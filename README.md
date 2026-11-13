@@ -154,6 +154,8 @@ Source choices are saved on the console and shared by paired devices. Turning of
 - **Vikingfile:** Orbit first asks for the file with your [Vikingfile account session](guides/vikingfile.md), when signed in, and starts the download straight away if it gets a ready link. If verification is needed, the page opens: complete it, move the pointer to **Download** with the left stick and press ○.
 - **AkiraBox:** open the download page from Orbit, complete any verification, then select **Download**. AkiraBox may show an ad instead; close it and try again, or choose another source.
 
+**Vikingfile and AkiraBox take a few minutes for now.** On PS4, the Cloudflare check on their pages can take 2–3 minutes to pass. Leave the page open: once the check passes, the download works as usual. We’re working on making this faster.
+
 On a paired phone, these pages still open on the PS4. See the [full provider steps](guides/downloads.md#provider-steps).
 
 ### Automatic archive extraction
