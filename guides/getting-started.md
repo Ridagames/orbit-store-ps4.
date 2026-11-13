@@ -68,7 +68,9 @@ Already using Orbit? In the browser version, open **App settings → Updates & s
 2. Send the ELF to an ELF loader on port 9021 (for example elfldr, which GoldHEN's LaunchPad can start). GoldHEN's own loader and LaunchPad can't run `orbit_store.elf` itself; it is too big for them. Orbit saves its service and elfldr, and creates the **Orbit Store Browser** icon.
 3. Open **Orbit Store Browser**, then **App settings → Sources & accounts**. Choose the sources you want to use, including Archive.org, Vikingfile and AkiraBox, and acknowledge the notice. Only download material you have permission to obtain and use.
 
-Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files.
+![Orbit Store 0.0.1 download sources and notice in the PS4 TV app](../assets/0.0.1/store-sources.jpg)
+
+*Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files.*
 
 Both interfaces use the same service, catalogue, favourites and download queue. The TV app does not need a pairing code on the console. The native app and browser use the same settings categories. Connections, retries and shutdown are under **Downloads**; destinations and cleanup are under **Storage & cleanup**. Accounts are under **Sources & accounts**, pairing is under **Devices**, and reports are under **Diagnostics & about**. Native's **Updates & startup** links to the browser for payload-manager and auto-start setup.
 
@@ -87,6 +89,10 @@ A drive connected to your phone or computer is not a PS4 destination. Attach you
 Orbit Store supports **26 interface languages**: English, Arabic, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Simplified Chinese and Traditional Chinese.
 
 Open **Settings → Appearance → Language** (called **App settings** in Orbit Store's default layout). Choose a language or follow the system/browser language. Language choices stay on that device. Arabic uses a mirrored layout; Japanese, Chinese and Korean use fonts with their character sets. Changing the interface language does not change game or provider-page languages.
+
+![Orbit Store 0.0.1 appearance and language settings in the PS4 TV app](../assets/0.0.1/store-language.jpg)
+
+*Game names, descriptions and provider pages may keep their original language. Changing Orbit’s language does not change a downloaded game’s language.*
 
 
 ### Choose your interface
