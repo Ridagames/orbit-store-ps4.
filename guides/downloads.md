@@ -8,11 +8,15 @@ Settings paths in this guide use the Store layout. Crossbar, Cinema and Panorama
 
 **Discover opens first.** In the default Store layout, start with the featured game and **New on Orbit**, then **Latest releases**. Move down to **All games** for the full collection. The grid loads more games as you scroll. Each game’s size is its smallest option from your enabled sources.
 
+![Orbit Store 0.0.1 Discover on PS4 with BioShock Infinite: The Complete Edition selected](../assets/0.0.1/store-discover.jpg)
+
 Switch to **Browse** for search and filters. It sorts by **Release date (newest first)**; games without a date follow alphabetically. Search by game name or title ID, filter by source, format, genre, tag, region or download size, and change the sort order. **Reset filters** goes back to the defaults. Source and Format allow several choices. **Installed games** hides games already installed on the PS4.
 
 ### Genres and filter counts
 
 Browse filters show how many games match each choice, and update as you change your search and other filters. Choices with no matches are dimmed. This works in the TV app and the browser, in all four layouts.
+
+![Browse in the PS4 TV app with Genre choices and matching game counts](../assets/0.0.1/store-genres.jpg)
 
 Choose one or more entries under **Genre**. A game can match any selected genre while still meeting your other filters. Save the selection through [Saved filters](saved-filters.md). Only genres recorded for at least ten games appear in the list; games with missing or less common genres stay under **All genres**.
 
@@ -35,6 +39,8 @@ Open **Add-ons** after Browse, or **Add-ons (count)** on a game’s details. Sea
 Opening a game from filtered Browse results selects an option that matches those filters. Opening it elsewhere first tries the source and format you downloaded last, then an option that can download without a verification page. You can still choose another option.
 
 On the game page, select the main download button to open **Download options**. This lets you review your choices without starting anything. Open **Source** to choose a format and provider, **Download using** for direct or TorBox delivery, and **Save to** for the PS4 drive. The storage panel shows **Free now**, **Unfinished downloads** and **After queue + this download**.
+
+![Orbit Store 0.0.1 source, delivery and destination choices on PS4](../assets/0.0.1/store-download-options.jpg)
 
 Known firmware requirements appear beside download options. Options that don’t suit your PS4’s firmware come last with a warning and stay selectable. Unknown requirements aren’t a promise of compatibility. If another format or version of the game is already installed, Orbit warns you and offers **Download anyway**.
 
@@ -60,6 +66,8 @@ Provider pages open full screen on the PS4, even when you start from a paired ph
 [Sign in to Vikingfile](vikingfile.md) first if you have an account. Choose the option and drive, then select **Download to PS4**. Orbit asks Vikingfile for the file with your session; if it gets a ready link, the download starts straight away.
 
 If Vikingfile needs verification, its page opens. Complete the verification, move the pointer to **Download** with the left stick and press ○. Orbit checks the link against the file you chose, closes the page and returns to the app. Follow its progress in **Downloads**.
+
+![Vikingfile instructions in Download options: complete verification if shown, then select Download](../assets/0.0.1/store-download-options.jpg)
 
 ### AkiraBox
 
@@ -103,6 +111,8 @@ Orbit unpacks on the selected PS4 drive after downloading. Follow the **Extracti
 ### Follow your queue
 
 Use **Active**, **Finished**, **Failed** and **Cancelled** to find a download. Move waiting items up or down, pause and resume, or cancel.
+
+![Orbit Store 0.0.1 Downloads on PS4 with an empty queue](../assets/0.0.1/store-downloads.jpg)
 
 Choose **1–64 connections per download** in **App settings → Downloads**; eight is the default. Active downloads share up to 64 connections. If a provider refuses several connections, Orbit retries with fewer. Speed depends on the provider, network and drive.
 
