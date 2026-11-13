@@ -22,6 +22,93 @@ To go back to the default later, open Appearance, choose **Store** and confirm *
 | **Cinema** | Large artwork, prominent titles and filmstrip-style game collections. |
 | **Panorama** | Wide sections, bold headings and groups of tiles with a choice of accent colours. |
 
+These screenshots are from the TV app on a PS4.
+
+### Store
+
+![Orbit Store 0.0.1 Discover on PS4 with BioShock Infinite: The Complete Edition selected](../assets/0.0.1/store-discover.jpg)
+
+### Crossbar
+
+![Crossbar Discover in the Orbit Store 0.0.1 TV app on PS4](../assets/0.0.1/crossbar-discover.jpg)
+
+<details>
+<summary>See more: Browse, game details and Downloads in Crossbar</summary>
+
+**Browse**
+
+![Orbit Store 0.0.1 Crossbar browse on PS4](../assets/0.0.1/crossbar-browse.jpg)
+
+<br>
+
+**Game details**
+
+![Orbit Store 0.0.1 Crossbar game details on PS4](../assets/0.0.1/crossbar-game-details.jpg)
+
+<br>
+
+**Downloads**
+
+![Orbit Store 0.0.1 Crossbar Downloads on PS4 with an empty queue](../assets/0.0.1/crossbar-downloads.jpg)
+
+*Downloads with an empty queue.*
+
+</details>
+
+### Cinema
+
+![Cinema Discover in the Orbit Store 0.0.1 TV app on PS4](../assets/0.0.1/cinema-discover.jpg)
+
+<details>
+<summary>See more: Browse, game details and Downloads in Cinema</summary>
+
+**Browse**
+
+![Orbit Store 0.0.1 Cinema browse on PS4](../assets/0.0.1/cinema-browse.jpg)
+
+<br>
+
+**Game details**
+
+![Orbit Store 0.0.1 Cinema game details on PS4](../assets/0.0.1/cinema-game-details.jpg)
+
+<br>
+
+**Downloads**
+
+![Orbit Store 0.0.1 Cinema Downloads on PS4 with an empty queue](../assets/0.0.1/cinema-downloads.jpg)
+
+*Downloads with an empty queue.*
+
+</details>
+
+### Panorama
+
+![Panorama Discover in the Orbit Store 0.0.1 TV app on PS4](../assets/0.0.1/panorama-discover.jpg)
+
+<details>
+<summary>See more: Browse, game details and Downloads in Panorama</summary>
+
+**Browse**
+
+![Orbit Store 0.0.1 Panorama browse on PS4](../assets/0.0.1/panorama-browse.jpg)
+
+<br>
+
+**Game details**
+
+![Orbit Store 0.0.1 Panorama game details on PS4](../assets/0.0.1/panorama-game-details.jpg)
+
+<br>
+
+**Downloads**
+
+![Orbit Store 0.0.1 Panorama Downloads on PS4 with an empty queue](../assets/0.0.1/panorama-downloads.jpg)
+
+*Downloads with an empty queue.*
+
+</details>
+
 ## Motion and backgrounds
 
 Open **Appearance** while using the interface you want to adjust. The options depend on that interface.
