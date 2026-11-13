@@ -64,7 +64,6 @@ Orbit supports 26 interface languages: English, Arabic, Czech, Danish, Dutch, Fi
 - [Notifications](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/notifications.md): PS4 alerts and ntfy setup.
 - [Appearance](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/appearance.md): Interfaces, motion, backgrounds, controller navigation and language.
 - [Troubleshooting](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/troubleshooting.md): Startup, updates, providers, storage, installing and diagnostics.
-- [What's different from PS5](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/NOT-PORTED.md): PS4 scope and differences.
 
 ## Downloads
 
