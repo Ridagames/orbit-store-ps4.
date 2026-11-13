@@ -1,0 +1,27 @@
+.DS_Store
+
+# Release files are GitHub release assets, never committed
+*.elf
+*.pkg
+*.zip
+*.sha256
+*.part
+*.rar
+*.7z
+*.ffpfsc
+*.exfat
+
+# Private notes, local tools and working files
+AGENTS.md
+/CATALOGUE.md
+.state/
+.env*
+node_modules/
+.venv/
+
+# Keys, pairings and sign-ins
+*.private.*
+*.key
+*.pem
+*.p12
+secrets/

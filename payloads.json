@@ -1,0 +1,15 @@
+{
+  "name": "Orbit Store",
+  "payloads": [
+    {
+      "name": "Orbit Store (Beta)",
+      "filename": "orbit_store.elf",
+      "url": "https://github.com/saawant12/orbit-store-ps4/releases/download/v1.8.5/orbit_store.elf",
+      "description": "A modern PS4 download manager with a native TV app, resumable downloads and phone controls.",
+      "version": "v1.8.5",
+      "category": "Utilities",
+      "checksum": "1fb74cdc95dd221b70d002c6d5131a1391a5b74e1c734c7ae9f6dee394ee8e0d",
+      "size": 64476424
+    }
+  ]
+}
