@@ -6,6 +6,11 @@ Orbit runs on your PS4. Pick a game, choose its source and format, and Orbit dow
 
 Explore **1,110 PS4 games** with **1,227 download options**, plus **533 DLCs and add-ons with 535 options across 120 games**. Choose your source and save to your preferred drive. New games, add-ons and corrected links arrive through catalogue updates.
 
+<p>
+  <a href="assets/0.0.1/native-crossbar-discover.jpg"><img src="assets/0.0.1/native-crossbar-discover.jpg" width="48%" alt="Crossbar Discover in the PS4 TV app with Crysis Remastered selected"></a>
+  <a href="assets/0.0.1/native-store-game-details.jpg"><img src="assets/0.0.1/native-store-game-details.jpg" width="48%" alt="MONSTER HUNTER: WORLD game details in the PS4 TV app's Store interface"></a>
+</p>
+
 <br>
 
 <div align="center">
@@ -72,6 +77,70 @@ You need a PS4 with GoldHEN, internet access on the console and enough writable 
 5. **Follow your queue.** Open Downloads on the TV or a paired device to check progress, pause or resume.
 
 See the [setup and update guide](guides/getting-started.md) for installation, auto-start, updates and phone pairing.
+
+## See how it works
+
+Open Orbit from your Games row and use the controller to browse, explore and choose a download. The TV app shares your catalogue, favourites and download queue with the browser version. These screenshots are from the TV app on a PS4.
+
+### Discover, browse and choose a download
+
+**Start with something new.** Discover opens first. **New on Orbit** brings featured picks and recent additions to the first row, followed by **Latest releases**. Move down to All games to explore a grid that loads more games as you scroll.
+
+**Store (default)**
+
+![Orbit Store 0.0.1 Discover on PS4 with BioShock Infinite: The Complete Edition selected](assets/0.0.1/store-discover.jpg)
+
+**Keep exploring.** All games gives each title its own tile. Move through the grid with your controller; more games appear as you keep scrolling.
+
+![Orbit Store 0.0.1 All games on PS4 with Horizon Forbidden West selected](assets/0.0.1/store-all-games.jpg)
+
+**Find your next game.** Search by name or title ID, narrow the collection by genre, tag, source, format, region or size, and browse the newest known releases first.
+
+![Orbit Store 0.0.1 Browse on PS4 with genre, tag, source, format, region and size filters](assets/0.0.1/store-browse.jpg)
+
+**Get to know a game.** Read its description, save it to favourites, or open the three-dot menu for its publisher, release date, title ID and download size. The main download button opens your options before anything starts.
+
+![About this game for MONSTER HUNTER: WORLD in Orbit Store 0.0.1 on PS4](assets/0.0.1/store-game-about.jpg)
+
+**Choose how and where to download.** Review the source, delivery method and drive together. Vikingfile uses your saved sign-in when available and opens its provider page on the PS4 if verification is needed. See the [download guide](guides/downloads.md), including [TorBox](guides/downloads.md#torbox).
+
+![Orbit Store 0.0.1 download options on PS4: Vikingfile, TorBox available and internal storage](assets/0.0.1/store-download-options.jpg)
+
+### Choose your interface
+
+Make Orbit look the way you like. Open **Appearance** and choose **Store**, **Crossbar**, **Cinema** or **Panorama**. Confirm your choice to keep it. The interfaces are available in the TV app and the browser version; switching keeps your downloads, favourites and settings. See the [appearance guide](guides/appearance.md) for the 15-second confirmation, controller shortcuts, motion options and where to find settings in each layout.
+
+**Crossbar**
+
+![Crossbar Discover in the Orbit Store 0.0.1 TV app on PS4](assets/0.0.1/crossbar-discover.jpg)
+
+<br>
+
+**Cinema**
+
+![Cinema Discover in the Orbit Store 0.0.1 TV app on PS4](assets/0.0.1/cinema-discover.jpg)
+
+<br>
+
+**Panorama**
+
+![Panorama Discover in the Orbit Store 0.0.1 TV app on PS4](assets/0.0.1/panorama-discover.jpg)
+
+### Choose how Orbit works
+
+The instructions below use Store’s settings names. In Crossbar, Cinema and Panorama, the main menu is called **Settings**; see [Find settings after switching](guides/appearance.md#find-settings-after-switching).
+
+Choose sources, set your default drive, pair a phone and refresh your game catalogue from one place. **Update Orbit** updates the TV app and download service together; you choose when to install or restart.
+
+![Orbit Store 0.0.1 App settings on PS4: interface, motion and language](assets/0.0.1/store-app-settings.jpg)
+
+### Orbit in your language
+
+Orbit supports **English, Arabic, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Simplified Chinese and Traditional Chinese**. In the TV app, choose a language in **App settings → Appearance**, or keep **Automatic** to follow your PS4’s system language. In the browser version, use **App settings → Appearance → Language** in Store, or **Settings → Appearance → Language** in the other interfaces, to choose a language for that device, or leave it on **Automatic** to follow the browser.
+
+![Orbit Store 0.0.1 Storage & cleanup settings in Hungarian on PS4](assets/0.0.1/native-settings-hu.jpg)
+
+Language settings change Orbit’s menus; each game keeps its own language settings. See [language settings](guides/getting-started.md#choose-your-language) for instructions.
 
 ## Beta status
 
