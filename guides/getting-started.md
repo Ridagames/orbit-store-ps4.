@@ -22,7 +22,7 @@ The Games and browser versions share the same downloads, favourites and service 
 - Enough writable storage.
 - A phone or computer on the same local network, if you want to control Orbit from one.
 
-The PS4 release pairs **Orbit Store 1.8.5** and **native app 1.12.6** (publication pending; release links go live when it ships).
+The first PS4 release is **Orbit Store 0.0.1**: **native app 0.0.1** with **download service 0.0.1** (publication pending; release links go live when it ships).
 
 The instructions below use the default Store layout. If you choose another interface, check its settings entry under Appearance.
 
@@ -32,10 +32,10 @@ Choose the app you use; you do not need to download every asset.
 
 | How you use Orbit | What to download |
 | --- | --- |
-| Native PS4 app | **`orbit_store_ps4.pkg`** and its checksum. Native app **1.12.6** already includes service **1.8.5** and elfldr. The app starts the service itself; nothing has to run first. |
+| Native PS4 app | **`orbit_store_ps4.pkg`** and its checksum. Native app **0.0.1** already includes service **0.0.1** and elfldr. The app starts the service itself; nothing has to run first. |
 | Service started separately through an ELF loader | **`orbit_store.elf`** and its checksum. Send it once to an ELF loader on port 9021; Orbit then keeps its own copies current. |
 
-Installing a package or uploading an ELF does not replace an older service that is already running. Stop it with **Stop Orbit to restart** before starting the updated copy. In **Diagnostics & about**, the current versions are **native app 1.12.6** and **download service 1.8.5**; they intentionally have different version numbers. Keep your pairing, settings and queue in place.
+Installing a package or uploading an ELF does not replace an older service that is already running. Stop it with **Stop Orbit to restart** before starting the updated copy. In **Diagnostics & about**, the current versions are **native app 0.0.1** and **download service 0.0.1**. Later releases may update one without the other, so the two numbers can differ. Keep your pairing, settings and queue in place.
 
 ## Verify the PS4 files
 
@@ -92,7 +92,7 @@ Open **Settings → Appearance → Language** (called **App settings** in Orbit 
 
 
 
-*Browser interface previews are from Orbit 1.5.0. Game names, descriptions and provider pages may keep their original language. Changing Orbit's language does not change a downloaded game's language.*
+*Browser interface previews are from Orbit for PS5 1.5.0; the PS4 version looks the same. Game names, descriptions and provider pages may keep their original language. Changing Orbit's language does not change a downloaded game's language.*
 
 ### Choose your interface
 
@@ -187,6 +187,6 @@ Alternatively, use the browser:
 2. In the browser version, open **App settings → Updates & startup → TV app** and check for an update. Confirm replacement if you previously installed the package yourself. Orbit verifies the download and hands it to the console's package installer. If it cannot identify a safe installation to replace, follow the message instead of installing again.
 3. Reopen Orbit from the Games row. If the console still opens the previous app, restart the console when convenient and run your jailbreak again.
 
-Existing full-PKG replacement still needs console validation. If Orbit reports an unconfirmed install, use **Check** to recover the existing task; do not submit the package again. A saved update is not proof that the new native app is running. Close and reopen the app, then compare the running native version with the installed version. You can also install the package yourself with the console's package installer. The native PS4 project ID is `ORBT00002`. Earlier local prototypes used `CUSA99177`; they are separate titles and are not migrated automatically. If one was installed, remove that obsolete prototype deliberately after checking which title is running. Keep `/data/orbit-store/`; it holds your settings and queue.
+If Orbit reports an unconfirmed install, use **Check** to recover the existing task; do not submit the package again. A saved update is not proof that the new native app is running. Close and reopen the app, then compare the running native version with the installed version. You can also install the package yourself with the console's package installer. The native PS4 project ID is `ORBT00002`. Earlier local prototypes used `CUSA99177`; they are separate titles and are not migrated automatically. If one was installed, remove that obsolete prototype deliberately after checking which title is running. Keep `/data/orbit-store/`; it holds your settings and queue.
 
 The TV app includes a copy of the service. For a manual replacement or an older updater, stop the old service before starting the new copy. After an in-app update, choosing **Close and reopen** lets the updated app handle that service replacement when you open it again. If the saved service is newer than the one inside the TV app, opening the app keeps the newer one.

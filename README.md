@@ -12,7 +12,7 @@ release exists.
 - [Getting started](guides/getting-started.md) — draft setup and update guide.
 - [Scope and exclusions](NOT-PORTED.md).
 
-The current source targets service **1.8.5** and native app **1.12.6**. The native
+The current source targets service **0.0.1** and native app **0.0.1**. The native
 app uses project title ID `ORBT00002`; the browser shortcut uses `ORBT00001`.
 These are homebrew project identifiers, not official Sony allocations.
 
