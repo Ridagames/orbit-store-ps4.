@@ -4,10 +4,10 @@ A download manager and storefront for PS4, with a native TV app and a browser
 interface. Both share downloads, catalogue choices and settings. The port targets
 the PS5 app's features, four layouts and 26 languages; Orbit Zero is excluded.
 
-**Status: unreleased.** Local builds and automated checks are available. PS4
-console acceptance is deferred, native shader assets are missing, and the RAR assessment
-remains deferred. Native runtime source provenance has been resolved. Draft feed URLs do not mean
-a downloadable release exists.
+**Status: unreleased.** Local builds and automated checks are available. Most
+features were tested on a PS4 on firmware 12.00; a few console checks remain, and
+the RAR assessment remains deferred. Draft feed URLs do not mean a downloadable
+release exists.
 
 - [Getting started](guides/getting-started.md) — draft setup and update guide.
 - [Scope and exclusions](NOT-PORTED.md).
