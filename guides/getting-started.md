@@ -1,7 +1,6 @@
 # Get started with Orbit Store
 
-**Draft for an unreleased PS4 port.** Most features were tested on a PS4 on
-firmware 12.00; a few checks remain. Release links are not live.
+**For Orbit Store 0.0.1 for PS4 (beta).** Tested on a PS4 on firmware 12.00 with GoldHEN.
 
 Orbit runs on your PS4. Use the TV with your controller, or pair a phone or computer to manage the same catalogue and download queue. Files go to the PS4's selected storage.
 
@@ -22,7 +21,7 @@ The Games and browser versions share the same downloads, favourites and service 
 - Enough writable storage.
 - A phone or computer on the same local network, if you want to control Orbit from one.
 
-The first PS4 release is **Orbit Store 0.0.1**: **native app 0.0.1** with **download service 0.0.1** (publication pending; release links go live when it ships).
+The first PS4 release is **Orbit Store 0.0.1**: **native app 0.0.1** with **download service 0.0.1**.
 
 The instructions below use the default Store layout. If you choose another interface, check its settings entry under Appearance.
 
@@ -53,13 +52,13 @@ On macOS or Linux, the result should say **OK**. On Windows, open the `.sha256` 
 
 The native package includes Orbit's download service and **elfldr**, the ELF loader Orbit runs through. Nothing has to run first: when no ELF loader answers, the app gives its elfldr to GoldHEN's payload loader, then starts Orbit through it. Turn that loader on once in **GoldHEN → Servers Settings → Enable PayLoader Server**.
 
-Close other apps such as ezRemote before opening Orbit. Programs started this way share memory with open apps, and with ezRemote open Orbit may not start. If Orbit doesn't answer, the app sends it once more, then shows **Orbit didn't start** with **Try again**.
+Close other apps such as ezRemote before opening Orbit. Programs started this way share memory with open apps, and with ezRemote open Orbit may not start. If Orbit doesn't answer, the app sends it once more, then shows **Orbit didn't start** with **Try again**. Right after the PS4 turns on, Orbit sometimes needs a second try to start, so the first start can take up to about 40 seconds longer.
 
 1. Get `orbit_store_ps4.pkg` and `orbit_store_ps4.pkg.sha256` from the [latest release](https://github.com/saawant12/orbit-store-ps4/releases/latest), then [verify the checksum](#verify-the-ps4-files).
 2. If an older Orbit service is running, stop it from **App settings → Updates & startup → Stop Orbit to restart** in the browser version. Installing a package does not replace a running service.
 3. Copy the PKG to your PS4 on a USB drive (or over FTP), then install it with your jailbreak's package installer — for example **Settings → Debug Settings → Package Installer** under GoldHEN.
 4. Open **Orbit Store** from the **Games row**. Discover is the starting page. On first use, select **Choose sources**, enable the sources you want and acknowledge the notice. Saving opens Discover. Source choices are shared with the browser.
-5. Choose a game, source, format and destination drive. The downloads guide covers direct downloads and each provider's browser steps.
+5. Choose a game, source, format and destination drive. The [downloads guide](downloads.md) covers direct downloads and each provider's browser steps.
 
 Already using Orbit? In the browser version, open **App settings → Updates & startup → TV app → Install on this PS4**. Orbit downloads the official package, verifies it and hands it to the console's package installer.
 
@@ -69,8 +68,7 @@ Already using Orbit? In the browser version, open **App settings → Updates & s
 2. Send the ELF to an ELF loader on port 9021 (for example elfldr, which GoldHEN's LaunchPad can start). GoldHEN's own loader and LaunchPad can't run `orbit_store.elf` itself; it is too big for them. Orbit saves its service and elfldr, and creates the **Orbit Store Browser** icon.
 3. Open **Orbit Store Browser**, then **App settings → Sources & accounts**. Choose the sources you want to use, including Archive.org, Vikingfile and AkiraBox, and acknowledge the notice. Only download material you have permission to obtain and use.
 
-
-*Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files. Interface previews use example storage data.*
+Sources are your choice. Turning one off later hides its options and pauses unfinished downloads without deleting files.
 
 Both interfaces use the same service, catalogue, favourites and download queue. The TV app does not need a pairing code on the console. The native app and browser use the same settings categories. Connections, retries and shutdown are under **Downloads**; destinations and cleanup are under **Storage & cleanup**. Accounts are under **Sources & accounts**, pairing is under **Devices**, and reports are under **Diagnostics & about**. Native's **Updates & startup** links to the browser for payload-manager and auto-start setup.
 
@@ -91,28 +89,25 @@ Orbit Store supports **26 interface languages**: English, Arabic, Czech, Danish,
 Open **Settings → Appearance → Language** (called **App settings** in Orbit Store's default layout). Choose a language or follow the system/browser language. Language choices stay on that device. Arabic uses a mirrored layout; Japanese, Chinese and Korean use fonts with their character sets. Changing the interface language does not change game or provider-page languages.
 
 
-
-*Browser interface previews are from Orbit for PS5 1.5.0; the PS4 version looks the same. Game names, descriptions and provider pages may keep their original language. Changing Orbit's language does not change a downloaded game's language.*
-
 ### Choose your interface
 
 Choose **Store**, **Crossbar**, **Cinema** or **Panorama** in **App settings → Appearance** in native Store, or **Settings → Appearance** in the other native layouts. In the browser, use **App settings → Appearance** in Store or **Settings → Appearance** in another layout.
 
-Select **Keep** within 15 seconds to save your choice, or let the countdown return you to the previous interface. Downloads and favourites stay with you; the appearance choice is separate for each app or browser. The appearance settings also cover navigation, motion and the background.
+Select **Keep** within 15 seconds to save your choice, or let the countdown return you to the previous interface. Downloads and favourites stay with you; the appearance choice is separate for each app or browser. The appearance settings also cover navigation, motion and the background. See [Appearance](appearance.md).
 
 ### Connect optional accounts
 
-**TorBox:** to use optional TorBox downloads, connect your account in the browser's **App settings → Sources & accounts → TorBox**. Both apps can then use it for supported options. See the TorBox section of the downloads guide when it is published.
+**TorBox:** to use optional TorBox downloads, connect your account in the browser's **App settings → Sources & accounts → TorBox**. Both apps can then use it for supported options. See [TorBox](downloads.md#torbox).
 
-**Archive.org:** for account-required Archive.org files, open **App settings → Sources & accounts → Archive.org** in either app and sign in. See the Archive.org sign-in section of the downloads guide when it is published.
+**Archive.org:** for account-required Archive.org files, open **App settings → Sources & accounts → Archive.org** in either app and sign in. See [Archive.org sign-in](downloads.md#archiveorg-sign-in).
 
-## PS4 and PS5 games
+## Games and DLC
 
-The catalogue includes both platforms. In Browse, choose **Platform → PS4**, **PS5** or **All platforms**. A PS4 and a PS5 edition of the same game have separate download choices.
+The catalogue has **1,110 PS4 games** with **1,227 download options** from Archive.org, Vikingfile and AkiraBox.
 
-Orbit itself runs on PS4. Downloading a PKG/FPKG saves a package to your selected drive; the apps let you choose **Install on PS4** from the completed download to send it to the console's package installer. PS5 titles remain downloadable for archival or transfer; they cannot be installed on PS4. See the package-installation documentation in the source repository.
+Downloading a PKG or FPKG saves a package to your selected drive. Choose **Install on PS4** on the finished download to hand it to the console's package installer. See [installing games](install-games.md).
 
-**DLC is available.** Open **Add-ons** or **Add-ons (count)** on a game's details to browse expansions, content packs, activation packages and bundles. Check the required base game before downloading or installing. See the add-ons documentation in the source repository.
+**DLC is available.** Open **Add-ons** or **Add-ons (count)** on a game's details to browse expansions, content packs, activation packages and bundles. Check the required base game before downloading or installing. See [the DLC guide](add-ons.md).
 
 ## Pair your phone or computer
 
@@ -136,13 +131,13 @@ In a payload manager that supports custom sources, add:
 https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/payloads.json
 ```
 
-When a payload-manager source publishes Orbit Store for PS4, download it there. The full `orbit_store.elf` only runs through an ELF loader on port 9021; GoldHEN's LaunchPad can't run it. Until then use the release ELF directly.
+The feed lists the release's `orbit_store.elf` with its version and checksum. The full ELF only runs through an ELF loader on port 9021; GoldHEN's LaunchPad can't run it. To start Orbit from LaunchPad, use **Add Orbit** below instead.
 
 ### Keep a manager copy up to date
 
 Open **App settings → Updates & startup → Payload managers** and choose **Add Orbit**, or **Allow updates to this copy** if it is already listed. That manager's copy then receives Orbit updates. The copy Orbit places is a small starter, not the service: it starts the service Orbit saved, starting elfldr through GoldHEN first when needed. **Stop syncing** leaves the existing copy and auto-start choices in place.
 
-GoldHEN 2.4b18.10+ supports optional AutoRun. In Orbit, first allow a managed payload copy, then explicitly enable AutoRun. Orbit preserves unrelated entries in `payloads.ini`. AutoRun runs Orbit's starter after GoldHEN starts; it does not replace running the jailbreak after a reboot. AutoRun at boot still needs a PS4 check.
+GoldHEN 2.4b18.10+ supports optional AutoRun. In Orbit, first allow a managed payload copy, then explicitly enable AutoRun. Orbit preserves unrelated entries in `payloads.ini`. AutoRun runs Orbit's starter after GoldHEN starts; it does not replace running the jailbreak after a reboot.
 
 If you select **Stop syncing**, future Orbit updates leave that manager copy alone. It still starts the service Orbit saved, which Orbit's updates keep current.
 
@@ -162,7 +157,7 @@ In the native app, open **App settings → Updates & startup**. In the browser's
 
 ### Update the download service
 
-The separate controls below remain useful for older apps and manual updates.
+The separate controls below are useful for manual updates.
 
 In the native app, open **App settings → Updates & startup → Download service**. Check for updates, install the chosen release, then confirm **Restart download service**. The app stops only Orbit and starts its saved service through elfldr. If no loader can be reached, follow the on-screen instructions to start Orbit manually.
 
@@ -187,6 +182,6 @@ Alternatively, use the browser:
 2. In the browser version, open **App settings → Updates & startup → TV app** and check for an update. Confirm replacement if you previously installed the package yourself. Orbit verifies the download and hands it to the console's package installer. If it cannot identify a safe installation to replace, follow the message instead of installing again.
 3. Reopen Orbit from the Games row. If the console still opens the previous app, restart the console when convenient and run your jailbreak again.
 
-If Orbit reports an unconfirmed install, use **Check** to recover the existing task; do not submit the package again. A saved update is not proof that the new native app is running. Close and reopen the app, then compare the running native version with the installed version. You can also install the package yourself with the console's package installer. The native PS4 project ID is `ORBT00002`. Earlier local prototypes used `CUSA99177`; they are separate titles and are not migrated automatically. If one was installed, remove that obsolete prototype deliberately after checking which title is running. Keep `/data/orbit-store/`; it holds your settings and queue.
+If Orbit reports an unconfirmed install, use **Check** to recover the existing task; do not submit the package again. A saved update is not proof that the new native app is running. Close and reopen the app, then compare the running native version with the installed version. You can also install the package yourself with the console's package installer. The TV app's title ID is `ORBT00002`. Keep `/data/orbit-store/`; it holds your settings and queue.
 
 The TV app includes a copy of the service. For a manual replacement or an older updater, stop the old service before starting the new copy. After an in-app update, choosing **Close and reopen** lets the updated app handle that service replacement when you open it again. If the saved service is newer than the one inside the TV app, opening the app keeps the newer one.

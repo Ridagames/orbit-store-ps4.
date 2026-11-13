@@ -1,0 +1,80 @@
+# Orbit Store for PS4 (Beta)
+
+> A modern PS4 download manager with resumable downloads, a native TV app, browser controls and phone pairing.
+
+The official project is https://github.com/saawant12/orbit-store-ps4. The PS5 version is at https://github.com/saawant12/orbit-store-ps5. Orbit Store has no official social media accounts. It is free to use, and nothing is locked behind a payment. Optional contributions help cover the costs of AI tools, test consoles, hardware and servers. Optional crypto support is available through the addresses at https://github.com/saawant12/orbit-store-ps5/issues/131#user-content-support-with-crypto.
+
+The first PS4 release is Orbit Store 0.0.1 (beta): native TV app 0.0.1 (orbit_store_ps4.pkg) with download service 0.0.1 (orbit_store.elf). It was tested on a PS4 on firmware 12.00 with GoldHEN. Orbit Zero, the desktop companion, is PS5 only and is not part of the PS4 version.
+
+## Catalogue
+
+The PS4 catalogue lists 1,110 PS4 games with 1,227 single-file download options from Archive.org, Vikingfile and AkiraBox, plus 533 add-ons with 535 options across 120 base games. There is no platform filter; every entry is a PS4 (CUSA) title. Formats are PKG and FPKG packages, either raw or inside a single ZIP, RAR or 7z archive. Multipart archives are not supported. Sources are opt-in.
+
+Discover opens first. Store shows New on Orbit, Latest releases and an All games grid; Crossbar, Cinema and Panorama arrange these collections differently. Browse supports source, format, genre, tag, region and download-size filters, search, sorting, Installed games and shared favourites. Filter choices show matching game counts. Genre allows several selections; only genres recorded for at least ten games appear. Tags are PlayStation exclusive, Local co-op, Split-screen, Open world, Story-driven, Soulslike, Turn-based and PSVR supported. In the TV app, Square toggles favourites in Store; Triangle does so in Crossbar, Cinema and Panorama.
+
+New games and corrections arrive through catalogue updates. Orbit checks when it starts and every six hours; App settings → Game catalogue → Refresh catalogue checks manually. If a refresh fails with HTTP 0 or a network error, the saved catalogue stays usable. Queued downloads keep the file originally chosen.
+
+## Install and use Orbit Store
+
+Orbit needs a PS4 with GoldHEN. Turn on GoldHEN's payload loader once (GoldHEN → Servers Settings → Enable PayLoader Server). Close other apps, such as ezRemote, before opening Orbit; programs started this way share memory with open apps.
+
+- TV app: install orbit_store_ps4.pkg with GoldHEN's Package Installer (Settings → Debug Settings → Package Installer). Orbit Store appears on the Games row. The package includes the download service and elfldr, an ELF loader. Nothing has to run first: the app gives elfldr to GoldHEN's payload loader and starts the service through it. Right after the PS4 turns on, the first start can take up to about 40 seconds longer. The TV app's title ID is ORBT00002.
+- Browser version: send orbit_store.elf once to an ELF loader on port 9021, such as elfldr. GoldHEN's own payload loader (port 9090) and LaunchPad cannot run the full ELF; it is too big. Orbit saves its service and elfldr in /data/orbit-store/ and adds the Orbit Store Browser icon (ORBT00001), which opens http://127.0.0.1:34177/ in the PS4's Internet Browser while Orbit is running. The icon cannot start a stopped service.
+- Phone or computer: open http://<ps4-ip>:34177/ on the same local network and pair with the six-digit code shown on the PS4.
+
+Auto-start is opt-in. App settings → Updates & startup → Payload managers → Add Orbit places a small starter in GoldHEN LaunchPad (/data/payloads) or Homebrew Launcher and keeps it current. GoldHEN AutoRun (GoldHEN 2.4b18.10 or newer) can then run that starter when GoldHEN loads; Orbit edits only its own entries in /data/GoldHEN/payloads.ini. The starter sends the saved service to elfldr, starting elfldr through GoldHEN's payload loader first when needed.
+
+Update Orbit is under App settings → Updates & startup (Settings → Updates & startup in other layouts). It updates the TV app and service together; select Close and reopen afterward. Reopening saves the queue, stops the older service and starts the new one, resuming interrupted downloads. Restart Orbit restarts only the service. Loading an ELF while Orbit runs saves it for the next start. The update panel shows Running, Saved for next start and Latest release separately. Your settings and queue are in /data/orbit-store/.
+
+## Downloads
+
+Open a game's Download options to choose Source, Download using (direct or TorBox) and Save to (a PS4 drive). Direct options start with Download to PS4. Vikingfile first asks for the file with the signed-in session; if verification is needed, its page opens full screen on the PS4: complete verification, move the pointer to Download with the left stick and press ○. AkiraBox: select Open AkiraBox on PS4 (TV app) or Open download page on PS4 (browser), complete verification, then select Download; an ad may appear instead, so close it and try again or choose another source. Orbit catches the ready link, checks it against the chosen file and returns to the app. Provider pages appear on the PS4 even when started from a phone.
+
+Downloads go to the selected drive's homebrew folder: /data/homebrew/ for internal storage, /mnt/usbN/homebrew/ for USB drives. Connections per download: 1–64, default 8, with 64 shared across active downloads; TorBox uses at most eight per game. Simultaneous downloads: 1–8, default 1. Download recovery: automatic retries 0–10 (default 3), 10 seconds between retries, reconnect below 1 KiB/s for 60 seconds. Downloads keep running when the TV app or browser is closed; Orbit does not download in rest mode.
+
+ZIP, RAR and 7z downloads unpack on the selected PS4 drive. Known passwords are tried automatically: DLPSGAME.COM, [DLPSGAME.COM], SuperPSX, www.DLPSGAME.COM, downloadgameps3.com, hako and pippo. Otherwise use Enter archive password, then Retry extraction. Delete archives after extracting is on by default.
+
+Optional accounts: Archive.org (email and password sent once; only the sign-in is kept, never the password), Vikingfile (account hash entered on Vikingfile's official page; the TV app and browser keep separate sessions) and TorBox (API key, connected once in the browser and shared). Notifications can go to the PS4, to ntfy, or both. Automatic PS4 shutdown is off by default and shows a 60-second countdown you can cancel once downloads, installations and file operations finish.
+
+## Installing, Library and Files
+
+Install on PS4 hands a finished PKG or FPKG to the PS4's own package installer (BGFT). Downloading never installs automatically. The PS4 chooses its installation storage. Downloaded packages are kept unless App settings → Storage & cleanup → Installed packages → Delete packages after installing is on (off by default). Check installation recovers an unconfirmed result; Orbit never resubmits an uncertain installation by itself or uninstalls a game. Game images (exFAT, FFPFSC, FFPKG) and game folders are PS5 ShadowMount formats and are not supported on PS4.
+
+Library lists the games installed on the PS4, read from the console's own app folders; no ShadowMount is needed. It refreshes automatically. Library cannot mount, copy, move, start or uninstall games. Library → Files browses internal storage and USB drives: open folders, copy, move, rename, delete, measure, unpack ZIP/RAR/7z and install PKG/FPKG files. A paired phone or computer can save a file with Save to this device.
+
+## Interfaces, settings and languages
+
+Store is the default interface; Crossbar, Cinema and Panorama are also available in the TV app and browser. Select Keep within 15 seconds to save a choice. All offer Full or Reduced motion; Crossbar has time-of-day ribbons, Cinema blurred art or plain black behind menus, and Panorama four accent colours and faint art or plain black behind pages. Settings categories: Downloads, Storage & cleanup, Sources & accounts, Devices, Appearance, Notifications, Game catalogue, Updates & startup, Diagnostics & about and Support Orbit (App settings in Store, Settings elsewhere).
+
+Orbit supports 26 interface languages: English, Arabic, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Simplified Chinese and Traditional Chinese. Arabic mirrors the layout.
+
+## Documentation
+
+- [Project overview](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/README.md): Features, setup, controls and beta limits.
+- [Getting started](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/getting-started.md): Install the TV app or browser version, auto-start, updates and phone pairing.
+- [Downloads](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/downloads.md): Browse, sources, formats, Vikingfile and AkiraBox steps, archives, saved locations and queue controls.
+- [Install games](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/install-games.md): Package installation, DLC bundles and recovery.
+- [DLC and Add-ons](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/add-ons.md): Add-on browsing, types and base-game requirements.
+- [Library](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/library.md): Installed games and automatic updates.
+- [Files](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/files.md): Browse and manage PS4 files and folders.
+- [Saved filters](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/saved-filters.md): Shared named searches for Browse and Add-ons.
+- [Vikingfile accounts](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/vikingfile.md): Sign-in, session checks and account downloads.
+- [Settings](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/settings.md): Categories and where each control is.
+- [Automatic shutdown](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/shutdown.md): Conditions, countdown and cancelling.
+- [Notifications](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/notifications.md): PS4 alerts and ntfy setup.
+- [Appearance](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/appearance.md): Interfaces, motion, backgrounds, controller navigation and language.
+- [Troubleshooting](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/guides/troubleshooting.md): Startup, updates, providers, storage, installing and diagnostics.
+- [What's different from PS5](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/NOT-PORTED.md): PS4 scope and differences.
+
+## Downloads
+
+- [Current release](https://github.com/saawant12/orbit-store-ps4/releases/latest): Version, changes, installation steps, source bundle and checksums.
+- [Native TV app](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store_ps4.pkg): The Games-row app, including the Orbit service and elfldr.
+- [TV app SHA-256 checksum](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store_ps4.pkg.sha256): Verify the PKG before installing.
+- [Current ELF](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store.elf): The download service and browser interface.
+- [ELF SHA-256 checksum](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store.elf.sha256): Verify the ELF before loading it.
+- [Payload feed](https://raw.githubusercontent.com/saawant12/orbit-store-ps4/main/payloads.json): Orbit's ELF URL, version and checksum for payload managers that support custom sources.
+
+## Support
+
+- [Issues](https://github.com/saawant12/orbit-store-ps4/issues): Report problems with the Orbit version, PS4 firmware, GoldHEN version and steps to reproduce. Keep pairing codes and private information out of reports.

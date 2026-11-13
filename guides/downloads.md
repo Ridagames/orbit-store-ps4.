@@ -1,0 +1,164 @@
+# Find and download a game
+
+**For Orbit Store 0.0.1 for PS4.** The catalogue has **1,110 PS4 games** with **1,227 single-file download options** from Archive.org, Vikingfile and AkiraBox. Open a game to choose from its sources and formats. What you see depends on which sources you turn on.
+
+Settings paths in this guide use the Store layout. Crossbar, Cinema and Panorama call the main menu **Settings**; see [Appearance](appearance.md#find-settings-after-switching).
+
+## Browse and choose
+
+**Discover opens first.** In the default Store layout, start with the featured game and **New on Orbit**, then **Latest releases**. Move down to **All games** for the full collection. The grid loads more games as you scroll. Each game’s size is its smallest option from your enabled sources.
+
+Switch to **Browse** for search and filters. It sorts by **Release date (newest first)**; games without a date follow alphabetically. Search by game name or title ID, filter by source, format, genre, tag, region or download size, and change the sort order. **Reset filters** goes back to the defaults. Source and Format allow several choices. **Installed games** hides games already installed on the PS4.
+
+### Genres and filter counts
+
+Browse filters show how many games match each choice, and update as you change your search and other filters. Choices with no matches are dimmed. This works in the TV app and the browser, in all four layouts.
+
+Choose one or more entries under **Genre**. A game can match any selected genre while still meeting your other filters. Save the selection through [Saved filters](saved-filters.md). Only genres recorded for at least ten games appear in the list; games with missing or less common genres stay under **All genres**.
+
+### Game tags
+
+Use **Tags** for **PlayStation exclusive**, **Local co-op**, **Split-screen**, **Open world**, **Story-driven**, **Soulslike**, **Turn-based** and **PSVR supported**. Selecting several tags shows games matching any of them. Combine tags with Source, Format and the other filters.
+
+PlayStation exclusive means no official PC, Xbox or Nintendo version. The PSVR tag covers required and optional VR modes; check the game details for headset needs. Tags are reviewed catalogue data and coverage is still growing, so an untagged game may still have the feature.
+
+Save a game from its details page to find it under **Favourites** later; favourites are shared with your paired devices.
+
+In the TV app’s Store layout, use the D-pad or left stick to move, Cross to select, Circle to go back and L1/R1 to switch tabs. Press **Square** on a game in Browse or Discover to add or remove it from Favourites. In the other layouts, **Triangle** toggles favourites; see [controls by layout](appearance.md#controller-navigation-in-the-tv-app). In the browser, use the arrow keys, Enter and Escape, or touch and mouse.
+
+## DLC and add-ons
+
+Open **Add-ons** after Browse, or **Add-ons (count)** on a game’s details. Search by DLC or base-game name and filter by Type, Source and Region. Check the required game edition, title ID and known version requirements before downloading. See [the DLC guide](add-ons.md).
+
+## Pick a source, format and drive
+
+Opening a game from filtered Browse results selects an option that matches those filters. Opening it elsewhere first tries the source and format you downloaded last, then an option that can download without a verification page. You can still choose another option.
+
+On the game page, select the main download button to open **Download options**. This lets you review your choices without starting anything. Open **Source** to choose a format and provider, **Download using** for direct or TorBox delivery, and **Save to** for the PS4 drive. The storage panel shows **Free now**, **Unfinished downloads** and **After queue + this download**.
+
+Known firmware requirements appear beside download options. Options that don’t suit your PS4’s firmware come last with a warning and stay selectable. Unknown requirements aren’t a promise of compatibility. If another format or version of the game is already installed, Orbit warns you and offers **Download anyway**.
+
+### Which format to pick
+
+| Format | What you get | What to do after it’s saved |
+| --- | --- | --- |
+| **PKG**, **FPKG** | `.pkg` package | Choose **Install on PS4** on the finished download. See [installing games](install-games.md). |
+| **ZIP**, **RAR**, **7z** | Archive | Orbit unpacks it after downloading. When the contents are known, the label shows the format inside, for example `RAR · PKG`. |
+
+Check the download size and expected unpacked size when planning drive space.
+
+### Start the download
+
+For a direct option, select **Download to PS4**. Orbit checks the file and the drive, then adds it to Downloads. For Vikingfile and AkiraBox, follow the provider steps below.
+
+## Provider steps
+
+Provider pages open full screen on the PS4, even when you start from a paired phone. Only one provider page can be open at a time; **Cancel verification** closes it without adding a download. If the page times out, start the option again.
+
+### Vikingfile
+
+[Sign in to Vikingfile](vikingfile.md) first if you have an account. Choose the option and drive, then select **Download to PS4**. Orbit asks Vikingfile for the file with your session; if it gets a ready link, the download starts straight away.
+
+If Vikingfile needs verification, its page opens. Complete the verification, move the pointer to **Download** with the left stick and press ○. Orbit checks the link against the file you chose, closes the page and returns to the app. Follow its progress in **Downloads**.
+
+### AkiraBox
+
+Choose the option and drive, then select **Open AkiraBox on PS4** in the TV app or **Open download page on PS4** in the browser. Complete any verification, then select **Download**. Orbit checks the link, closes the page and returns to the app.
+
+AkiraBox may show an ad instead of the download. Close the ad and try again. If it keeps coming back, choose another source for the game. For a paused or failed AkiraBox download, use **Refresh download link**; Orbit keeps the partial file only if the new link points to the same file.
+
+## Accounts and TorBox
+
+### Archive.org sign-in
+
+Some Archive.org files need an account. Public downloads work without signing in.
+
+Open **App settings → Sources & accounts → Archive.org** in the TV app or the browser. Enter your Archive.org email and password, select **Sign in**, and check that it says **Signed in**. Then try the download again. Orbit sends your details to Archive.org once and keeps only the sign-in on your PS4, never your password. The TV app and the browser share it. Sign out in the same place.
+
+Signing in helps with files that need an account; it doesn’t bring back files Archive.org has removed. If the page says the item is unavailable, choose another option.
+
+### TorBox
+
+TorBox is an optional way to download supported links. You need your own TorBox account; its plan, host list, quotas and file-size limits apply. You can keep using the original provider without it.
+
+1. In the browser version, open **App settings → Sources & accounts → TorBox**. You can do this on the PS4 or a paired phone or computer.
+2. Get your API key from [TorBox settings](https://torbox.app/settings), enter it and choose **Connect TorBox**. Keep the key private.
+3. Open a game and its **Download options**. Select **Source**, then **Download using → TorBox**, and choose your drive.
+4. Select **Download via TorBox**. Downloads shows the job as **via TorBox**.
+
+Connect once in the browser; the TV app and paired devices share the connection. If you aren’t connected, choose **Set up TorBox** under **Download using**.
+
+TorBox uses at most eight connections per game, even when you choose more. With TorBox connected, **Browse → Source → TorBox available** shows games with a supported option. If an option isn’t available through TorBox, choose the original provider; Orbit never switches a TorBox job to another method by itself. Disconnecting TorBox pauses its unfinished jobs and keeps their partial files; reconnect the same account to resume.
+
+## ZIP, RAR and 7z downloads
+
+Archive options are in the normal Format filter. Their size is the archive size; keep space for both the archive and the unpacked files. Multipart archives aren’t supported.
+
+Orbit unpacks on the selected PS4 drive after downloading. Follow the **Extracting** progress in Downloads. Orbit tries the known source passwords by itself (`DLPSGAME.COM`, `[DLPSGAME.COM]`, `SuperPSX`, `www.DLPSGAME.COM`, `downloadgameps3.com`, `hako` and `pippo`). If another password is needed, choose **Enter archive password**, then **Retry extraction**; Orbit reuses the downloaded archive.
+
+**Delete archives after extracting** is on by default, under **App settings → Storage & cleanup**. It removes the archive after a successful unpack and keeps archives that need a password or fail to unpack.
+
+## Your download queue
+
+### Follow your queue
+
+Use **Active**, **Finished**, **Failed** and **Cancelled** to find a download. Move waiting items up or down, pause and resume, or cancel.
+
+Choose **1–64 connections per download** in **App settings → Downloads**; eight is the default. Active downloads share up to 64 connections. If a provider refuses several connections, Orbit retries with fewer. Speed depends on the provider, network and drive.
+
+To remove a cancelled download and its partial file, use **Delete download** and confirm. Reconnect its drive first if it’s unplugged. If you kept the partial, resume it from Downloads.
+
+Keep the PS4 awake. Closing the TV app or the browser leaves downloads running; stopping Orbit interrupts them. Downloads interrupted unexpectedly come back paused for you to check. **Restart Orbit** resumes downloads that were running before that restart. Orbit doesn’t download in rest mode.
+
+**Notifications.** Open **App settings → Notifications** to choose PS4 alerts, phone or computer alerts through ntfy, or both. See [notifications](notifications.md).
+
+### Remove download history and files
+
+**Remove from history**, **Clear finished history** and **Clear cancelled history** let you choose what happens to the downloaded files.
+
+1. Check the paths and file sizes.
+2. Choose **Keep files** to remove only the history entry, or the delete option to remove the files too.
+3. Optionally select **Remember my choice**. Reset it in **App settings → Storage & cleanup → Removing download history → Ask every time**.
+
+Orbit protects files used by active downloads and installations. Reconnect a missing drive before deleting its files. If deleting fails, Orbit keeps the entry and shows the error. This removes downloaded files; it doesn’t uninstall a game.
+
+### Automatic PS4 shutdown
+
+Open **App settings → Downloads → Automatic PS4 shutdown**. Choose the whole queue or one download under **Wait for**, or choose **Shut down when finished** on a download and confirm. Other unfinished work still holds off shutdown. Orbit shows a 60-second countdown you can cancel. It’s off by default. See [Automatic shutdown](shutdown.md).
+
+### Simultaneous downloads
+
+Orbit downloads one game at a time by default. Choose **1–8** in **App settings → Downloads → Simultaneous downloads**. Games share the same connection and total speed; more games don’t add bandwidth. Lowering the limit lets current downloads finish first.
+
+### Download recovery settings
+
+Open **App settings → Downloads → Download recovery**.
+
+- **Automatic retries:** how many times Orbit tries again after a temporary failure, **0–10**; **0** turns retries off. The default is **3**.
+- **Wait between retries:** **10 seconds** by default.
+- **Wait before reconnecting** and **Reconnect below this speed:** when a download stays too slow, Orbit reconnects. By default, below **1 KiB/s** for **60 seconds**.
+
+Changes apply on the next attempt. Your partial file is kept, but a paused download still needs **Resume**. Retries can’t fix a removed file, an account limit or a full drive.
+
+## Where downloads are saved
+
+Downloads go to the selected drive’s `homebrew` folder:
+
+| Drive | Folder on the PS4 |
+| --- | --- |
+| Internal storage | `/data/homebrew/` |
+| USB drive | `/mnt/usb0/homebrew/`, `/mnt/usb1/homebrew/`, or the folder for the selected USB drive |
+
+USB numbering depends on how the console mounts your drives. Choose by the label Orbit shows and keep that drive connected. Orbit creates `homebrew` when needed and checks it can write there before downloading or resuming. A drive attached to your phone or computer isn’t a PS4 destination.
+
+**Downloads → Finished → Location** shows the saved file or unpacked folder in the TV app and the browser. It’s where the file was saved; it doesn’t check whether it has since been moved or deleted, and it doesn’t mean the game is installed.
+
+### Choose a drive with enough space
+
+Check the space estimate before starting. Orbit prefers your default drive while it has room; otherwise it suggests another drive with more space. A drive you chose yourself is never swapped silently. Archives and unpacked files can need space at the same time, and installing needs space on the PS4 too.
+
+## Get new games and corrected details
+
+Orbit checks for catalogue updates when it starts and every six hours. Use **App settings → Game catalogue → Refresh catalogue** to check now. You can browse the saved catalogue offline, and queued downloads keep the files you chose. New games and corrected details arrive without reinstalling Orbit.
+
+[Getting started](getting-started.md) · [Install games](install-games.md) · [Troubleshooting](troubleshooting.md)
