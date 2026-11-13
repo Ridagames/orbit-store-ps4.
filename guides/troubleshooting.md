@@ -138,6 +138,10 @@ Open **App settings → Diagnostics & about → View diagnostics**. In the brows
 
 You can also save a report as a file with **Save diagnostic report** in the TV app or the browser, then choose a PS4 drive. Attach the file yourself when reporting a problem.
 
+![Diagnostics & about in the PS4 TV app with View diagnostics and Save diagnostic report](../assets/0.0.1/native-diagnostics.jpg)
+
+*You choose whether to save and share a report.*
+
 When reporting a problem in [Issues](https://github.com/saawant12/orbit-store-ps4/issues), include the Orbit version, PS4 firmware, GoldHEN version, what you did and the error shown. For a display or navigation problem, include the interface (Store, Crossbar, Cinema or Panorama) and whether you used a controller, keyboard, mouse or touch. Remove private details before posting.
 
 [Getting started](getting-started.md) · [Downloads](downloads.md) · [Library](library.md) · [Appearance](appearance.md)

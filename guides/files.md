@@ -4,6 +4,10 @@
 
 Open **Library → Files** in the TV app or the browser. Choose internal storage or a connected USB drive. Each drive shows its free space.
 
+![Files in the PS4 TV app: Internal storage with folders, dates and a … button for each folder's actions](../assets/0.0.1/native-files.jpg)
+
+*Files in the PS4 TV app. Select a folder to open it; use its … button for actions.*
+
 ## Browse folders and choose actions
 
 Select a folder to open it. **Circle** or **Escape** returns to its parent folder, then the drive list, then Library. An open dialog or menu closes before you leave the folder. **Up one folder** and **All drives** are also available on screen.
