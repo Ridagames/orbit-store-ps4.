@@ -9,7 +9,7 @@
 3. If it has several packages, choose the one you want to install.
 4. Select **Install on PS4** and follow its installation status.
 
-The same controls are in the TV app and the browser, in all four interfaces. Downloading and installing have separate progress: a finished download means the files are saved, not that the game is installed.
+The same controls are in the TV app, the browser and Orbit Zero, in all four interfaces. Downloading and installing have separate progress: a finished download means the files are saved, not that the game is installed.
 
 The PS4 installs to its own installation storage. Choosing a download drive doesn’t choose where the game installs. Allow space for both copies during installation. Downloaded PKG and FPKG files stay on the drive by default.
 
@@ -20,6 +20,12 @@ Installation needs a jailbroken PS4 with GoldHEN. It doesn’t change a game’s
 ## Install from Files
 
 Open **Library → Files**, select a PKG or FPKG file, and choose **Install on PS4**. See [Files](files.md).
+
+## Install from Orbit Zero
+
+In [Orbit Zero](orbit-zero.md), you can download to **This computer** without a connected PS4. When you’re ready, pair or reconnect your PS4 and choose **Send to PS4**. After the transfer finishes, choose **Install on PS4** in Downloads, or open **Downloaded files** and choose it there.
+
+Installation runs on the PS4, not on your computer. Keep the PS4 awake and Orbit running on it. **Stream & install**, which installs straight from the computer without a copy on the PS4, isn’t available for PS4 yet.
 
 ## Add-ons and bundles
 

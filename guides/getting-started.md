@@ -4,24 +4,27 @@
 
 Orbit runs on your PS4. Use the TV with your controller, or pair a phone or computer to manage the same catalogue and download queue. Files go to the PS4's selected storage.
 
-**Two ways to use Orbit**
+**Ways to use Orbit**
 
 | Do this | Orbit appears in | What it is |
 |---|---|---|
 | Install `orbit_store_ps4.pkg` with your package installer | **Games** on your PS4 | The TV app, used with your controller. [Install it](#install-the-native-tv-app). |
 | Send `orbit_store.elf` to an ELF loader | **Internet Browser** on your PS4 | Opens Orbit in the PS4's browser. Keep Orbit's download service running on the PS4 to use it. [Set it up](#use-the-browser-version). |
+| Install [Orbit Zero](orbit-zero.md) | Your Mac, Windows or Linux computer | Downloads on your computer and sends the files to your PS4. The PS4 doesn't need internet. Needs Orbit Store 0.0.2 or later on the PS4. |
 
 The Games and browser versions share the same downloads, favourites and service settings, so seeing two Orbit entries on your PS4 is normal. Appearance is saved separately in each app or browser.
+
+**Prefer downloading on your computer?** [Orbit Zero](orbit-zero.md) is our desktop app for Mac, Windows and Linux. It starts Orbit on your PS4, downloads on your computer and sends the files over your home network. Vikingfile and AkiraBox pages open on the computer, where their check usually passes in seconds. See [Install Orbit Zero](orbit-zero-installation.md).
 
 ## What you need
 
 - A PS4 running a homebrew-capable jailbreak (for example GoldHEN). Orbit brings its own ELF loader (**elfldr**); to let Orbit start it, turn on GoldHEN's payload loader once: **GoldHEN → Servers Settings → Enable PayLoader Server**.
 - A package installer for the TV app (for example GoldHEN's **Debug Settings → Package Installer**).
-- Internet access on the console for direct provider downloads.
+- Internet access on the console for direct provider downloads. With Orbit Zero, the computer downloads instead.
 - Enough writable storage.
 - A phone or computer on the same local network, if you want to control Orbit from one.
 
-The current PS4 release is **Orbit Store 0.0.2**: **native app 0.0.2** with **download service 0.0.2**.
+The current PS4 release is **Orbit Store 0.0.2**: **native app 0.0.2** with **download service 0.0.2**, plus **Orbit Zero 1.9.1** for your computer.
 
 The instructions below use the default Store layout. If you choose another interface, check its settings entry under Appearance.
 
@@ -33,6 +36,7 @@ Choose the app you use; you do not need to download every asset.
 | --- | --- |
 | Native PS4 app | **`orbit_store_ps4.pkg`** and its checksum. Native app **0.0.2** already includes service **0.0.2** and elfldr. The app starts the service itself; nothing has to run first. |
 | Service started separately through an ELF loader | **`orbit_store.elf`** and its checksum. Send it once to an ELF loader on port 9021; Orbit then keeps its own copies current. |
+| Orbit Zero | The `Orbit-Zero-1.9.1-*` package for your computer. Zero gets Orbit for PS4 from the release and starts it with **Start Orbit on PS4**, so you don't need to download the ELF. The TV app is optional if you also want TV controls. |
 
 Installing a package or uploading an ELF does not replace an older service that is already running. Stop it with **Stop Orbit to restart** before starting the updated copy. In **Diagnostics & about**, the current versions are **native app 0.0.2** and **download service 0.0.2**. Later releases may update one without the other, so the two numbers can differ. Keep your pairing, settings and queue in place.
 
@@ -47,6 +51,8 @@ Download the ELF or PKG and its matching `.sha256` file from the **same release*
 | Windows PowerShell | `Get-FileHash .\orbit_store.elf -Algorithm SHA256` | `Get-FileHash .\orbit_store_ps4.pkg -Algorithm SHA256` |
 
 On macOS or Linux, the result should say **OK**. On Windows, open the `.sha256` file in a text editor and compare its 64-character checksum with PowerShell's **Hash** value; uppercase and lowercase letters are equivalent. If it differs, download the file again before loading it.
+
+Orbit Zero's packages use **`SHA256SUMS`** instead. See [Verify your download](orbit-zero-installation.md#verify-your-download).
 
 ## Install the native TV app
 
@@ -86,7 +92,7 @@ A drive connected to your phone or computer is not a PS4 destination. Attach you
 
 ### Choose your language
 
-Orbit Store supports **26 interface languages**: English, Arabic, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Simplified Chinese and Traditional Chinese.
+Orbit Store and Orbit Zero support **26 interface languages**: English, Arabic, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Simplified Chinese and Traditional Chinese.
 
 Open **Settings → Appearance → Language** (called **App settings** in Orbit Store's default layout). Choose a language or follow the system/browser language. Language choices stay on that device. Arabic uses a mirrored layout; Japanese, Chinese and Korean use fonts with their character sets. Changing the interface language does not change game or provider-page languages.
 
@@ -97,7 +103,7 @@ Open **Settings → Appearance → Language** (called **App settings** in Orbit 
 
 ### Choose your interface
 
-Choose **Store**, **Crossbar**, **Cinema** or **Panorama** in **App settings → Appearance** in native Store, or **Settings → Appearance** in the other native layouts. In the browser, use **App settings → Appearance** in Store or **Settings → Appearance** in another layout.
+Choose **Store**, **Crossbar**, **Cinema** or **Panorama** in **App settings → Appearance** in native Store, or **Settings → Appearance** in the other native layouts. In the browser, use **App settings → Appearance** in Store or **Settings → Appearance** in another layout. In Orbit Zero, use the palette-shaped **Appearance** button in Store’s top bar, or **Settings → Appearance** in another layout.
 
 Select **Keep** within 15 seconds to save your choice, or let the countdown return you to the previous interface. Downloads and favourites stay with you; the appearance choice is separate for each app or browser. The appearance settings also cover navigation, motion and the background. See [Appearance](appearance.md).
 
@@ -106,6 +112,8 @@ Select **Keep** within 15 seconds to save your choice, or let the countdown retu
 **TorBox:** to use optional TorBox downloads, connect your account in the browser's **App settings → Sources & accounts → TorBox**. Both apps can then use it for supported options. See [TorBox](downloads.md#torbox).
 
 **Archive.org:** for account-required Archive.org files, open **App settings → Sources & accounts → Archive.org** in either app and sign in. See [Archive.org sign-in](downloads.md#archiveorg-sign-in).
+
+Orbit Zero has its own TorBox, Archive.org and Vikingfile sign-ins on the computer, under **Settings → Sources & accounts**.
 
 ## Games and DLC
 
@@ -117,13 +125,13 @@ Downloading a PKG or FPKG saves a package to your selected drive. Choose **Insta
 
 ## Pair your phone or computer
 
-In the TV app, open **App settings → Pair a device** to see the console address and six-digit code. While Orbit is running, visit `http://<ps4-ip>:34177/` on the same network. Choose **Pair devices** and enter the six-digit code shown on the PS4. On the console, **Pair devices** keeps the code visible; **Show code on PS4** repeats its notification. Do not share the code publicly.
+In the TV app, open **App settings → Devices** to see the console address and six-digit code. While Orbit is running, visit `http://<ps4-ip>:34177/` on the same network. Choose **Pair devices** and enter the six-digit code shown on the PS4. On the console, **Pair devices** keeps the code visible; **Show code on PS4** repeats its notification. Do not share the code publicly.
 
 Your paired device controls the console's queue. For Vikingfile browser verification, use the PS4 screen to complete the provider steps even when you start from your phone.
 
 ### Use Orbit Zero on your computer
 
-Orbit Zero for Mac, Windows and Linux (it needs Orbit Store 0.0.2 or later on your PS4) downloads games on your computer and sends them to your PS4, opens Vikingfile and AkiraBox pages on the computer so there’s no Cloudflare wait, and can start Orbit for you. See [Use Orbit Zero with your PS4](orbit-zero.md).
+Orbit Zero for Mac, Windows and Linux (it needs Orbit Store 0.0.2 or later on your PS4) downloads games on your computer and sends them to your PS4, opens Vikingfile and AkiraBox pages on the computer so there’s no Cloudflare wait, and can start Orbit for you. See [Install Orbit Zero](orbit-zero-installation.md) and [Orbit Zero for PS4](orbit-zero.md).
 
 ### Use a local hostname
 

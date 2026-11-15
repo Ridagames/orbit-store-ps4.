@@ -14,7 +14,7 @@ Switch to **Browse** for search and filters. It sorts by **Release date (newest 
 
 ### Genres and filter counts
 
-Browse filters show how many games match each choice, and update as you change your search and other filters. Choices with no matches are dimmed. This works in the TV app and the browser, in all four layouts.
+Browse filters show how many games match each choice, and update as you change your search and other filters. Choices with no matches are dimmed. This works in the TV app, the browser and Orbit Zero, in all four layouts.
 
 ![Browse in the PS4 TV app with Genre choices and matching game counts](../assets/0.0.1/store-genres.jpg)
 
@@ -59,13 +59,15 @@ For a direct option, select **Download to PS4**. Orbit checks the file and the d
 
 ## Provider steps
 
-Provider pages open full screen on the PS4, even when you start from a paired phone. Only one provider page can be open at a time; **Cancel verification** closes it without adding a download. If the page times out, start the option again.
+Provider pages open full screen on the PS4, even when you start from a paired phone. With [Orbit Zero](orbit-zero.md), they open on the computer instead, where the check usually passes in seconds. Only one provider page can be open at a time; **Cancel verification** closes it without adding a download. If the page times out, start the option again.
 
 ### Vikingfile
 
 [Sign in to Vikingfile](vikingfile.md) first if you have an account. Choose the option and drive, then select **Download to PS4**. Orbit asks Vikingfile for the file with your session; if it gets a ready link, the download starts straight away.
 
 If Vikingfile needs verification, its page opens. Complete the verification, move the pointer to **Download** with the left stick and press ○. Orbit checks the link against the file you chose, closes the page and returns to the app. Follow its progress in **Downloads**.
+
+**Downloading through Orbit Zero?** Zero first asks Vikingfile for the file with its own saved sign-in. If verification is needed, Vikingfile opens on your computer. Complete any verification and wait without pressing **Download**. Zero catches the ready link and closes the page. With **Prefer PS4** in Zero’s **Settings → Downloads → Download preference**, Zero then hands the link to your PS4, which downloads the game itself; otherwise Zero downloads it and sends it over. See [Orbit Zero](orbit-zero.md#vikingfile-akirabox-and-archive-downloads).
 
 ![Vikingfile instructions in Download options: complete verification if shown, then select Download](../assets/0.0.1/store-download-options.jpg)
 
@@ -75,6 +77,8 @@ Choose the option and drive, then select **Open AkiraBox on PS4** in the TV app 
 
 AkiraBox may show an ad instead of the download. Close the ad and try again. If it keeps coming back, choose another source for the game. For a paused or failed AkiraBox download, use **Refresh download link**; Orbit keeps the partial file only if the new link points to the same file.
 
+In Orbit Zero, AkiraBox opens on your computer. Complete any verification and wait without pressing **Download**: the page closes by itself once the file is ready, and the download appears in your queue.
+
 ## Accounts and TorBox
 
 ### Archive.org sign-in
@@ -82,6 +86,8 @@ AkiraBox may show an ad instead of the download. Close the ad and try again. If 
 Some Archive.org files need an account. Public downloads work without signing in.
 
 Open **App settings → Sources & accounts → Archive.org** in the TV app or the browser. Enter your Archive.org email and password, select **Sign in**, and check that it says **Signed in**. Then try the download again. Orbit sends your details to Archive.org once and keeps only the sign-in on your PS4, never your password. The TV app and the browser share it. Sign out in the same place.
+
+Orbit Zero keeps its own sign-in on the computer: open **Settings → Sources & accounts → Archive.org** in Zero. If you use **Prefer PS4**, sign in on the PS4 as well for downloads your PS4 runs itself.
 
 Signing in helps with files that need an account; it doesn’t bring back files Archive.org has removed. If the page says the item is unavailable, choose another option.
 
@@ -98,13 +104,17 @@ Connect once in the browser; the TV app and paired devices share the connection.
 
 TorBox uses at most eight connections per game, even when you choose more. With TorBox connected, **Browse → Source → TorBox available** shows games with a supported option. If an option isn’t available through TorBox, choose the original provider; Orbit never switches a TorBox job to another method by itself. Disconnecting TorBox pauses its unfinished jobs and keeps their partial files; reconnect the same account to resume.
 
+**TorBox in Orbit Zero.** Open **Settings → Sources & accounts → TorBox** in Zero and connect your API key on the computer, then choose **Download using → TorBox** on a supported option. Zero downloads to the computer; choose **This computer** to keep the game there, or a PS4 drive to send it over. This connection is separate from the PS4’s TorBox connection.
+
 ## ZIP, RAR and 7z downloads
 
 Archive options are in the normal Format filter. Their size is the archive size; keep space for both the archive and the unpacked files. Multipart archives aren’t supported.
 
-Orbit unpacks on the selected PS4 drive after downloading. Follow the **Extracting** progress in Downloads. Orbit tries the known source passwords by itself (`DLPSGAME.COM`, `[DLPSGAME.COM]`, `SuperPSX`, `www.DLPSGAME.COM`, `downloadgameps3.com`, `hako` and `pippo`). If another password is needed, choose **Enter archive password**, then **Retry extraction**; Orbit reuses the downloaded archive.
+Orbit unpacks on the selected PS4 drive after downloading. Orbit Zero unpacks on the computer first, then sends the unpacked files to your PS4 drive. Follow the **Extracting** progress in Downloads. Orbit tries the known source passwords by itself (`DLPSGAME.COM`, `[DLPSGAME.COM]`, `SuperPSX`, `www.DLPSGAME.COM`, `downloadgameps3.com`, `hako` and `pippo`). If another password is needed, choose **Enter archive password**, then **Retry extraction**; Orbit reuses the downloaded archive.
 
-**Delete archives after extracting** is on by default, under **App settings → Storage & cleanup**. It removes the archive after a successful unpack and keeps archives that need a password or fail to unpack.
+**Delete archives after extracting** is on by default, under **App settings → Storage & cleanup** on the PS4, or **Settings → Storage & cleanup** in Orbit Zero. It removes the archive after a successful unpack and keeps archives that need a password or fail to unpack.
+
+In Zero, the unpacked files on the computer follow the separate **Computer cache** setting. **Automatically remove after transfer** is off by default; turning it on removes those copies only after the PS4 confirms the transfer.
 
 ## Your download queue
 
@@ -132,13 +142,15 @@ Keep the PS4 awake. Closing the TV app or the browser leaves downloads running; 
 
 Orbit protects files used by active downloads and installations. Reconnect a missing drive before deleting its files. If deleting fails, Orbit keeps the entry and shows the error. This removes downloaded files; it doesn’t uninstall a game.
 
+In Orbit Zero, **Remove from Downloads** can include the computer copy, the PS4 copy or both. Check the selected copies before confirming. See [Pause, reconnect and clean up](orbit-zero.md#pause-reconnect-and-clean-up).
+
 ### Automatic PS4 shutdown
 
-Open **App settings → Downloads → Automatic PS4 shutdown**. Choose the whole queue or one download under **Wait for**, or choose **Shut down when finished** on a download and confirm. Other unfinished work still holds off shutdown. Orbit shows a 60-second countdown you can cancel. It’s off by default. See [Automatic shutdown](shutdown.md).
+Open **App settings → Downloads → Automatic PS4 shutdown**. In Orbit Zero, use **Settings → Downloads** while connected to the PS4. Choose the whole queue or one download under **Wait for**, or choose **Shut down when finished** on a download and confirm. Other unfinished work still holds off shutdown. Orbit shows a 60-second countdown you can cancel. It’s off by default. See [Automatic shutdown](shutdown.md).
 
 ### Simultaneous downloads
 
-Orbit downloads one game at a time by default. Choose **1–8** in **App settings → Downloads → Simultaneous downloads**. Games share the same connection and total speed; more games don’t add bandwidth. Lowering the limit lets current downloads finish first.
+Orbit downloads one game at a time by default. Choose **1–8** in **App settings → Downloads → Simultaneous downloads**. Games share the same connection and total speed; more games don’t add bandwidth. Lowering the limit lets current downloads finish first. Orbit Zero has its own setting, **Settings → Downloads → Simultaneous computer downloads**, and sends files to the PS4 one at a time while computer downloads continue.
 
 ### Download recovery settings
 
@@ -150,9 +162,11 @@ Open **App settings → Downloads → Download recovery**.
 
 Changes apply on the next attempt. Your partial file is kept, but a paused download still needs **Resume**. Retries can’t fix a removed file, an account limit or a full drive.
 
+These settings apply to downloads your PS4 runs. For computer downloads, use **Settings → Downloads → Download recovery** in Orbit Zero. The computer and the PS4 keep separate settings.
+
 ## Where downloads are saved
 
-Downloads go to the selected drive’s `homebrew` folder:
+Downloads and Orbit Zero transfers go to the selected drive’s `homebrew` folder:
 
 | Drive | Folder on the PS4 |
 | --- | --- |
@@ -163,9 +177,13 @@ USB numbering depends on how the console mounts your drives. Choose by the label
 
 **Downloads → Finished → Location** shows the saved file or unpacked folder in the TV app and the browser. It’s where the file was saved; it doesn’t check whether it has since been moved or deleted, and it doesn’t mean the game is installed.
 
+Orbit Zero also keeps a copy in the computer’s download folder unless you turn on removal after transfer; see [Download settings](orbit-zero.md#download-settings). Zero’s download details show the PS4 **Location**. **Settings → Storage & cleanup → Computer download folder** sets where new computer downloads go; unfinished ones stay in their original folder.
+
 ### Choose a drive with enough space
 
 Check the space estimate before starting. Orbit prefers your default drive while it has room; otherwise it suggests another drive with more space. A drive you chose yourself is never swapped silently. Archives and unpacked files can need space at the same time, and installing needs space on the PS4 too.
+
+Orbit Zero shows each PS4 drive’s free space and the space left after queued transfers, blocks a drive known to be too small and checks the computer’s space too. For a Zero transfer already in the queue, [Change drive](orbit-zero.md#change-the-ps4-drive) reuses the computer copy.
 
 ## Get new games and corrected details
 

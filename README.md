@@ -38,7 +38,7 @@ Explore **1,110 PS4 games** with **1,227 download options**, plus **533 DLCs and
 - **One link per download.** PKG and FPKG, with ZIP, RAR and 7z archives unpacked automatically.
 - **Choose 1–64 connections per download**, with eight as the default. Active downloads share a limit of 64; TorBox uses at most eight per game. [Guide](guides/downloads.md#follow-your-queue)
 - **Filter for TorBox.** With your account connected, choose **Source → TorBox available** to find supported options.
-- **Orbit Zero for Mac, Windows and Linux.** Download on your computer and send games to your PS4, skip the Cloudflare wait on Vikingfile and AkiraBox, and start Orbit from your computer. [Guide](guides/orbit-zero.md)
+- **Orbit Zero for Mac, Windows and Linux.** Download on your computer and send games to your PS4, skip the Cloudflare wait on Vikingfile and AkiraBox, and start Orbit from your computer. [Guide](guides/orbit-zero.md) · [Install](guides/orbit-zero-installation.md)
 - **Optional accounts** for [TorBox](guides/downloads.md#torbox), [Archive.org](guides/downloads.md#archiveorg-sign-in) and [Vikingfile](guides/vikingfile.md).
 - **Notifications** on your PS4, phone or computer. [Setup](guides/notifications.md)
 - **Optional automatic shutdown** after downloads and installations finish, with a countdown you can cancel. [Guide](guides/shutdown.md)
@@ -142,6 +142,26 @@ Orbit supports **English, Arabic, Czech, Danish, Dutch, Finnish, French, German,
 ![Orbit Store 0.0.1 Storage & cleanup settings in Hungarian on PS4](assets/0.0.1/native-settings-hu.jpg)
 
 Language settings change Orbit’s menus; each game keeps its own language settings. See [language settings](guides/getting-started.md#choose-your-language) for instructions.
+
+## Orbit Zero for Mac, Windows and Linux
+
+Orbit Zero is our desktop companion for Mac, Windows and Linux. [Download Orbit Zero](https://github.com/saawant12/orbit-store-ps4/releases/latest) (the `Orbit-Zero-1.9.1-*` files) and use it with Orbit Store 0.0.2 or later on your PS4.
+
+Download on your computer and send games to your PS4 over your home network. **Works over Wi-Fi or Ethernet. Your PS4 doesn’t need internet access for these downloads.**
+
+- **No Cloudflare wait.** Vikingfile and AkiraBox pages open on your computer, where their check usually passes in seconds. [How it works](guides/orbit-zero.md#vikingfile-akirabox-and-archive-downloads)
+- **Start Orbit from your computer.** Choose **PS4** and select **Start Orbit on PS4**. Zero gets Orbit for PS4 and starts it for you. Your PS4 needs GoldHEN running.
+- **Download now and send to PS4 later.** Choose **Save to → This computer** to keep a game on your computer. Connect your PS4 when ready, then select **Send to PS4** in Downloads. [See the steps](guides/orbit-zero.md#download-now-and-send-to-your-ps4-later)
+- **Choose where downloads run.** Use **Computer** to download through your computer, or **Prefer PS4** to let the PS4 download directly. For Vikingfile and AkiraBox, **Prefer PS4** hands the download link to your PS4 once the check passes on the computer.
+- **PS4 games only.** With a PS4 paired, Browse and Add-ons list PS4 games and add-ons only.
+- **Follow each stage.** See the computer download, unpacking and PS4 transfer separately, with controls to pause, resume and reconnect.
+- **Install after transfer.** Choose **Install on PS4** once a game or add-on reaches the console. **Stream & install** isn’t available for PS4 yet.
+- **Recover an interrupted transfer.** Resume after a connection failure, reconnect your PS4 at its new address, or remove a stuck entry while keeping its files. [Compare the recovery choices](guides/orbit-zero.md#pause-reconnect-and-clean-up)
+- **Your PS4 from the computer.** Library, Files, saved filters and automatic PS4 shutdown work with the paired PS4.
+- **Use your accounts on the computer.** **Settings → Sources & accounts** has Archive.org and Vikingfile sign-in, plus TorBox. They’re separate from the accounts on your PS4.
+- **One Orbit Zero for PS5 and PS4.** Each console gets its own profile, with its own pairing, games and downloads. [PS5 and PS4 together](guides/orbit-zero.md#ps5-and-ps4-together)
+
+[Install on Mac, Windows or Linux](guides/orbit-zero-installation.md) · [Set up a PS4 without internet](guides/orbit-zero-offline-ps4.md) · [Connect another app](guides/orbit-zero-integrations.md)
 
 ## Beta status
 

@@ -1,6 +1,6 @@
 # Choose your Orbit interface
 
-**For Orbit Store 0.0.2 for PS4.** Orbit offers four interfaces: **Store**, **Crossbar**, **Cinema** and **Panorama**, in the TV app and the browser. Each changes the layout and navigation while keeping your catalogue, favourites and download queue. Library, Files, Add-ons and saved filters are in all four.
+**For Orbit Store 0.0.2 for PS4.** Orbit offers four interfaces: **Store**, **Crossbar**, **Cinema** and **Panorama**, in the TV app, the browser and [Orbit Zero](orbit-zero.md). Each changes the layout and navigation while keeping your catalogue, favourites and download queue. Library, Files, Add-ons and saved filters are in all four.
 
 ## Switch interfaces
 
@@ -8,6 +8,8 @@
 | --- | --- |
 | TV app or browser using Store | **App settings → Appearance** |
 | TV app or browser using Crossbar, Cinema or Panorama | **Settings → Appearance** |
+| Orbit Zero using Store | The palette-shaped **Appearance** button in the top bar |
+| Orbit Zero using Crossbar, Cinema or Panorama | **Settings → Appearance** |
 
 Choose an interface, then select **Keep Store**, **Keep Crossbar**, **Keep Cinema** or **Keep Panorama** when **Keep this interface?** appears. You have **15 seconds** to confirm. **Switch back**, or letting the countdown finish, returns to your previous interface.
 
@@ -137,7 +139,7 @@ Dialogs and menus have their own controls. While **Keep this interface?** is ope
 
 ## Find settings after switching
 
-Open **App settings** in the default Store layout, or **Settings** in the other layouts. The category names stay the same: **Downloads**, **Storage & cleanup**, **Sources & accounts**, **Devices**, **Appearance**, **Notifications**, **Game catalogue**, **Updates & startup**, **Diagnostics & about** and **Support Orbit**. See [Settings](settings.md).
+Open **App settings** in the default Store layout, or **Settings** in the other layouts. The category names stay the same: **Downloads**, **Storage & cleanup**, **Sources & accounts**, **Devices**, **Appearance**, **Notifications**, **Game catalogue**, **Updates & startup**, **Diagnostics & about** and **Support Orbit**. Orbit Zero has a **Settings** entry in every layout; the gear in Downloads opens its **Downloads** category directly. See [Settings](settings.md), including which Zero settings affect the computer and which affect the PS4.
 
 Every layout uses the same games and enabled sources. Browse has Genre, Tags and the other filters with matching game counts in every layout.
 
@@ -147,18 +149,18 @@ Every layout uses the same games and enabled sources. Browse has Genre, Tags and
 
 ## Language
 
-Open **App settings → Appearance → Language** in the Store layout, or **Settings → Appearance → Language** in the others.
+Open **App settings → Appearance → Language** in the Store layout, or **Settings → Appearance → Language** in the others and in Orbit Zero. Zero’s Store layout also has the globe-shaped **Language** button in the top bar.
 
 Orbit supports **26 languages**: English, Arabic, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Simplified Chinese and Traditional Chinese.
 
-Choose a language or follow the system or browser language. Arabic mirrors the layout and left-right navigation; English game names keep their reading direction. Numbers, dates and sizes follow the selected language. Game descriptions and provider pages may stay in their original language. The choice is saved separately for the TV app and each browser.
+Choose a language or follow the system or browser language. Arabic mirrors the layout and left-right navigation; English game names keep their reading direction. Numbers, dates and sizes follow the selected language. Game descriptions and provider pages may stay in their original language. The choice is saved separately for the TV app, each browser and Orbit Zero.
 
 ## Where your choice is saved
 
-Confirming an interface saves it for that app or browser. The TV app, the PS4 browser and a paired phone can each use a different layout; they don’t share appearance choices.
+Confirming an interface saves it for that app or browser. The TV app, the PS4 browser, a paired phone and Orbit Zero can each use a different layout; they don’t share appearance choices.
 
 In a browser, the choice belongs to that browser and address. Opening Orbit by a different IP address or hostname can start with Store again. Clearing site data or using a private window can also reset it.
 
 If your choice switches back right away, select **Keep** before the countdown ends. Missing artwork is usually a network or image-host problem; changing interfaces doesn’t fix it. See [Troubleshooting](troubleshooting.md#a-game-or-image-is-missing).
 
-[Getting started](getting-started.md) · [Downloads](downloads.md) · [Settings](settings.md) · [Troubleshooting](troubleshooting.md)
+[Getting started](getting-started.md) · [Downloads](downloads.md) · [Settings](settings.md) · [Orbit Zero](orbit-zero.md) · [Troubleshooting](troubleshooting.md)

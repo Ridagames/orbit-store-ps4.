@@ -32,11 +32,11 @@ If a TV app update still opens the previous version, close the app with **PS but
 
 ### Automatic shutdown hasn’t started
 
-Check **App settings → Downloads → Automatic PS4 shutdown**. **Wait for** doesn’t ignore other unfinished work: paused or failed downloads, pending installation checks, and active file operations or updates hold off shutdown. A failed installation cancels the plan. When all work is finished, the countdown lasts 60 seconds. See [Automatic shutdown](shutdown.md).
+Check **App settings → Downloads → Automatic PS4 shutdown**, or **Settings → Downloads** in Orbit Zero. **Wait for** doesn’t ignore other unfinished work: paused or failed downloads, pending installation checks, active file operations or updates, and a busy Orbit Zero computer that disconnected hold off shutdown. A failed installation cancels the plan. When all work is finished, the countdown lasts 60 seconds. See [Automatic shutdown](shutdown.md).
 
 ### The selected drive is too small
 
-Check free space and queued work in the download options. Archives may need room for the archive and the unpacked files together, and installing needs extra console storage. Choose another drive before starting, or free up space and resume.
+Check free space and queued work in the download options. Archives may need room for the archive and the unpacked files together, and installing needs extra console storage. Choose another drive before starting, or free up space and resume. If Orbit Zero still has the computer copy, use **Change drive** on that download to send it to another PS4 drive without downloading it again.
 
 ## Finding and downloading games
 
@@ -73,13 +73,15 @@ Turn on Vikingfile under **Sources & accounts** and [sign in](vikingfile.md) in 
 
 If the page times out or changes, go back to Orbit and try that option again. Cancel an open provider page before starting another. A file that doesn’t match the selected option isn’t queued.
 
+If the page takes minutes or doesn’t work on your PS4, use [Orbit Zero](orbit-zero.md) on a computer: Vikingfile opens there, and its check usually passes in seconds. In Zero, complete any verification and wait without pressing **Download**.
+
 ### AkiraBox doesn’t enter Downloads
 
-Open the download page from Orbit, complete any verification, then select **Download**. AkiraBox may show an ad instead; close it and try again, or choose another source for the game. If the page times out, go back to Orbit and open it again. For a paused or failed download, use **Refresh download link**.
+Open the download page from Orbit, complete any verification, then select **Download**. AkiraBox may show an ad instead; close it and try again, or choose another source for the game. If the page times out, go back to Orbit and open it again. For a paused or failed download, use **Refresh download link**. In Orbit Zero, AkiraBox opens on the computer: complete any verification and wait without pressing **Download**.
 
 ### Archive.org reports HTTP 401, 403 or 404
 
-Some files need an Archive.org account. Follow [Archive.org sign-in](downloads.md#archiveorg-sign-in), then retry. If the page says the item was removed or is unavailable, signing in won’t bring it back; choose another source. An HTTP code alone doesn’t show which case applies.
+Some files need an Archive.org account. Follow [Archive.org sign-in](downloads.md#archiveorg-sign-in) in the app handling the download, then retry. Orbit on the PS4 and Orbit Zero keep separate sign-ins. If the page says the item was removed or is unavailable, signing in won’t bring it back; choose another source. An HTTP code alone doesn’t show which case applies.
 
 ### Archive needs a password
 
@@ -98,6 +100,8 @@ If the drive still doesn’t appear, include your firmware, Orbit version and a 
 Library shows installed games. A finished download is a saved file until you install it: open the download and choose **Install on PS4**. See [installing games](install-games.md).
 
 To find the file, check **Downloads → Finished → Location**, then look at that path in **Library → Files**. Unpacked downloads may be a folder with several files. The recorded path stays in history even if the file is later moved or deleted.
+
+In Orbit Zero, a download’s **Location** shows where it was saved on the PS4. For **Send to PS4**, wait for **Transfer to PS4** to finish too.
 
 ### A downloaded PKG or FPKG game doesn’t appear
 
@@ -130,6 +134,30 @@ Select **Keep** before the 15-second countdown ends. **Switch back**, or not ans
 - **Circle leaves a folder:** it goes to the parent folder, then all drives, then Library.
 - **Vikingfile says sign-in couldn’t be confirmed:** use **Check sign-in** or open its account page. A network error or provider check doesn’t mean you’re signed out.
 - **Vikingfile's sign-in page freezes or closes the browser:** sign in on a computer instead and paste a [pass from another device](vikingfile.md#use-a-pass-from-another-device) into Orbit (0.0.2 or later).
+
+## Orbit Zero
+
+### Orbit Zero can’t start or reach Orbit on the PS4
+
+Check that GoldHEN is running, the PS4’s IP address is current and both devices are on the same home network. Allow Orbit Zero on the local network or through the computer’s firewall. For the messages Zero shows, see [If the connection fails](orbit-zero-installation.md#if-the-connection-fails).
+
+### An Orbit Zero transfer is stuck after sleep or disconnection
+
+Wake the computer and the PS4, keep the original PS4 drive connected, and reconnect in **Console**. Start Orbit on the PS4 if it stopped. Keep the computer’s partial file, then select **Resume** on the interrupted transfer. If the PS4’s IP address or pairing changed, see [Reconnect after an address change](orbit-zero.md#reconnect-after-an-address-change). Orbit checks the saved files before continuing; it doesn’t restart every paused transfer by itself.
+
+If other games show **Waiting to transfer**, an earlier transfer may still hold their turn. In Downloads, choose what you want:
+
+- **Resume** to continue that transfer.
+- **Cancel and remove partials** to delete its unfinished files after you confirm, and start again.
+- **Stop transfer** to keep the files already sent and free the queue. **A stopped transfer can’t resume afterward.**
+- **Restart PS4 transfer**, when offered, to send the computer copy again from the start.
+- **Remove from Downloads** to clear a stuck entry while keeping its files. If the PS4 is still blocked afterward, use **Recover downloads → Review PS4 transfer**.
+
+Cancelling or stopping a transfer the PS4 has already started needs an answer from that PS4. If it can’t confirm, reconnect and try again. If Zero asks for a newer Orbit on the PS4, see [Update Orbit on your PS4](orbit-zero-installation.md#update-orbit-on-your-ps4).
+
+### I removed a download but still have its computer copy
+
+In Orbit Zero, open **Downloads → Recover downloads → Choose file** and choose the finished game file. Keep the name and folder Orbit used. Check the matching game and destination, add it back to the queue, then select **Resume**. See [Recover a finished computer download](orbit-zero.md#recover-a-finished-computer-download).
 
 ## Reporting a problem
 

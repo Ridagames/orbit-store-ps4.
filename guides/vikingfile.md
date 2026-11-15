@@ -6,7 +6,7 @@ Vikingfile identifies an account with an **account hash**: the private code it g
 
 ## Sign in
 
-There are two ways to sign in: on Vikingfile's page on your PS4 (below), or with a [pass from another device](#use-a-pass-from-another-device) when that page doesn't work on your PS4.
+There are two ways to sign in on your PS4: on Vikingfile's page on your PS4 (below), or with a [pass from another device](#use-a-pass-from-another-device) when that page doesn't work on your PS4. Orbit Zero on a computer has [its own sign-in](#on-your-computer).
 
 In the TV app, open **App settings → Sources & accounts** and scroll to **Vikingfile**. In the browser, open **App settings → Sources & accounts → Vikingfile** (or **Settings → Sources & accounts → Vikingfile** in Crossbar, Cinema and Panorama). Choose **Open Vikingfile account**. On Vikingfile’s official page, enter your account code, complete verification if asked and select **Login**. Return to Orbit and choose **Check sign-in**.
 
@@ -38,6 +38,12 @@ Orbit tries the pass first for Vikingfile downloads. If Vikingfile has ended it,
 
 To remove the pass, choose **Forget pass** in the Vikingfile settings, in the browser version or the TV app.
 
+## On your computer
+
+In [Orbit Zero](orbit-zero.md), open **Settings → Sources & accounts → Vikingfile**, enter your account code and choose **Sign in**. Zero fills in the account field on Vikingfile’s official page. Complete any verification there. Zero clears the account field after submitting, and the sign-in stays on that computer. Use **Check sign-in** or **Sign out** in the same settings.
+
+The computer’s sign-in and the PS4’s are separate. Pairing doesn’t copy either one to the other. With Orbit Zero, Vikingfile pages open on the computer, so you don’t need the PS4’s sign-in page at all.
+
 ## Downloading after sign-in
 
 For a Vikingfile game, choose a drive and select **Download to PS4**. Orbit first asks Vikingfile for the file using your session. If Vikingfile returns a ready link, the download starts without opening the provider page.
@@ -46,4 +52,4 @@ If Vikingfile asks for verification, its page opens full screen. Complete the ve
 
 Premium features are controlled by Vikingfile. **Signed in** doesn’t mean the account is Premium or that every file skips verification. Expired sessions and provider checks fall back to the provider page; sign in again if needed. Free accounts still work.
 
-[Downloads](downloads.md) · [Settings](settings.md) · [Troubleshooting](troubleshooting.md)
+[Downloads](downloads.md) · [Settings](settings.md) · [Orbit Zero](orbit-zero.md) · [Troubleshooting](troubleshooting.md)

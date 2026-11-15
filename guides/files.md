@@ -2,7 +2,7 @@
 
 **For Orbit Store 0.0.2 for PS4.**
 
-Open **Library → Files** in the TV app or the browser. Choose internal storage or a connected USB drive. Each drive shows its free space.
+Open **Library → Files** in the TV app, the browser or [Orbit Zero](orbit-zero.md) on a paired computer. Choose internal storage or a connected USB drive. Each drive shows its free space.
 
 ![Files in the PS4 TV app: Internal storage with folders, dates and a … button for each folder's actions](../assets/0.0.1/native-files.jpg)
 
@@ -35,6 +35,6 @@ Downloads can continue, start or resume while you change files. Orbit keeps enou
 
 ## Save a file to another device
 
-On a paired phone or computer, **Save to this device** downloads the selected file. The PS4’s own browser and the TV app don’t offer this action.
+On a paired phone or computer, **Save to this device** downloads the selected file. In Orbit Zero, **Save to this computer** saves it in the computer’s download folder; an existing file there is kept and the new copy gets a numbered name. The PS4’s own browser and the TV app don’t offer this action.
 
 [Library](library.md) · [Install games](install-games.md) · [Troubleshooting](troubleshooting.md)

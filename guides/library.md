@@ -1,6 +1,6 @@
 # Your Library and storage
 
-**For Orbit Store 0.0.2 for PS4.** Library is in the TV app and the browser. Both show the same PS4 games and drives. Store, Crossbar, Cinema and Panorama show it in different layouts; changing [appearance](appearance.md) doesn’t change which games are installed.
+**For Orbit Store 0.0.2 for PS4.** Library is in the TV app, the browser and [Orbit Zero](orbit-zero.md) on a computer paired with the PS4. All three show the same PS4 games and drives. Store, Crossbar, Cinema and Panorama show it in different layouts; changing [appearance](appearance.md) doesn’t change which games are installed.
 
 Library shows the games installed on your PS4. Orbit reads them from the console itself; you don’t need ShadowMount or any other tool. It works independently of your download-source choices.
 
@@ -15,7 +15,7 @@ Search by title, title ID or path, and filter by status, location or format.
 
 Library shows installed games, while Browse uses Orbit’s download catalogue. A finished download is a saved file, not an installed game. Choose **Install on PS4** on the download to install it; it then appears in Library. See [installing games](install-games.md).
 
-To find a finished download’s file, open **Downloads → Finished → Location** in the TV app or the browser. That saved path is separate from Library.
+To find a finished download’s file, open **Downloads → Finished → Location** in the TV app or the browser. That saved path is separate from Library. In Orbit Zero, a download’s **Location** shows where it was saved on the PS4; for a download kept on the computer, use **Show in folder**.
 
 ## DLC and installed games
 

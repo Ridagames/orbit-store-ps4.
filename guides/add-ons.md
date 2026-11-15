@@ -6,7 +6,7 @@ The catalogue has **533 add-ons for 120 games**, with **535 download options**. 
 
 ## Find add-ons
 
-Open **Add-ons**, after **Browse** in navigation, or choose **Add-ons (count)** on a game’s details page to see its extras. The page works in the TV app and the browser, in Store, Crossbar, Cinema and Panorama.
+Open **Add-ons**, after **Browse** in navigation, or choose **Add-ons (count)** on a game’s details page to see its extras. The page works in the TV app, the browser and [Orbit Zero](orbit-zero.md), in Store, Crossbar, Cinema and Panorama. With a PS4 paired, Orbit Zero lists PS4 add-ons only.
 
 Search by the DLC name or base-game name. Filter by **Type**, **Source** and **Region**; **Recently added** is the default order. Enabled source settings also apply to add-ons.
 
@@ -33,7 +33,9 @@ Seeing a base game in Library doesn’t mark its DLC as installed. Likewise, an 
 
 Open the add-on and choose a source and drive in the usual download options. Archive.org sign-in, Vikingfile sign-in, TorBox for supported sources, provider verification, archive passwords and download recovery work as they do for games.
 
-Downloads identify both the base game and add-on, for example **Cuphead · The Delicious Last Course · DLC**. ZIP, RAR and 7z files unpack on the selected PS4 drive.
+Downloads identify both the base game and add-on, for example **Cuphead · The Delicious Last Course · DLC**. ZIP, RAR and 7z files unpack on the selected PS4 drive, or on the computer before Orbit Zero sends them.
+
+In Orbit Zero, choose **This computer** to download without a connected PS4. Later, connect your PS4 and choose **Send to PS4**. See [Orbit Zero](orbit-zero.md#download-now-and-send-to-your-ps4-later).
 
 When the download finishes, open it in **Downloads** and choose **Downloaded files** or **Install on PS4**. Review the base-game requirements again, select the package and choose **Install on PS4**.
 
@@ -47,4 +49,4 @@ Check your enabled sources and clear the Add-ons filters. If you opened the page
 
 For a problem report, include the add-on, selected source and format, the base game’s title ID and version, and the exact error.
 
-[Install games](install-games.md) · [Downloads](downloads.md) · [Library](library.md)
+[Install games](install-games.md) · [Downloads](downloads.md) · [Library](library.md) · [Orbit Zero](orbit-zero.md)
