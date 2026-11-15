@@ -6,7 +6,7 @@ Orbit runs on your PS4. Pick a game, choose its source and format, and Orbit dow
 
 Explore **1,434 PS4 games** with **1,551 download options**, plus **533 DLCs and add-ons with 535 options across 120 games**. Choose your source and save to your preferred drive. New games, add-ons and corrected links arrive through catalogue updates.
 
-**[Orbit Zero](#orbit-zero-for-mac-windows-and-linux)** brings Orbit to Mac, Windows and Linux. Download games on your computer and send them to your PS4 straight away or later, without your PS4 needing internet access, and skip the Cloudflare wait on Vikingfile and AkiraBox.
+**[Orbit Zero](#orbit-zero-for-mac-windows-and-linux)** brings Orbit to Mac, Windows and Linux. Download games on your computer and send them to your PS4 straight away or later, without your PS4 needing internet access.
 
 <p>
   <a href="assets/0.0.1/native-crossbar-discover.jpg"><img src="assets/0.0.1/native-crossbar-discover.jpg" width="48%" alt="Crossbar Discover in the PS4 TV app with Crysis Remastered selected"></a>
