@@ -117,7 +117,7 @@ Orbit Zero has its own TorBox, Archive.org and Vikingfile sign-ins on the comput
 
 ## Games and DLC
 
-The catalogue has **1,110 PS4 games** with **1,227 download options** from Archive.org, Vikingfile and AkiraBox.
+The catalogue has **1,434 PS4 games** with **1,551 download options** from Archive.org, Vikingfile and AkiraBox.
 
 Downloading a PKG or FPKG saves a package to your selected drive. Choose **Install on PS4** on the finished download to hand it to the console's package installer. See [installing games](install-games.md).
 

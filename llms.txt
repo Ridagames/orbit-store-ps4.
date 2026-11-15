@@ -8,7 +8,7 @@ The current PS4 release is Orbit Store 0.0.2 (beta): native TV app 0.0.2 (orbit_
 
 ## Catalogue
 
-The PS4 catalogue lists 1,110 PS4 games with 1,227 single-file download options from Archive.org, Vikingfile and AkiraBox, plus 533 add-ons with 535 options across 120 base games. There is no platform filter; every entry is a PS4 (CUSA) title. Formats are PKG and FPKG packages, either raw or inside a single ZIP, RAR or 7z archive. Multipart archives are not supported. Sources are opt-in.
+The PS4 catalogue lists 1,434 PS4 games with 1,551 single-file download options from Archive.org, Vikingfile and AkiraBox, plus 533 add-ons with 535 options across 120 base games. There is no platform filter; every entry is a PS4 (CUSA) title. Formats are PKG and FPKG packages, either raw or inside a single ZIP, RAR or 7z archive. Multipart archives are not supported. Sources are opt-in.
 
 Discover opens first. Store shows New on Orbit, Latest releases and an All games grid; Crossbar, Cinema and Panorama arrange these collections differently. Browse supports source, format, genre, tag, region and download-size filters, search, sorting, Installed games and shared favourites. Filter choices show matching game counts. Genre allows several selections; only genres recorded for at least ten games appear. Tags are PlayStation exclusive, Local co-op, Split-screen, Open world, Story-driven, Soulslike, Turn-based and PSVR supported. In the TV app, Square toggles favourites in Store; Triangle does so in Crossbar, Cinema and Panorama.
 

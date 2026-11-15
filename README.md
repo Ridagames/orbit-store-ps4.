@@ -4,7 +4,7 @@
 
 Orbit runs on your PS4. Pick a game, choose its source and format, and Orbit downloads it straight to the console or a USB drive plugged into it, then installs it for you. Use it on your TV with a controller from the Games row, or pair a phone or computer to manage the same downloads over your home network.
 
-Explore **1,110 PS4 games** with **1,227 download options**, plus **533 DLCs and add-ons with 535 options across 120 games**. Choose your source and save to your preferred drive. New games, add-ons and corrected links arrive through catalogue updates.
+Explore **1,434 PS4 games** with **1,551 download options**, plus **533 DLCs and add-ons with 535 options across 120 games**. Choose your source and save to your preferred drive. New games, add-ons and corrected links arrive through catalogue updates.
 
 **[Orbit Zero](#orbit-zero-for-mac-windows-and-linux)** brings Orbit to Mac, Windows and Linux. Download games on your computer and send them to your PS4 straight away or later, without your PS4 needing internet access, and skip the Cloudflare wait on Vikingfile and AkiraBox.
 
