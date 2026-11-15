@@ -1,6 +1,6 @@
 # When something needs attention
 
-**For Orbit Store 0.0.1 for PS4.** Settings paths below use the default Store layout. In Crossbar, Cinema and Panorama, the main menu is called **Settings**; see [Find settings after switching](appearance.md#find-settings-after-switching).
+**For Orbit Store 0.0.2 for PS4.** Settings paths below use the default Store layout. In Crossbar, Cinema and Panorama, the main menu is called **Settings**; see [Find settings after switching](appearance.md#find-settings-after-switching).
 
 ## Opening and updating Orbit
 
@@ -129,6 +129,7 @@ Select **Keep** before the 15-second countdown ends. **Switch back**, or not ans
 - **A copied source changed:** keep the original and retry after whatever was changing it has stopped. Orbit didn’t keep the incomplete copy.
 - **Circle leaves a folder:** it goes to the parent folder, then all drives, then Library.
 - **Vikingfile says sign-in couldn’t be confirmed:** use **Check sign-in** or open its account page. A network error or provider check doesn’t mean you’re signed out.
+- **Vikingfile's sign-in page freezes or closes the browser:** sign in on a computer instead and paste a [pass from another device](vikingfile.md#use-a-pass-from-another-device) into Orbit (0.0.2 or later).
 
 ## Reporting a problem
 

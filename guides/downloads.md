@@ -1,6 +1,6 @@
 # Find and download a game
 
-**For Orbit Store 0.0.1 for PS4.** The catalogue has **1,110 PS4 games** with **1,227 single-file download options** from Archive.org, Vikingfile and AkiraBox. Open a game to choose from its sources and formats. What you see depends on which sources you turn on.
+**For Orbit Store 0.0.2 for PS4.** The catalogue has **1,110 PS4 games** with **1,227 single-file download options** from Archive.org, Vikingfile and AkiraBox. Open a game to choose from its sources and formats. What you see depends on which sources you turn on.
 
 Settings paths in this guide use the Store layout. Crossbar, Cinema and Panorama call the main menu **Settings**; see [Appearance](appearance.md#find-settings-after-switching).
 

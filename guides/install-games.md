@@ -1,6 +1,6 @@
 # Install games without leaving Orbit
 
-**For Orbit Store 0.0.1 for PS4.**
+**For Orbit Store 0.0.2 for PS4.**
 
 ## Install a downloaded game
 

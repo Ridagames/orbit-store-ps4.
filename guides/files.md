@@ -1,6 +1,6 @@
 # Manage files on your PS4
 
-**For Orbit Store 0.0.1 for PS4.**
+**For Orbit Store 0.0.2 for PS4.**
 
 Open **Library → Files** in the TV app or the browser. Choose internal storage or a connected USB drive. Each drive shows its free space.
 

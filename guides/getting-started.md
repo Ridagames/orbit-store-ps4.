@@ -1,6 +1,6 @@
 # Get started with Orbit Store
 
-**For Orbit Store 0.0.1 for PS4 (beta).** Tested on a PS4 on firmware 12.00 with GoldHEN.
+**For Orbit Store 0.0.2 for PS4 (beta).** Tested on a PS4 on firmware 12.00 with GoldHEN.
 
 Orbit runs on your PS4. Use the TV with your controller, or pair a phone or computer to manage the same catalogue and download queue. Files go to the PS4's selected storage.
 
@@ -21,7 +21,7 @@ The Games and browser versions share the same downloads, favourites and service 
 - Enough writable storage.
 - A phone or computer on the same local network, if you want to control Orbit from one.
 
-The first PS4 release is **Orbit Store 0.0.1**: **native app 0.0.1** with **download service 0.0.1**.
+The current PS4 release is **Orbit Store 0.0.2**: **native app 0.0.2** with **download service 0.0.2**.
 
 The instructions below use the default Store layout. If you choose another interface, check its settings entry under Appearance.
 
@@ -31,10 +31,10 @@ Choose the app you use; you do not need to download every asset.
 
 | How you use Orbit | What to download |
 | --- | --- |
-| Native PS4 app | **`orbit_store_ps4.pkg`** and its checksum. Native app **0.0.1** already includes service **0.0.1** and elfldr. The app starts the service itself; nothing has to run first. |
+| Native PS4 app | **`orbit_store_ps4.pkg`** and its checksum. Native app **0.0.2** already includes service **0.0.2** and elfldr. The app starts the service itself; nothing has to run first. |
 | Service started separately through an ELF loader | **`orbit_store.elf`** and its checksum. Send it once to an ELF loader on port 9021; Orbit then keeps its own copies current. |
 
-Installing a package or uploading an ELF does not replace an older service that is already running. Stop it with **Stop Orbit to restart** before starting the updated copy. In **Diagnostics & about**, the current versions are **native app 0.0.1** and **download service 0.0.1**. Later releases may update one without the other, so the two numbers can differ. Keep your pairing, settings and queue in place.
+Installing a package or uploading an ELF does not replace an older service that is already running. Stop it with **Stop Orbit to restart** before starting the updated copy. In **Diagnostics & about**, the current versions are **native app 0.0.2** and **download service 0.0.2**. Later releases may update one without the other, so the two numbers can differ. Keep your pairing, settings and queue in place.
 
 ## Verify the PS4 files
 
@@ -120,6 +120,10 @@ Downloading a PKG or FPKG saves a package to your selected drive. Choose **Insta
 In the TV app, open **App settings → Pair a device** to see the console address and six-digit code. While Orbit is running, visit `http://<ps4-ip>:34177/` on the same network. Choose **Pair devices** and enter the six-digit code shown on the PS4. On the console, **Pair devices** keeps the code visible; **Show code on PS4** repeats its notification. Do not share the code publicly.
 
 Your paired device controls the console's queue. For Vikingfile browser verification, use the PS4 screen to complete the provider steps even when you start from your phone.
+
+### Use Orbit Zero on your computer
+
+Orbit Zero for Mac, Windows and Linux (it needs Orbit Store 0.0.2 or later on your PS4) downloads games on your computer and sends them to your PS4, opens Vikingfile and AkiraBox pages on the computer so there’s no Cloudflare wait, and can start Orbit for you. See [Use Orbit Zero with your PS4](orbit-zero.md).
 
 ### Use a local hostname
 

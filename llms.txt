@@ -4,7 +4,7 @@
 
 The official project is https://github.com/saawant12/orbit-store-ps4. The PS5 version is at https://github.com/saawant12/orbit-store-ps5. Orbit Store has no official social media accounts. It is free to use, and nothing is locked behind a payment. Optional contributions help cover the costs of AI tools, test consoles, hardware and servers. Optional crypto support is available through the addresses at https://github.com/saawant12/orbit-store-ps5/issues/131#user-content-support-with-crypto.
 
-The first PS4 release is Orbit Store 0.0.1 (beta): native TV app 0.0.1 (orbit_store_ps4.pkg) with download service 0.0.1 (orbit_store.elf). It was tested on a PS4 on firmware 12.00 with GoldHEN. Orbit Zero, the desktop companion, is PS5 only and is not part of the PS4 version.
+The current PS4 release is Orbit Store 0.0.2 (beta): native TV app 0.0.2 (orbit_store_ps4.pkg) with download service 0.0.2 (orbit_store.elf). It was tested on a PS4 on firmware 12.00 with GoldHEN. Orbit Zero 1.9.1 or later, the companion app for Mac, Windows and Linux, works with a PS4 running Orbit Store 0.0.2 or later: it downloads games on the computer and sends them to the PS4 to install, opens Vikingfile and AkiraBox pages on the computer so their Cloudflare check passes in seconds, and starts Orbit on the PS4 (sending elfldr through GoldHEN's payload loader first when no ELF loader runs). With Download preference set to Prefer PS4, Zero hands the link it caught to the PS4, which downloads the game itself. Zero keeps one profile per console and uses one console at a time. Guide: https://github.com/saawant12/orbit-store-ps4/blob/main/guides/orbit-zero.md
 
 ## Catalogue
 

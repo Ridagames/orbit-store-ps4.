@@ -20,7 +20,7 @@ Explore **1,110 PS4 games** with **1,227 download options**, plus **533 DLCs and
 
 </div>
 
-> **Also from Orbit:** [Orbit Store for PS5](https://github.com/saawant12/orbit-store-ps5), with Orbit Zero for Mac, Windows and Linux, and [Orbit Play](https://github.com/saawant12/orbit-play-ps5), to stream your jailbroken PS5 to your computer.
+> **Also from Orbit:** [Orbit Store for PS5](https://github.com/saawant12/orbit-store-ps5) and [Orbit Play](https://github.com/saawant12/orbit-play-ps5), to stream your jailbroken PS5 to your computer.
 
 ## Features
 
@@ -38,6 +38,7 @@ Explore **1,110 PS4 games** with **1,227 download options**, plus **533 DLCs and
 - **One link per download.** PKG and FPKG, with ZIP, RAR and 7z archives unpacked automatically.
 - **Choose 1–64 connections per download**, with eight as the default. Active downloads share a limit of 64; TorBox uses at most eight per game. [Guide](guides/downloads.md#follow-your-queue)
 - **Filter for TorBox.** With your account connected, choose **Source → TorBox available** to find supported options.
+- **Orbit Zero for Mac, Windows and Linux.** Download on your computer and send games to your PS4, skip the Cloudflare wait on Vikingfile and AkiraBox, and start Orbit from your computer. [Guide](guides/orbit-zero.md)
 - **Optional accounts** for [TorBox](guides/downloads.md#torbox), [Archive.org](guides/downloads.md#archiveorg-sign-in) and [Vikingfile](guides/vikingfile.md).
 - **Notifications** on your PS4, phone or computer. [Setup](guides/notifications.md)
 - **Optional automatic shutdown** after downloads and installations finish, with a countdown you can cancel. [Guide](guides/shutdown.md)
@@ -144,12 +145,13 @@ Language settings change Orbit’s menus; each game keeps its own language setti
 
 ## Beta status
 
-**Orbit Store for PS4 is an experimental beta.** [Download the latest release](https://github.com/saawant12/orbit-store-ps4/releases/latest). Release **0.0.1** has these version numbers:
+**Orbit Store for PS4 is an experimental beta.** [Download the latest release](https://github.com/saawant12/orbit-store-ps4/releases/latest). Release **0.0.2** has these version numbers:
 
 | Component | Version |
 | --- | --- |
-| Orbit Store download service and browser interface (`orbit_store.elf`) | **0.0.1** |
-| Native TV app (`orbit_store_ps4.pkg`) | **0.0.1** |
+| Orbit Store download service and browser interface (`orbit_store.elf`) | **0.0.2** |
+| Native TV app (`orbit_store_ps4.pkg`) | **0.0.2** |
+| Orbit Zero for Mac, Windows and Linux (`Orbit-Zero-1.9.1-*`) | **1.9.1** |
 
 The TV app’s title ID is `ORBT00002` and the browser icon’s is `ORBT00001`. These are homebrew project IDs, not official Sony ones.
 
