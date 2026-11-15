@@ -6,6 +6,8 @@ Orbit runs on your PS4. Pick a game, choose its source and format, and Orbit dow
 
 Explore **1,110 PS4 games** with **1,227 download options**, plus **533 DLCs and add-ons with 535 options across 120 games**. Choose your source and save to your preferred drive. New games, add-ons and corrected links arrive through catalogue updates.
 
+**[Orbit Zero](#orbit-zero-for-mac-windows-and-linux)** brings Orbit to Mac, Windows and Linux. Download games on your computer and send them to your PS4 straight away or later, without your PS4 needing internet access, and skip the Cloudflare wait on Vikingfile and AkiraBox.
+
 <p>
   <a href="assets/0.0.1/native-crossbar-discover.jpg"><img src="assets/0.0.1/native-crossbar-discover.jpg" width="48%" alt="Crossbar Discover in the PS4 TV app with Crysis Remastered selected"></a>
   <a href="assets/0.0.1/native-store-game-details.jpg"><img src="assets/0.0.1/native-store-game-details.jpg" width="48%" alt="MONSTER HUNTER: WORLD game details in the PS4 TV app's Store interface"></a>
@@ -29,16 +31,17 @@ Explore **1,110 PS4 games** with **1,227 download options**, plus **533 DLCs and
 - **Discover and Browse** with source, format, genre, region and size filters, matching game counts and eight [game tags](guides/downloads.md#game-tags). Select several sources, formats or genres at once.
 - **Hide games you already have** installed on the PS4.
 - **Favourites.** Save games you want to return to and find them again quickly.
-- **Saved filters.** Name your filters once and apply them again in the TV app or the browser. [Guide](guides/saved-filters.md)
+- **Saved filters.** Name your filters once and apply them again in the TV app, the browser or Orbit Zero. [Guide](guides/saved-filters.md)
 - **DLC and add-ons** from the Add-ons page or a game’s details. [DLC guide](guides/add-ons.md)
 - **Firmware requirements.** See the required firmware for each download option when that information is available.
 
 **Download**
 
 - **One link per download.** PKG and FPKG, with ZIP, RAR and 7z archives unpacked automatically.
-- **Choose 1–64 connections per download**, with eight as the default. Active downloads share a limit of 64; TorBox uses at most eight per game. [Guide](guides/downloads.md#follow-your-queue)
+- **Choose 1–64 connections per download**, with eight as the default. Active downloads share a limit of 64; TorBox uses at most four per game in Zero and eight on PS4. [Guide](guides/downloads.md#follow-your-queue)
 - **Filter for TorBox.** With your account connected, choose **Source → TorBox available** to find supported options.
 - **Orbit Zero for Mac, Windows and Linux.** Download on your computer and send games to your PS4, skip the Cloudflare wait on Vikingfile and AkiraBox, and start Orbit from your computer. [Guide](guides/orbit-zero.md) · [Install](guides/orbit-zero-installation.md)
+- **Download now, send later.** Zero can save games on your computer without a connected PS4. Send them when you’re ready. [Guide](guides/orbit-zero.md#download-now-and-send-to-your-ps4-later)
 - **Optional accounts** for [TorBox](guides/downloads.md#torbox), [Archive.org](guides/downloads.md#archiveorg-sign-in) and [Vikingfile](guides/vikingfile.md).
 - **Notifications** on your PS4, phone or computer. [Setup](guides/notifications.md)
 - **Optional automatic shutdown** after downloads and installations finish, with a countdown you can cancel. [Guide](guides/shutdown.md)
@@ -49,6 +52,7 @@ Explore **1,110 PS4 games** with **1,227 download options**, plus **533 DLCs and
 - **Library** of the games installed on your PS4, kept up to date automatically. [Library guide](guides/library.md)
 - **File manager** for your PS4’s drives: copy, move, rename, delete, unpack and install. [Files guide](guides/files.md)
 - **Save files from your PS4.** Use **Library → Files** to save a file to your paired phone or computer. [Guide](guides/files.md#save-a-file-to-another-device)
+- **Change a Zero transfer’s drive** using its computer copy, without downloading it again. [Guide](guides/orbit-zero.md#change-the-ps4-drive)
 
 **Use it your way**
 
@@ -56,20 +60,22 @@ Explore **1,110 PS4 games** with **1,227 download options**, plus **533 DLCs and
 - **Nothing to start first.** The TV app brings its own ELF loader and starts Orbit through GoldHEN by itself. GoldHEN AutoRun can start Orbit when the PS4 turns on.
 - **Four interfaces:** Store, Crossbar, Cinema and Panorama, with 26 interface languages. [Appearance guide](guides/appearance.md)
 - **Control from your phone.** Pair once to browse, queue and follow downloads.
+- **Connect other apps to Zero.** Use individually approved API tokens for its local API. [Guide](guides/orbit-zero-integrations.md)
 - **No Orbit account. No telemetry.**
 
 ## Get started
 
-**Two ways to use Orbit**
+**Ways to use Orbit**
 
 | Do this | Orbit appears in | What it is |
 |---|---|---|
 | Install `orbit_store_ps4.pkg` with GoldHEN’s Package Installer | **Games** on your PS4 | The TV app, used with your controller. It includes the download service. |
 | Send `orbit_store.elf` to an ELF loader on port 9021 | **Orbit Store Browser** on your PS4 | Opens Orbit in the PS4’s Internet Browser. Keep Orbit’s download service running on the PS4 to use it. |
+| Install [Orbit Zero](#orbit-zero-for-mac-windows-and-linux) | Your Mac, Windows or Linux computer | Downloads on your computer and sends the files to your PS4. The PS4 doesn’t need internet. |
 
 Both versions share the same downloads, favourites and service settings, so seeing two Orbit icons on your PS4 is normal. Appearance is saved separately in each.
 
-You need a PS4 with GoldHEN, internet access on the console and enough writable storage. Turn on GoldHEN’s payload loader once, in **GoldHEN → Servers Settings → Enable PayLoader Server**, so Orbit can start.
+You need a PS4 with GoldHEN, internet access on the console and enough writable storage. Turn on GoldHEN’s payload loader once, in **GoldHEN → Servers Settings → Enable PayLoader Server**, so Orbit can start. For downloads through your computer, see [Orbit Zero](#orbit-zero-for-mac-windows-and-linux).
 
 1. **Install Orbit.** Download the files from the [latest release](https://github.com/saawant12/orbit-store-ps4/releases/latest), verify them and follow the table above. Use the TV app, the browser version or both. Close other apps, such as ezRemote, before opening Orbit.
 2. **Choose your sources.** Choose sources in the TV app’s setup screen or **App settings → Sources & accounts**. Select the sources you want to use, including Archive.org, Vikingfile and AkiraBox, and acknowledge the download notice. Your choices apply to both versions.
@@ -109,7 +115,7 @@ Open Orbit from your Games row and use the controller to browse, explore and cho
 
 ### Choose your interface
 
-Make Orbit look the way you like. Open **Appearance** and choose **Store**, **Crossbar**, **Cinema** or **Panorama**. Confirm your choice to keep it. The interfaces are available in the TV app and the browser version; switching keeps your downloads, favourites and settings. See the [appearance guide](guides/appearance.md) for the 15-second confirmation, controller shortcuts, motion options and where to find settings in each layout.
+Make Orbit look the way you like. Open **Appearance** and choose **Store**, **Crossbar**, **Cinema** or **Panorama**. Confirm your choice to keep it. The interfaces are available in the TV app, the browser version and Orbit Zero; switching keeps your downloads, favourites and settings. See the [appearance guide](guides/appearance.md) for the 15-second confirmation, controller shortcuts, motion options and where to find settings in each layout.
 
 **Crossbar**
 
@@ -137,11 +143,11 @@ Choose sources, set your default drive, pair a phone and refresh your game catal
 
 ### Orbit in your language
 
-Orbit supports **English, Arabic, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Simplified Chinese and Traditional Chinese**. In the TV app, choose a language in **App settings → Appearance**, or keep **Automatic** to follow your PS4’s system language. In the browser version, use **App settings → Appearance → Language** in Store, or **Settings → Appearance → Language** in the other interfaces, to choose a language for that device, or leave it on **Automatic** to follow the browser.
+Orbit Store and Orbit Zero support **English, Arabic, Czech, Danish, Dutch, Finnish, French, German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian Bokmål, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Simplified Chinese and Traditional Chinese**. In the TV app, choose a language in **App settings → Appearance**, or keep **Automatic** to follow your PS4’s system language. In the browser version, use **App settings → Appearance → Language** in Store, or **Settings → Appearance → Language** in the other interfaces, to choose a language for that device, or leave it on **Automatic** to follow the browser.
 
 ![Orbit Store 0.0.1 Storage & cleanup settings in Hungarian on PS4](assets/0.0.1/native-settings-hu.jpg)
 
-Language settings change Orbit’s menus; each game keeps its own language settings. See [language settings](guides/getting-started.md#choose-your-language) for instructions.
+In Orbit Zero’s Store interface, use the globe-shaped **Language** button in the top bar. Language settings change Orbit’s menus; each game keeps its own language settings. See [language settings](guides/getting-started.md#choose-your-language) for instructions.
 
 ## Orbit Zero for Mac, Windows and Linux
 
@@ -185,6 +191,7 @@ The [release downloads](https://github.com/saawant12/orbit-store-ps4/releases/la
 
 - [orbit_store_ps4.pkg](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store_ps4.pkg), the native TV app with the download service and elfldr, and [its checksum](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store_ps4.pkg.sha256).
 - [orbit_store.elf](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store.elf), the download service and browser interface, and [its checksum](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store.elf.sha256).
+- The `Orbit-Zero-1.9.1-*` packages for Mac, Windows and Linux, in ARM64 and x64 builds, with `SHA256SUMS`. Follow the [desktop installation guide](guides/orbit-zero-installation.md).
 - The complete source and licence bundle for the service, browser interface, TV app and their open-source components, with build instructions.
 
 Follow the [verification commands](guides/getting-started.md#verify-the-ps4-files), then the installation steps for your version.
@@ -203,6 +210,8 @@ To restore a deleted Orbit Store Browser icon, start Orbit again. Your paired de
 
 Loading an ELF while Orbit is already running saves it for the next start; it doesn’t replace the running service. The update panel shows **Running**, **Saved for next start** and **Latest release** separately. Updates are never installed just by opening the panel.
 
+For the desktop app, follow [Update Orbit Zero](guides/orbit-zero-installation.md#update-orbit-zero).
+
 ## Managing your downloads
 
 Choose **1–64 connections per download** in **App settings → Downloads**; eight is the default. Active downloads share a total of 64 connections. Orbit retries with fewer when a host refuses several. Speed depends on the host, network and drive.
@@ -211,13 +220,13 @@ Open **Downloads** and choose **Active**, **Finished**, **Failed** or **Cancelle
 
 **Remove from history**, **Clear finished history** and **Clear cancelled history** let you keep the downloaded files or delete them. Check the paths and sizes before confirming. Removing downloaded files doesn’t uninstall a game. See [history and file removal](guides/downloads.md#remove-download-history-and-files).
 
-Before queuing a game, check **Free now**, **Unfinished downloads** and **After queue + this download**. Files are saved in the selected drive’s `homebrew` folder; see [where downloads are saved](guides/downloads.md#where-downloads-are-saved).
+Before queuing a game, check **Free now**, **Unfinished downloads** and **After queue + this download**. Files are saved in the selected drive’s `homebrew` folder; see [where downloads are saved](guides/downloads.md#where-downloads-are-saved). For computer downloads, see [Orbit Zero transfer recovery](guides/orbit-zero.md#pause-reconnect-and-clean-up).
 
 ## Your Library
 
 Open **Library** to see the games installed on your PS4. Search by name, title ID or path and filter by status, location or format. Orbit reads the games from the console itself and keeps the list up to date automatically. Library works independently of your download-source choices.
 
-Open **Library → Files** to browse drives and manage files: copy, move, rename, delete, unpack and install. See the [Files guide](guides/files.md). Orbit doesn’t start or uninstall games.
+Open **Library → Files** to browse drives and manage files: copy, move, rename, delete, unpack and install. See the [Files guide](guides/files.md). Library and Files also work in Orbit Zero on a paired computer. Orbit doesn’t start or uninstall games.
 
 ## Finding and saving games
 
@@ -245,13 +254,15 @@ Source choices are saved on the console and shared by paired devices. Turning of
 - **Vikingfile:** Orbit first asks for the file with your [Vikingfile account session](guides/vikingfile.md), when signed in, and starts the download straight away if it gets a ready link. If verification is needed, the page opens: complete it, move the pointer to **Download** with the left stick and press ○.
 - **AkiraBox:** open the download page from Orbit, complete any verification, then select **Download**. AkiraBox may show an ad instead; close it and try again, or choose another source.
 
-**Vikingfile and AkiraBox take a few minutes for now.** On PS4, the Cloudflare check on their pages can take 2–3 minutes to pass. Leave the page open: once the check passes, the download works as usual. We’re working on making this faster. With a Vikingfile Premium account [signed in to Orbit](guides/vikingfile.md), there’s usually no wait: Orbit gets the download without opening the page.
+**Without Orbit Zero, Vikingfile and AkiraBox take a few minutes.** On PS4, the Cloudflare check on their pages can take 2–3 minutes to pass. Leave the page open: once the check passes, the download works as usual. With [Orbit Zero](#orbit-zero-for-mac-windows-and-linux), the pages open on your computer instead, where the check usually passes in seconds. With a Vikingfile Premium account [signed in to Orbit](guides/vikingfile.md), there’s usually no wait: Orbit gets the download without opening the page.
 
-On a paired phone, these pages still open on the PS4. See the [full provider steps](guides/downloads.md#provider-steps).
+If Vikingfile’s sign-in page doesn’t work on your PS4, sign in on a computer and use a [pass from another device](guides/vikingfile.md#use-a-pass-from-another-device).
+
+On a paired phone, these pages still open on the PS4. In Orbit Zero, they open on your computer: complete any check and wait without pressing **Download**. See the [full provider steps](guides/downloads.md#provider-steps).
 
 ### Automatic archive extraction
 
-Orbit unpacks single-file **ZIP, RAR and 7z** downloads on the selected PS4 drive. Keep enough free space for the archive and its unpacked files. **Delete archives after extracting** is on by default under **App settings → Storage & cleanup**; it removes the archive only after a successful unpack.
+Orbit unpacks single-file **ZIP, RAR and 7z** downloads on the selected PS4 drive; Orbit Zero unpacks them on your computer before sending the files to the PS4. Keep enough free space for the archive and its unpacked files. **Delete archives after extracting** is on by default under **App settings → Storage & cleanup** (**Settings → Storage & cleanup** in Orbit Zero); it removes the archive only after a successful unpack.
 
 For password-protected archives, Orbit tries these passwords by itself, so you usually don’t need to enter one:
 

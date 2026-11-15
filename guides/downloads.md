@@ -104,7 +104,7 @@ Connect once in the browser; the TV app and paired devices share the connection.
 
 TorBox uses at most eight connections per game, even when you choose more. With TorBox connected, **Browse → Source → TorBox available** shows games with a supported option. If an option isn’t available through TorBox, choose the original provider; Orbit never switches a TorBox job to another method by itself. Disconnecting TorBox pauses its unfinished jobs and keeps their partial files; reconnect the same account to resume.
 
-**TorBox in Orbit Zero.** Open **Settings → Sources & accounts → TorBox** in Zero and connect your API key on the computer, then choose **Download using → TorBox** on a supported option. Zero downloads to the computer; choose **This computer** to keep the game there, or a PS4 drive to send it over. This connection is separate from the PS4’s TorBox connection.
+**TorBox in Orbit Zero.** Open **Settings → Sources & accounts → TorBox** in Zero and connect your API key on the computer, then choose **Download using → TorBox** on a supported option. Zero downloads to the computer; choose **This computer** to keep the game there, or a PS4 drive to send it over. This connection is separate from the PS4’s TorBox connection. Zero uses at most four connections per TorBox game.
 
 ## ZIP, RAR and 7z downloads
 

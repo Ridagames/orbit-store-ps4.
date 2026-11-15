@@ -22,10 +22,11 @@ Describe what should have happened.
 
 - Orbit download service version:
 - TV app version, if used:
+- Orbit Zero version and computer OS/architecture, if used:
 - PS4 firmware:
 - GoldHEN version:
-- How Orbit starts: TV app / LaunchPad / GoldHEN AutoRun / ELF loader on port 9021 / other
-- Where it happens: TV app (Games row) / browser version (Orbit Store Browser) / paired phone or computer
+- How Orbit starts: TV app / LaunchPad / GoldHEN AutoRun / ELF loader on port 9021 / Orbit Zero (Start Orbit on PS4) / other
+- Where it happens: TV app (Games row) / browser version (Orbit Store Browser) / Orbit Zero desktop / paired phone or computer
 - Interface: Store / Crossbar / Cinema / Panorama
 - Input used: PS4 controller / keyboard / mouse / touch
 
