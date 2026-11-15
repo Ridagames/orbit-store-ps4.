@@ -1,6 +1,6 @@
 # Orbit Store for PS4 (Beta)
 
-> A modern PS4 download manager with resumable downloads, a native TV app, browser controls and phone pairing.
+> A modern PS4 download manager with resumable downloads, a native TV app, browser controls, phone pairing and the Orbit Zero desktop companion.
 
 The official project is https://github.com/saawant12/orbit-store-ps4. The PS5 version is at https://github.com/saawant12/orbit-store-ps5. Orbit Store has no official social media accounts. It is free to use, and nothing is locked behind a payment. Optional contributions help cover the costs of AI tools, test consoles, hardware and servers. Optional crypto support is available through the addresses at https://github.com/saawant12/orbit-store-ps5/issues/131#user-content-support-with-crypto.
 
