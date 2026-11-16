@@ -1,6 +1,6 @@
 # Choose your Orbit interface
 
-**For Orbit Store 0.0.2 for PS4.** Orbit offers four interfaces: **Store**, **Crossbar**, **Cinema** and **Panorama**, in the TV app, the browser and [Orbit Zero](orbit-zero.md). Each changes the layout and navigation while keeping your catalogue, favourites and download queue. Library, Files, Add-ons and saved filters are in all four.
+**For Orbit Store 0.0.3 for PS4.** Orbit offers four interfaces: **Store**, **Crossbar**, **Cinema** and **Panorama**, in the TV app, the browser and [Orbit Zero](orbit-zero.md). Each changes the layout and navigation while keeping your catalogue, favourites and download queue. Library, Files, Add-ons and saved filters are in all four.
 
 ## Switch interfaces
 
@@ -110,6 +110,10 @@ These screenshots are from the TV app on a PS4.
 *Downloads with an empty queue.*
 
 </details>
+
+## Scores and playtimes on game cards
+
+In **Appearance**, turn **Scores and playtimes on game cards** on or off. It is on by default, saved separately on each device and applies to all four layouts. Turning it off hides the card labels while keeping game-page information, Browse filters and sorting.
 
 ## Motion and backgrounds
 

@@ -9,7 +9,7 @@ Orbit Zero is Orbit’s app for Mac, Windows and Linux. With your PS4 it can:
 - start Orbit on your PS4 from the computer;
 - keep a PS5 and a PS4 as separate profiles, and switch between them in one click.
 
-**Needs Orbit Store 0.0.2 or later on your PS4 and Orbit Zero 1.9.1 or later on your computer.** Orbit Zero 1.9.1 is attached to the [Orbit Store for PS4 0.0.2 release](https://github.com/saawant12/orbit-store-ps4/releases/tag/v0.0.2).
+**Needs Orbit Store 0.0.2 or later on your PS4 and Orbit Zero 1.9.1 or later on your computer.** Orbit Zero 1.9.2 is attached to the [latest Orbit Store for PS4 release](https://github.com/saawant12/orbit-store-ps4/releases/latest). [Stream & install](#stream--install) needs Orbit Store 0.0.3 or later.
 
 - **Installing Orbit Zero for the first time?** Follow [Install Orbit Zero](orbit-zero-installation.md).
 - **PS4 without internet?** Follow [Set up Orbit on a PS4 without internet](orbit-zero-offline-ps4.md).
@@ -44,6 +44,8 @@ Zero gets Orbit for PS4 from the [latest release](https://github.com/saawant12/o
 When GitHub can’t be reached, Zero uses the last copy that passed its check. To send an ELF you downloaded yourself, open **Advanced** under **Start Orbit on PS4**, choose **Choose another ELF**, then select **Send custom ELF**.
 
 If Orbit doesn’t start, close other homebrew apps such as ezRemote, then try again. Opening **Orbit Store** from the Games row starts Orbit too.
+
+**On firmware 13.52 and 14.00, use Orbit Zero 1.9.2 or later.** Its elfldr supports these firmware versions. The elfldr in Orbit Zero 1.9.1 doesn’t, so with 1.9.1 start Orbit from the TV app or send `orbit_store.elf` to an ELF loader yourself.
 
 ## Connect and pair
 
@@ -113,7 +115,15 @@ When a transfer finishes, select **Install on PS4** on the download. Orbit insta
 
 Files go to the `homebrew` folder on the PS4 drive you chose. A finished download’s **Location** shows where it was saved on the PS4. For a game kept only on the computer, use **Show in folder**.
 
-**Stream & install**, which installs straight from the copy on your computer, isn’t available for PS4 yet.
+### Stream & install
+
+**Needs Orbit Store 0.0.3 or later on your PS4.** **Stream & install** installs a finished computer download straight from your computer, without saving another copy of the package on the PS4 first. Your computer copy is kept.
+
+1. Let the download finish on your computer, and connect your PS4.
+2. In **Downloads**, select **Stream & install** on the game, then **Stream & install** again to start.
+3. Keep Orbit Zero open and your computer awake until it shows **Installed on PS4**.
+
+The PS4 still needs space for the installed game. Some packages can’t be installed straight from a computer; Orbit then tells you to send the package to the PS4 instead. Send it, then choose **Install on PS4**.
 
 ## Pause, reconnect and clean up
 

@@ -10,7 +10,7 @@ Open **App settings** in Orbit Store’s default Store layout, or **Settings** i
 | Storage & cleanup | Default drive, available space, archive and package cleanup, and what happens to files when you clear history. Zero has its computer download folder and computer cache here. |
 | Sources & accounts | The sources you use, plus Archive.org, Vikingfile and TorBox accounts. |
 | Devices | Pairing your phone or computer, connection details and **Enable Orbit Zero**. Zero has its pairing and **Connected apps** here. |
-| Appearance | Interface, language, motion and the selected layout’s options. |
+| Appearance | Interface, language, motion, scores and playtimes on game cards, and the selected layout’s options. |
 | Notifications | PS4 and ntfy notifications. |
 | Game catalogue | Catalogue version and refresh. |
 | Updates & startup | Updates, restart and start-up controls. The TV app links to the browser for payload-manager and auto-start setup. |
@@ -18,6 +18,12 @@ Open **App settings** in Orbit Store’s default Store layout, or **Settings** i
 | Support Orbit | Optional support link and QR code. |
 
 Each layout shows the same categories. Your saved choices stay when you switch layouts.
+
+## Download method and game-card details
+
+Under **Sources & accounts → TorBox**, **Always use TorBox** applies to new downloads. Orbit also remembers the last Direct/TorBox selection. Existing jobs keep their delivery method; unsupported files and account limits still need your choice. The PS4 and Orbit Zero keep separate preferences.
+
+Under **Appearance**, turn **Scores and playtimes on game cards** off to hide the extra card labels. Game details, Browse filters and sorting remain available. This setting is saved on the device.
 
 ## Automatic PS4 shutdown
 

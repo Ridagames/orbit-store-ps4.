@@ -1,6 +1,6 @@
 # Connect another app to Orbit Zero
 
-Available in Orbit Zero 1.9.0 and later; it works with a PS4 from Orbit Zero 1.9.1 with Orbit Store for PS4 0.0.2. The supported integration API is separate from Zero's internal browser interface.
+Available in Orbit Zero 1.9.0 and later; it works with a PS4 from Orbit Zero 1.9.1 with Orbit Store for PS4 0.0.2 or later. The supported integration API is separate from Zero's internal browser interface.
 
 Keep Orbit Zero running on the same computer as the other app. In **Settings → Devices → Connected apps**, turn on **Allow other apps**. You can connect in either of these ways:
 
@@ -113,7 +113,7 @@ The API was first made for the PS5, so a few names still say `ps5`. With a PS4 p
 
 **Ask for PS4 games.** `/catalogue` lists PS4 and PS5 games alike, whichever console is paired. Add `platform=ps4` to every catalogue request. Orbit Zero's own lists show only PS4 games with a PS4 paired, but the API doesn't stop an app from sending a PS5 game to a PS4 drive, and a PS5 game won't install on a PS4.
 
-Installation is outside this API, so Stream & install, which isn't available for PS4 yet, doesn't affect it.
+Installation, including Stream & install, is outside this API.
 
 ## Compatibility
 

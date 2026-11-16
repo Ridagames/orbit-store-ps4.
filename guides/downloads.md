@@ -1,6 +1,6 @@
 # Find and download a game
 
-**For Orbit Store 0.0.2 for PS4.** The catalogue has **1,434 PS4 games** with **1,551 single-file download options** from Archive.org, Vikingfile and AkiraBox. Open a game to choose from its sources and formats. What you see depends on which sources you turn on.
+**For Orbit Store 0.0.3 for PS4.** The catalogue has **1,434 PS4 games** with **1,551 single-file download options** from Archive.org, Vikingfile and AkiraBox. Open a game to choose from its sources and formats. What you see depends on which sources you turn on.
 
 Settings paths in this guide use the Store layout. Crossbar, Cinema and Panorama call the main menu **Settings**; see [Appearance](appearance.md#find-settings-after-switching).
 
@@ -29,6 +29,12 @@ PlayStation exclusive means no official PC, Xbox or Nintendo version. The PSVR t
 Save a game from its details page to find it under **Favourites** later; favourites are shared with your paired devices.
 
 In the TV app’s Store layout, use the D-pad or left stick to move, Cross to select, Circle to go back and L1/R1 to switch tabs. Press **Square** on a game in Browse or Discover to add or remove it from Favourites. In the other layouts, **Triangle** toggles favourites; see [controls by layout](appearance.md#controller-navigation-in-the-tv-app). In the browser, use the arrow keys, Enter and Escape, or touch and mouse.
+
+### Scores and playtimes
+
+Game pages show Metacritic scores and HowLongToBeat estimates when recorded: 433 PS4 games have a score and 742 have playtimes. Browse can filter by minimum score or playtime and sort using these values. Choose **Main Story**, **Main + Extras** or **Completionist** for the estimate you want. These choices can be saved with Browse filters. Missing values stay unlabelled and sort last; applying a score or playtime filter excludes games missing that value. Playtimes are community estimates and vary by player. This information comes from the catalogue and can be corrected through catalogue updates.
+
+To hide this information below game cards, turn off **Appearance → Scores and playtimes on game cards**. Game details and filters remain available. The preference is saved on the device and works in all four layouts.
 
 ## DLC and add-ons
 
@@ -105,6 +111,10 @@ Connect once in the browser; the TV app and paired devices share the connection.
 TorBox uses at most eight connections per game, even when you choose more. With TorBox connected, **Browse → Source → TorBox available** shows games with a supported option. If an option isn’t available through TorBox, choose the original provider; Orbit never switches a TorBox job to another method by itself. Disconnecting TorBox pauses its unfinished jobs and keeps their partial files; reconnect the same account to resume.
 
 **TorBox in Orbit Zero.** Open **Settings → Sources & accounts → TorBox** in Zero and connect your API key on the computer, then choose **Download using → TorBox** on a supported option. Zero downloads to the computer; choose **This computer** to keep the game there, or a PS4 drive to send it over. This connection is separate from the PS4’s TorBox connection. Zero uses at most four connections per TorBox game.
+
+### Remember your download method
+
+Orbit remembers whether you chose **Direct** or **TorBox**. In **App settings → Sources & accounts → TorBox**, turn on **Always use TorBox** to use it for new downloads. Your account and the selected source must support the request. Turn this preference off before choosing Direct; Orbit doesn’t silently switch a TorBox request to the original source. Orbit Zero and the PS4 keep their own preferences.
 
 ## ZIP, RAR and 7z downloads
 

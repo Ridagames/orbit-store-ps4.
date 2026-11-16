@@ -1,6 +1,6 @@
 # Your Library and storage
 
-**For Orbit Store 0.0.2 for PS4.** Library is in the TV app, the browser and [Orbit Zero](orbit-zero.md) on a computer paired with the PS4. All three show the same PS4 games and drives. Store, Crossbar, Cinema and Panorama show it in different layouts; changing [appearance](appearance.md) doesn’t change which games are installed.
+**For Orbit Store 0.0.3 for PS4.** Library is in the TV app, the browser and [Orbit Zero](orbit-zero.md) on a computer paired with the PS4. All three show the same PS4 games and drives. Store, Crossbar, Cinema and Panorama show it in different layouts; changing [appearance](appearance.md) doesn’t change which games are installed.
 
 Library shows the games installed on your PS4. Orbit reads them from the console itself; you don’t need ShadowMount or any other tool. It works independently of your download-source choices.
 

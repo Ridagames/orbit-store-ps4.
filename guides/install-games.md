@@ -1,6 +1,6 @@
 # Install games without leaving Orbit
 
-**For Orbit Store 0.0.2 for PS4.**
+**For Orbit Store 0.0.3 for PS4.**
 
 ## Install a downloaded game
 
@@ -25,7 +25,7 @@ Open **Library → Files**, select a PKG or FPKG file, and choose **Install on P
 
 In [Orbit Zero](orbit-zero.md), you can download to **This computer** without a connected PS4. When you’re ready, pair or reconnect your PS4 and choose **Send to PS4**. After the transfer finishes, choose **Install on PS4** in Downloads, or open **Downloaded files** and choose it there.
 
-Installation runs on the PS4, not on your computer. Keep the PS4 awake and Orbit running on it. **Stream & install**, which installs straight from the computer without a copy on the PS4, isn’t available for PS4 yet.
+Installation runs on the PS4, not on your computer. Keep the PS4 awake and Orbit running on it. With Orbit Store 0.0.3 or later, **Stream & install** can instead install a finished computer download straight from the computer, without a copy on the PS4. See [Stream & install](orbit-zero.md#stream--install).
 
 ## Add-ons and bundles
 

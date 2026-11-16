@@ -1,6 +1,6 @@
 # When something needs attention
 
-**For Orbit Store 0.0.2 for PS4.** Settings paths below use the default Store layout. In Crossbar, Cinema and Panorama, the main menu is called **Settings**; see [Find settings after switching](appearance.md#find-settings-after-switching).
+**For Orbit Store 0.0.3 for PS4.** Settings paths below use the default Store layout. In Crossbar, Cinema and Panorama, the main menu is called **Settings**; see [Find settings after switching](appearance.md#find-settings-after-switching).
 
 ## Opening and updating Orbit
 
@@ -154,6 +154,10 @@ If other games show **Waiting to transfer**, an earlier transfer may still hold 
 - **Remove from Downloads** to clear a stuck entry while keeping its files. If the PS4 is still blocked afterward, use **Recover downloads → Review PS4 transfer**.
 
 Cancelling or stopping a transfer the PS4 has already started needs an answer from that PS4. If it can’t confirm, reconnect and try again. If Zero asks for a newer Orbit on the PS4, see [Update Orbit on your PS4](orbit-zero-installation.md#update-orbit-on-your-ps4).
+
+### Stream & install says to send the package to the PS4 instead
+
+The PS4 can’t install some packages straight from a computer. Send the package to the PS4 from Downloads, then choose **Install on PS4**. Stream & install needs Orbit Store 0.0.3 or later on the PS4. See [Stream & install](orbit-zero.md#stream--install).
 
 ### I removed a download but still have its computer copy
 
