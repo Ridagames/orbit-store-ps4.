@@ -1,6 +1,6 @@
 # Install games without leaving Orbit
 
-**For Orbit Store 0.0.3 for PS4.**
+**For Orbit Store 0.1.0 for PS4.**
 
 ## Install a downloaded game
 
@@ -33,7 +33,7 @@ Find DLC on **Add-ons**, or use **Add-ons (count)** from a game’s details. See
 
 Review the required base-game edition, title ID and known version requirements before installing DLC. A matching title ID alone doesn’t confirm compatibility, and seeing the base game in Library doesn’t mean its DLC is installed.
 
-For a bundle, select and install each package you want. Orbit doesn’t install the whole bundle automatically, fetch missing game updates or choose the installation order. Activation packages need their content to already be in the base game.
+For a bundle, select and install each package you want. Orbit doesn’t install the whole bundle automatically, fetch missing game updates or choose the installation order. [Get everything](downloads.md#get-everything) is different: it adds a game with its update and DLC and installs them in order, and Library’s [Updates](library.md#game-updates) installs updates by themselves. Activation packages need their content to already be in the base game.
 
 ## If installation needs attention
 

@@ -9,7 +9,7 @@ Orbit Zero is Orbit’s app for Mac, Windows and Linux. With your PS4 it can:
 - start Orbit on your PS4 from the computer;
 - keep a PS5 and a PS4 as separate profiles, and switch between them in one click.
 
-**Needs Orbit Store 0.0.2 or later on your PS4 and Orbit Zero 1.9.1 or later on your computer.** Orbit Zero 1.9.2 is attached to the [latest Orbit Store for PS4 release](https://github.com/saawant12/orbit-store-ps4/releases/latest). [Stream & install](#stream--install) needs Orbit Store 0.0.3 or later.
+**Needs Orbit Store 0.0.2 or later on your PS4 and Orbit Zero 1.9.1 or later on your computer.** Orbit Zero 1.9.5 is attached to the [latest Orbit Store for PS4 release](https://github.com/saawant12/orbit-store-ps4/releases/latest). [Stream & install](#stream--install) needs Orbit Store 0.0.3 or later.
 
 - **Installing Orbit Zero for the first time?** Follow [Install Orbit Zero](orbit-zero-installation.md).
 - **PS4 without internet?** Follow [Set up Orbit on a PS4 without internet](orbit-zero-offline-ps4.md).
@@ -71,6 +71,10 @@ You don’t need a paired PS4 to download.
 With a PS4 paired, **Browse** and **Add-ons** list only PS4 games and PS4 add-ons, as Orbit on your PS4 does. Filters, search, sorting, favourites and [saved filters](saved-filters.md) work as in the PS4 app. Open a game, choose a source and format, then choose a drive on your PS4 under **Save to**.
 
 For add-ons, check the type, contents and the base game they need before choosing a source. A bundle doesn’t install everything by itself: after the transfer, choose **Install on PS4** for each package you want. See [Add-ons](add-ons.md).
+
+### Get everything and game updates
+
+**Needs Orbit Store 0.1.0 on your PS4 and Orbit Zero 1.9.5 or later.** On a PS4 game’s page, **Get everything** shows the same checklist as on the PS4: the game, its newest update and its DLC. In **Library**, Zero shows each game’s installed version, the update labels, the **Updates** filter and **Update all**. The PS4 downloads and installs these itself, so keep Orbit running on it. See [Get everything](downloads.md#get-everything) and [Game updates](library.md#game-updates).
 
 ## Choose where downloads run
 

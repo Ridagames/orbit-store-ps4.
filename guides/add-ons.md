@@ -1,8 +1,10 @@
 # Find, download and install DLC
 
-**For Orbit Store 0.0.3 for PS4.**
+**For Orbit Store 0.1.0 for PS4.**
 
-The catalogue has **533 add-ons for 120 games**, with **535 download options**. These are counted separately from base games.
+The catalogue has **564 add-ons for 125 games**, with **566 download options**. These are counted separately from base games.
+
+**Want the game, its update and all its DLC?** From **0.1.0**, choose **Get everything** on the game’s page. Orbit adds them to Downloads in one go, then installs them in order: the game, then the update, then the DLC. See [Get everything](downloads.md#get-everything).
 
 ## Find add-ons
 

@@ -1,15 +1,28 @@
 # Your Library and storage
 
-**For Orbit Store 0.0.3 for PS4.** Library is in the TV app, the browser and [Orbit Zero](orbit-zero.md) on a computer paired with the PS4. All three show the same PS4 games and drives. Store, Crossbar, Cinema and Panorama show it in different layouts; changing [appearance](appearance.md) doesn’t change which games are installed.
+**For Orbit Store 0.1.0 for PS4.** Library is in the TV app, the browser and [Orbit Zero](orbit-zero.md) on a computer paired with the PS4. All three show the same PS4 games and drives. Store, Crossbar, Cinema and Panorama show it in different layouts; changing [appearance](appearance.md) doesn’t change which games are installed.
 
 Library shows the games installed on your PS4. Orbit reads them from the console itself; you don’t need ShadowMount or any other tool. It works independently of your download-source choices.
 
 ## Understand the labels
 
-- **Installed:** the game is installed on the PS4.
+- **Installed:** the game is installed on the PS4. From 0.1.0, Library also shows the installed version, for example **Installed 1.04**.
 - **On drive:** the game’s files are on that drive.
+- **Update {version}:** a newer update for the game is in Orbit’s catalogue and runs on your PS4’s firmware. See [Game updates](#game-updates).
 
 Search by title, title ID or path, and filter by status, location or format.
+
+## Game updates
+
+**Requires 0.1.0 or later.** Orbit compares each installed game’s version with the newest update in its catalogue that your PS4’s firmware can run, including backports for older firmware. Orbit has updates for 410 PS4 games.
+
+When a game has a newer update, Library marks it with **Update** and the version. **Updates**, with the number of games, then appears: a tab in the Store and Cinema looks, a row next to Installed in Crossbar, a group after your games in Panorama, and a filter in the browser and Orbit Zero. It lists only games with an update.
+
+- Select **Update** on a game, or **Update all** for every game in the list. Update all adds up to 64 updates at a time; select it again for the rest.
+- Updates download and install by themselves; follow them in **Downloads**. Library shows the new version once the PS4 has installed it.
+- An update that needs its provider’s page, such as Vikingfile or AkiraBox, opens it on the PS4 as for a normal download.
+
+Orbit doesn’t send a notification about updates; check **Updates** in Library. With a PS4 paired, Orbit Zero 1.9.5 shows the same update labels, the **Updates** filter and **Update all**; the PS4 downloads and installs the updates itself.
 
 ## Downloads and Library
 

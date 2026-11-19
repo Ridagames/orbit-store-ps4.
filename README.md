@@ -4,7 +4,7 @@
 
 Orbit runs on your PS4. Pick a game, choose its source and format, and Orbit downloads it straight to the console or a USB drive plugged into it, then installs it for you. Use it on your TV with a controller from the Games row, or pair a phone or computer to manage the same downloads over your home network.
 
-Explore **1,434 PS4 games** with **1,551 download options**, plus **533 DLCs and add-ons with 535 options across 120 games**. Choose your source and save to your preferred drive. New games, add-ons and corrected links arrive through catalogue updates.
+Explore **1,734 PS4 games** with **1,851 download options**, plus **564 DLCs and add-ons with 566 options across 125 games**. Choose your source and save to your preferred drive. New games, add-ons and corrected links arrive through catalogue updates.
 
 **[Orbit Zero](#orbit-zero-for-mac-windows-and-linux)** brings Orbit to Mac, Windows and Linux. Download games on your computer and send them to your PS4 straight away or later, without your PS4 needing internet access.
 
@@ -38,7 +38,8 @@ Explore **1,434 PS4 games** with **1,551 download options**, plus **533 DLCs and
 
 **Download**
 
-- **One link per download.** PKG and FPKG, with ZIP, RAR and 7z archives unpacked automatically.
+- **Get everything.** On a game’s page, add the game, its newest update and every DLC Orbit has for it to Downloads in one go. They install in order: the game, then the update, then the DLC. [Guide](guides/downloads.md#get-everything)
+- **One link per download.** PKG and FPKG, with ZIP, RAR and 7z archives unpacked automatically, or kept packed if you prefer. [Guide](guides/downloads.md#zip-rar-and-7z-downloads)
 - **Choose 1–64 connections per download**, with eight as the default. Active downloads share a limit of 64; TorBox uses at most four per game in Zero and eight on PS4. [Guide](guides/downloads.md#follow-your-queue)
 - **Filter for TorBox.** With your account connected, choose **Source → TorBox available** to find supported options.
 - **Remember Direct or TorBox**, with an optional **Always use TorBox** setting. [Guide](guides/downloads.md#remember-your-download-method)
@@ -52,6 +53,7 @@ Explore **1,434 PS4 games** with **1,551 download options**, plus **533 DLCs and
 
 - **Install without leaving Orbit.** PKG and FPKG games and DLC install through the PS4’s own package installer. [Guide](guides/install-games.md)
 - **Library** of the games installed on your PS4, kept up to date automatically. [Library guide](guides/library.md)
+- **Update your games.** Library shows each game’s installed version and marks the ones with a newer update. Select **Update**, or **Update all** in **Updates**; they download and install by themselves. [Guide](guides/library.md#game-updates)
 - **File manager** for your PS4’s drives: copy, move, rename, delete, unpack and install. [Files guide](guides/files.md)
 - **Save files from your PS4.** Use **Library → Files** to save a file to your paired phone or computer. [Guide](guides/files.md#save-a-file-to-another-device)
 - **Change a Zero transfer’s drive** using its computer copy, without downloading it again. [Guide](guides/orbit-zero.md#change-the-ps4-drive)
@@ -153,7 +155,7 @@ In Orbit Zero’s Store interface, use the globe-shaped **Language** button in t
 
 ## Orbit Zero for Mac, Windows and Linux
 
-Orbit Zero is our desktop companion for Mac, Windows and Linux. [Download Orbit Zero](https://github.com/saawant12/orbit-store-ps4/releases/latest) (the `Orbit-Zero-1.9.2-*` files) and use it with Orbit Store 0.0.2 or later on your PS4.
+Orbit Zero is our desktop companion for Mac, Windows and Linux. [Download Orbit Zero](https://github.com/saawant12/orbit-store-ps4/releases/latest) (the `Orbit-Zero-1.9.5-*` files) and use it with Orbit Store 0.0.2 or later on your PS4.
 
 Download on your computer and send games to your PS4 over your home network. **Works over Wi-Fi or Ethernet. Your PS4 doesn’t need internet access for these downloads.**
 
@@ -162,6 +164,7 @@ Download on your computer and send games to your PS4 over your home network. **W
 - **Download now and send to PS4 later.** Choose **Save to → This computer** to keep a game on your computer. Connect your PS4 when ready, then select **Send to PS4** in Downloads. [See the steps](guides/orbit-zero.md#download-now-and-send-to-your-ps4-later)
 - **Choose where downloads run.** Use **Computer** to download through your computer, or **Prefer PS4** to let the PS4 download directly. For Vikingfile and AkiraBox, **Prefer PS4** hands the download link to your PS4 once the check passes on the computer.
 - **PS4 games only.** With a PS4 paired, Browse and Add-ons list PS4 games and add-ons only.
+- **Get everything and game updates.** As on the PS4, get a game with its update and DLC in one go, and update your games from Library. The PS4 downloads and installs them itself; needs Orbit Store 0.1.0. [Guide](guides/orbit-zero.md#get-everything-and-game-updates)
 - **Follow each stage.** See the computer download, unpacking and PS4 transfer separately, with controls to pause, resume and reconnect.
 - **Install after transfer, or stream it.** Choose **Install on PS4** once a game or add-on reaches the console. With Orbit Store 0.0.3 or later, **Stream & install** installs a finished computer download straight from your computer, without a copy on the PS4. [Guide](guides/orbit-zero.md#stream--install)
 - **Recover an interrupted transfer.** Resume after a connection failure, reconnect your PS4 at its new address, or remove a stuck entry while keeping its files. [Compare the recovery choices](guides/orbit-zero.md#pause-reconnect-and-clean-up)
@@ -173,17 +176,17 @@ Download on your computer and send games to your PS4 over your home network. **W
 
 ## Beta status
 
-**Orbit Store for PS4 is an experimental beta.** [Download the latest release](https://github.com/saawant12/orbit-store-ps4/releases/latest). Release **0.0.3** has these version numbers:
+**Orbit Store for PS4 is an experimental beta.** [Download the latest release](https://github.com/saawant12/orbit-store-ps4/releases/latest). Release **0.1.0** has these version numbers:
 
 | Component | Version |
 | --- | --- |
-| Orbit Store download service and browser interface (`orbit_store.elf`) | **0.0.3** |
-| Native TV app (`orbit_store_ps4.pkg`) | **0.0.3** |
-| Orbit Zero for Mac, Windows and Linux (`Orbit-Zero-1.9.2-*`) | **1.9.2** |
+| Orbit Store download service and browser interface (`orbit_store.elf`) | **0.1.0** |
+| Native TV app (`orbit_store_ps4.pkg`) | **0.1.0** |
+| Orbit Zero for Mac, Windows and Linux (`Orbit-Zero-1.9.5-*`) | **1.9.5** |
 
 The TV app’s title ID is `ORBT00002` and the browser icon’s is `ORBT00001`. These are homebrew project IDs, not official Sony ones.
 
-Tested on a PS4 on firmware 12.00 with GoldHEN. 0.0.3 adds support for firmware 13.52 and 14.00, which hasn’t been tested on a console yet. Compatibility can vary with other firmware and GoldHEN versions. If something goes wrong, use the [bug report format](.github/ISSUE_TEMPLATE/bug_report.md) and include your versions and the error shown.
+Tested on a PS4 on firmware 12.00 with GoldHEN. 0.0.3 added support for firmware 13.52 and 14.00, which hasn’t been tested on a console yet. Compatibility can vary with other firmware and GoldHEN versions. If something goes wrong, use the [bug report format](.github/ISSUE_TEMPLATE/bug_report.md) and include your versions and the error shown.
 
 **Payload-manager setup is opt-in.** Choose **App settings → Updates & startup → Payload managers → Add Orbit** to let Orbit add and update a copy in LaunchPad or Homebrew Launcher. GoldHEN AutoRun is a separate choice.
 
@@ -193,7 +196,7 @@ The [release downloads](https://github.com/saawant12/orbit-store-ps4/releases/la
 
 - [orbit_store_ps4.pkg](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store_ps4.pkg), the native TV app with the download service and elfldr, and [its checksum](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store_ps4.pkg.sha256).
 - [orbit_store.elf](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store.elf), the download service and browser interface, and [its checksum](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store.elf.sha256).
-- The `Orbit-Zero-1.9.2-*` packages for Mac, Windows and Linux, in ARM64 and x64 builds, with `SHA256SUMS`. Follow the [desktop installation guide](guides/orbit-zero-installation.md).
+- The `Orbit-Zero-1.9.5-*` packages for Mac, Windows and Linux, in ARM64 and x64 builds, with `SHA256SUMS`. Follow the [desktop installation guide](guides/orbit-zero-installation.md).
 - The complete source and licence bundle for the service, browser interface, TV app and their open-source components, with build instructions.
 
 Follow the [verification commands](guides/getting-started.md#verify-the-ps4-files), then the installation steps for your version.

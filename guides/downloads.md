@@ -1,6 +1,6 @@
 # Find and download a game
 
-**For Orbit Store 0.0.3 for PS4.** The catalogue has **1,434 PS4 games** with **1,551 single-file download options** from Archive.org, Vikingfile and AkiraBox. Open a game to choose from its sources and formats. What you see depends on which sources you turn on.
+**For Orbit Store 0.1.0 for PS4.** The catalogue has **1,734 PS4 games** with **1,851 single-file download options** from Archive.org, Vikingfile and AkiraBox. Open a game to choose from its sources and formats. What you see depends on which sources you turn on.
 
 Settings paths in this guide use the Store layout. Crossbar, Cinema and Panorama call the main menu **Settings**; see [Appearance](appearance.md#find-settings-after-switching).
 
@@ -32,13 +32,25 @@ In the TV app’s Store layout, use the D-pad or left stick to move, Cross to se
 
 ### Scores and playtimes
 
-Game pages show Metacritic scores and HowLongToBeat estimates when recorded: 433 PS4 games have a score and 742 have playtimes. Browse can filter by minimum score or playtime and sort using these values. Choose **Main Story**, **Main + Extras** or **Completionist** for the estimate you want. These choices can be saved with Browse filters. Missing values stay unlabelled and sort last; applying a score or playtime filter excludes games missing that value. Playtimes are community estimates and vary by player. This information comes from the catalogue and can be corrected through catalogue updates.
+Game pages show Metacritic scores and HowLongToBeat estimates when recorded: 543 PS4 games have a score and 932 have playtimes. Browse can filter by minimum score or playtime and sort using these values. Choose **Main Story**, **Main + Extras** or **Completionist** for the estimate you want. These choices can be saved with Browse filters. Missing values stay unlabelled and sort last; applying a score or playtime filter excludes games missing that value. Playtimes are community estimates and vary by player. This information comes from the catalogue and can be corrected through catalogue updates.
 
 To hide this information below game cards, turn off **Appearance → Scores and playtimes on game cards**. Game details and filters remain available. The preference is saved on the device and works in all four layouts.
 
 ## DLC and add-ons
 
 Open **Add-ons** after Browse, or **Add-ons (count)** on a game’s details. Search by DLC or base-game name and filter by Type, Source and Region. Check the required game edition, title ID and known version requirements before downloading. See [the DLC guide](add-ons.md).
+
+## Get everything
+
+**Requires 0.1.0 or later.** On a game’s page, choose **Get everything** to download the game together with its newest update and every DLC Orbit has for it. It works in every look of the TV app and in the browser version. Orbit Zero 1.9.5 offers it on PS4 game pages too; your PS4 downloads and installs the items itself.
+
+1. **Get everything** lists the game, using the source and format chosen on its page, then the newest update your PS4’s firmware can run, then each DLC with its source and size. Everything is ticked; untick anything you don’t want. If the game is already installed, its row shows **Installed** and the update appears only when it’s newer than the installed version.
+2. Check the total size, the free space and the drive the downloads go to. If the drive doesn’t have room for everything ticked, Orbit says **Not enough space for everything on this drive.** and doesn’t start.
+3. Choose **Download all**. Orbit adds the items to Downloads one after another and shows each one’s state, for example **Adding 3 of 14 to Downloads**. **Stop** stops adding the rest; anything already added stays in Downloads.
+4. If an item needs its provider’s page, such as Vikingfile or AkiraBox, Orbit opens it on the PS4 as for a normal download, and the next item waits until that page adds its file. If the page is closed without a download, Orbit doesn’t add the items after it. Items that download from Archive.org or through TorBox need no page.
+5. When the downloads finish, Orbit installs them in order: the game, then the update, then the DLC. If an earlier item fails or is removed, the ones after it wait; install the earlier one first, then select **Install** on the rest.
+
+One Download all runs at a time. You can close Get everything while Orbit adds the items; open it again on the same game to see the progress.
 
 ## Pick a source, format and drive
 
@@ -65,7 +77,7 @@ For a direct option, select **Download to PS4**. Orbit checks the file and the d
 
 ## Provider steps
 
-Provider pages open full screen on the PS4, even when you start from a paired phone. With [Orbit Zero](orbit-zero.md), they open on the computer instead, where the check usually passes in seconds. Only one provider page can be open at a time; **Cancel verification** closes it without adding a download. If the page times out, start the option again.
+Provider pages open full screen on the PS4, even when you start from a paired phone. With [Orbit Zero](orbit-zero.md), they open on the computer instead, where the check usually passes in seconds. Only one provider page can be open at a time; **Cancel verification** closes it without adding a download. If the page times out, start the option again. From 0.1.0, the TV app comes back to the front when the page closes. If the page closed before a download was added, Orbit says so; start the option again.
 
 ### Vikingfile
 
@@ -118,11 +130,13 @@ Orbit remembers whether you chose **Direct** or **TorBox**. In **App settings �
 
 ## ZIP, RAR and 7z downloads
 
-Archive options are in the normal Format filter. Their size is the archive size; keep space for both the archive and the unpacked files. Multipart archives aren’t supported.
+Archive options are in the normal Format filter. Their size is the archive size. From 0.1.0, a ZIP, 7z or RAR download needs room only for itself when you add it. Orbit checks for room for the unpacked files just before unpacking; if there isn’t enough, the download waits, paused, with the archive kept. Free up space on its drive, then select **Resume**. Multipart archives aren’t supported.
 
 Orbit unpacks on the selected PS4 drive after downloading. Orbit Zero unpacks on the computer first, then sends the unpacked files to your PS4 drive. Follow the **Extracting** progress in Downloads. Orbit tries the known source passwords by itself (`DLPSGAME.COM`, `[DLPSGAME.COM]`, `SuperPSX`, `www.DLPSGAME.COM`, `downloadgameps3.com`, `hako` and `pippo`). If another password is needed, choose **Enter archive password**, then **Retry extraction**; Orbit reuses the downloaded archive.
 
 **Delete archives after extracting** is on by default, under **App settings → Storage & cleanup** on the PS4, or **Settings → Storage & cleanup** in Orbit Zero. It removes the archive after a successful unpack and keeps archives that need a password or fail to unpack.
+
+To unpack archives yourself with another tool, turn off **Extract archives after downloading** under **App settings → Storage & cleanup** on the PS4 (Orbit Store 0.1.0 or later). In the TV app’s Store look, select **Keep archives packed**. ZIP, 7z and RAR downloads you add afterwards are saved as the archive under its own name. Downloads already in the queue keep the setting they were added with. From 0.1.0, RAR archives Orbit unpacks use RARLAB’s UnRAR and several of the PS4’s CPU cores.
 
 In Zero, the unpacked files on the computer follow the separate **Computer cache** setting. **Automatically remove after transfer** is off by default; turning it on removes those copies only after the PS4 confirms the transfer.
 
@@ -191,7 +205,7 @@ Orbit Zero also keeps a copy in the computer’s download folder unless you turn
 
 ### Choose a drive with enough space
 
-Check the space estimate before starting. Orbit prefers your default drive while it has room; otherwise it suggests another drive with more space. A drive you chose yourself is never swapped silently. Archives and unpacked files can need space at the same time, and installing needs space on the PS4 too.
+Check the space estimate before starting. Orbit prefers your default drive while it has room; otherwise it suggests another drive with more space. A drive you chose yourself is never swapped silently. While an archive is unpacked, it and its files need space at the same time; Orbit checks for that room just before unpacking (see [ZIP, RAR and 7z downloads](#zip-rar-and-7z-downloads)). Installing needs space on the PS4 too.
 
 Orbit Zero shows each PS4 drive’s free space and the space left after queued transfers, blocks a drive known to be too small and checks the computer’s space too. For a Zero transfer already in the queue, [Change drive](orbit-zero.md#change-the-ps4-drive) reuses the computer copy.
 

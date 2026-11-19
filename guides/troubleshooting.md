@@ -1,6 +1,6 @@
 # When something needs attention
 
-**For Orbit Store 0.0.3 for PS4.** Settings paths below use the default Store layout. In Crossbar, Cinema and Panorama, the main menu is called **Settings**; see [Find settings after switching](appearance.md#find-settings-after-switching).
+**For Orbit Store 0.1.0 for PS4.** Settings paths below use the default Store layout. In Crossbar, Cinema and Panorama, the main menu is called **Settings**; see [Find settings after switching](appearance.md#find-settings-after-switching).
 
 ## Opening and updating Orbit
 
@@ -36,7 +36,7 @@ Check **App settings → Downloads → Automatic PS4 shutdown**, or **Settings �
 
 ### The selected drive is too small
 
-Check free space and queued work in the download options. Archives may need room for the archive and the unpacked files together, and installing needs extra console storage. Choose another drive before starting, or free up space and resume. If Orbit Zero still has the computer copy, use **Change drive** on that download to send it to another PS4 drive without downloading it again.
+Check free space and queued work in the download options. Archives need room for the archive and the unpacked files together while they’re unpacked, and installing needs extra console storage. Choose another drive before starting, or free up space and resume. From 0.1.0, an archive that has no room to unpack waits, paused, with **Not enough free space to unpack this download.** Its archive is kept; free up space on its drive, then select **Resume**. If Orbit Zero still has the computer copy, use **Change drive** on that download to send it to another PS4 drive without downloading it again.
 
 ## Finding and downloading games
 

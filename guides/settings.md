@@ -7,7 +7,7 @@ Open **App settings** in Orbit Store’s default Store layout, or **Settings** i
 | Category | Controls |
 | --- | --- |
 | Downloads | Simultaneous downloads, connections per download, automatic retries and automatic PS4 shutdown. In Zero, also where downloads run: on the computer or the PS4. |
-| Storage & cleanup | Default drive, available space, archive and package cleanup, and what happens to files when you clear history. Zero has its computer download folder and computer cache here. |
+| Storage & cleanup | Default drive, available space, whether to unpack archives or keep them packed, archive and package cleanup, and what happens to files when you clear history. Zero has its computer download folder and computer cache here. |
 | Sources & accounts | The sources you use, plus Archive.org, Vikingfile and TorBox accounts. |
 | Devices | Pairing your phone or computer, connection details and **Enable Orbit Zero**. Zero has its pairing and **Connected apps** here. |
 | Appearance | Interface, language, motion, scores and playtimes on game cards, and the selected layout’s options. |

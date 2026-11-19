@@ -4,11 +4,11 @@
     {
       "name": "Orbit Store (Beta)",
       "filename": "orbit_store.elf",
-      "url": "https://github.com/saawant12/orbit-store-ps4/releases/download/v0.0.3/orbit_store.elf",
+      "url": "https://github.com/saawant12/orbit-store-ps4/releases/download/v0.1.0/orbit_store.elf",
       "description": "A modern PS4 download manager with a native TV app, resumable downloads and phone controls.",
-      "version": "v0.0.3",
+      "version": "v0.1.0",
       "category": "Utilities",
-      "checksum": "b991c35d5abb80958d8a4286b48e726d208fb28250cabdc34f833998ca366e15",
+      "checksum": "45f5b7679f679dc00102c4ea82423a8fd2f767cd1c5f59e67b62405a4cfe5db8",
       "receiveProtocol": 1
     }
   ]
