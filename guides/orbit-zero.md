@@ -9,7 +9,7 @@ Orbit Zero is Orbit’s app for Mac, Windows and Linux. With your PS4 it can:
 - start Orbit on your PS4 from the computer;
 - keep a PS5 and a PS4 as separate profiles, and switch between them in one click.
 
-**Needs Orbit Store 0.0.2 or later on your PS4 and Orbit Zero 1.9.1 or later on your computer.** Orbit Zero 1.9.5 is attached to the [latest Orbit Store for PS4 release](https://github.com/saawant12/orbit-store-ps4/releases/latest). [Stream & install](#stream--install) needs Orbit Store 0.0.3 or later.
+**Needs Orbit Store 0.0.2 or later on your PS4 and Orbit Zero 1.9.1 or later on your computer.** Orbit Zero 1.9.6 is attached to the [latest Orbit Store for PS4 release](https://github.com/saawant12/orbit-store-ps4/releases/latest). [Stream & install](#stream--install) needs Orbit Store 0.0.3 or later.
 
 - **Installing Orbit Zero for the first time?** Follow [Install Orbit Zero](orbit-zero-installation.md).
 - **PS4 without internet?** Follow [Set up Orbit on a PS4 without internet](orbit-zero-offline-ps4.md).

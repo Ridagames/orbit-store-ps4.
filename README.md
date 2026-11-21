@@ -155,7 +155,7 @@ In Orbit Zero’s Store interface, use the globe-shaped **Language** button in t
 
 ## Orbit Zero for Mac, Windows and Linux
 
-Orbit Zero is our desktop companion for Mac, Windows and Linux. [Download Orbit Zero](https://github.com/saawant12/orbit-store-ps4/releases/latest) (the `Orbit-Zero-1.9.5-*` files) and use it with Orbit Store 0.0.2 or later on your PS4.
+Orbit Zero is our desktop companion for Mac, Windows and Linux. [Download Orbit Zero](https://github.com/saawant12/orbit-store-ps4/releases/latest) (the `Orbit-Zero-1.9.6-*` files) and use it with Orbit Store 0.0.2 or later on your PS4.
 
 Download on your computer and send games to your PS4 over your home network. **Works over Wi-Fi or Ethernet. Your PS4 doesn’t need internet access for these downloads.**
 
@@ -182,7 +182,7 @@ Download on your computer and send games to your PS4 over your home network. **W
 | --- | --- |
 | Orbit Store download service and browser interface (`orbit_store.elf`) | **0.1.0** |
 | Native TV app (`orbit_store_ps4.pkg`) | **0.1.0** |
-| Orbit Zero for Mac, Windows and Linux (`Orbit-Zero-1.9.5-*`) | **1.9.5** |
+| Orbit Zero for Mac, Windows and Linux (`Orbit-Zero-1.9.6-*`) | **1.9.6** |
 
 The TV app’s title ID is `ORBT00002` and the browser icon’s is `ORBT00001`. These are homebrew project IDs, not official Sony ones.
 
@@ -196,7 +196,7 @@ The [release downloads](https://github.com/saawant12/orbit-store-ps4/releases/la
 
 - [orbit_store_ps4.pkg](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store_ps4.pkg), the native TV app with the download service and elfldr, and [its checksum](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store_ps4.pkg.sha256).
 - [orbit_store.elf](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store.elf), the download service and browser interface, and [its checksum](https://github.com/saawant12/orbit-store-ps4/releases/latest/download/orbit_store.elf.sha256).
-- The `Orbit-Zero-1.9.5-*` packages for Mac, Windows and Linux, in ARM64 and x64 builds, with `SHA256SUMS`. Follow the [desktop installation guide](guides/orbit-zero-installation.md).
+- The `Orbit-Zero-1.9.6-*` packages for Mac, Windows and Linux, in ARM64 and x64 builds, with `SHA256SUMS`. Follow the [desktop installation guide](guides/orbit-zero-installation.md).
 - The complete source and licence bundle for the service, browser interface, TV app and their open-source components, with build instructions.
 
 Follow the [verification commands](guides/getting-started.md#verify-the-ps4-files), then the installation steps for your version.

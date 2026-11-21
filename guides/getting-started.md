@@ -24,7 +24,7 @@ The Games and browser versions share the same downloads, favourites and service 
 - Enough writable storage.
 - A phone or computer on the same local network, if you want to control Orbit from one.
 
-The current PS4 release is **Orbit Store 0.1.0**: **native app 0.1.0** with **download service 0.1.0**, plus **Orbit Zero 1.9.5** for your computer.
+The current PS4 release is **Orbit Store 0.1.0**: **native app 0.1.0** with **download service 0.1.0**, plus **Orbit Zero 1.9.6** for your computer.
 
 The instructions below use the default Store layout. If you choose another interface, check its settings entry under Appearance.
 
@@ -36,7 +36,7 @@ Choose the app you use; you do not need to download every asset.
 | --- | --- |
 | Native PS4 app | **`orbit_store_ps4.pkg`** and its checksum. Native app **0.1.0** already includes service **0.1.0** and elfldr. The app starts the service itself; nothing has to run first. |
 | Service started separately through an ELF loader | **`orbit_store.elf`** and its checksum. Send it once to an ELF loader on port 9021; Orbit then keeps its own copies current. |
-| Orbit Zero | The `Orbit-Zero-1.9.5-*` package for your computer. Zero gets Orbit for PS4 from the release and starts it with **Start Orbit on PS4**, so you don't need to download the ELF. The TV app is optional if you also want TV controls. |
+| Orbit Zero | The `Orbit-Zero-1.9.6-*` package for your computer. Zero gets Orbit for PS4 from the release and starts it with **Start Orbit on PS4**, so you don't need to download the ELF. The TV app is optional if you also want TV controls. |
 
 Installing a package or uploading an ELF does not replace an older service that is already running. Stop it with **Stop Orbit to restart** before starting the updated copy. In **Diagnostics & about**, the current versions are **native app 0.0.3** and **download service 0.0.3**. Later releases may update one without the other, so the two numbers can differ. Keep your pairing, settings and queue in place.
 

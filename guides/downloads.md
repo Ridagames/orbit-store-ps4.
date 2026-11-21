@@ -42,7 +42,7 @@ Open **Add-ons** after Browse, or **Add-ons (count)** on a game’s details. Sea
 
 ## Get everything
 
-**Requires 0.1.0 or later.** On a game’s page, choose **Get everything** to download the game together with its newest update and every DLC Orbit has for it. It works in every look of the TV app and in the browser version. Orbit Zero 1.9.5 offers it on PS4 game pages too; your PS4 downloads and installs the items itself.
+**Requires 0.1.0 or later.** On a game’s page, choose **Get everything** to download the game together with its newest update and every DLC Orbit has for it. It works in every look of the TV app and in the browser version. Orbit Zero 1.9.5 or later offers it on PS4 game pages too; your PS4 downloads and installs the items itself.
 
 1. **Get everything** lists the game, using the source and format chosen on its page, then the newest update your PS4’s firmware can run, then each DLC with its source and size. Everything is ticked; untick anything you don’t want. If the game is already installed, its row shows **Installed** and the update appears only when it’s newer than the installed version.
 2. Check the total size, the free space and the drive the downloads go to. If the drive doesn’t have room for everything ticked, Orbit says **Not enough space for everything on this drive.** and doesn’t start.

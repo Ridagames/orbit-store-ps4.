@@ -22,7 +22,7 @@ When a game has a newer update, Library marks it with **Update** and the version
 - Updates download and install by themselves; follow them in **Downloads**. Library shows the new version once the PS4 has installed it.
 - An update that needs its provider’s page, such as Vikingfile or AkiraBox, opens it on the PS4 as for a normal download.
 
-Orbit doesn’t send a notification about updates; check **Updates** in Library. With a PS4 paired, Orbit Zero 1.9.5 shows the same update labels, the **Updates** filter and **Update all**; the PS4 downloads and installs the updates itself.
+Orbit doesn’t send a notification about updates; check **Updates** in Library. With a PS4 paired, Orbit Zero 1.9.5 or later shows the same update labels, the **Updates** filter and **Update all**; the PS4 downloads and installs the updates itself.
 
 ## Downloads and Library
 
