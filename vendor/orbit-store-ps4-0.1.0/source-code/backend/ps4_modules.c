@@ -53,6 +53,7 @@ int ps4_modules_initialize(void) {
     static const char *names[] = {"libkernel_sys.sprx", "libkernel_web.sprx", "libkernel.sprx",
         "libSceLibcInternal.sprx", "libSceSysmodule.sprx", "libSceNet.sprx"};
     int result = 0;
+    size_t found = 0;
     pthread_mutex_lock(&module_lock);
     for (size_t i = 0; i < sizeof names / sizeof names[0]; i++) {
         uint32_t handle = 0;
@@ -60,11 +61,16 @@ int ps4_modules_initialize(void) {
             klog_printf("[ORBIT-SVC] module initialization: kernel_dynlib_handle failed for %s\n", names[i]);
             continue;
         }
+        found++;
         if (!isolate_module(handle)) {
             klog_printf("[ORBIT-SVC] module initialization: isolation failed for %s\n", names[i]);
             result = -1;
             break;
         }
+    }
+    if (!found) {
+        klog_printf("[ORBIT-SVC] module initialization: no system modules could be enumerated\n");
+        result = -1;
     }
     pthread_mutex_unlock(&module_lock);
     return result;
