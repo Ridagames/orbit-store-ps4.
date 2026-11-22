@@ -123,13 +123,26 @@ bool orbit_is_stopping(void) {
     return stopping || atomic_load(&stop_requested);
 }
 int main(int argc, char **argv) {
+    setvbuf(stdout, NULL, _IOLBF, 0);
 #ifndef ORBIT_DESKTOP
-    if (ps4_modules_initialize()) return 1;
+    /* Record this before module isolation: a kernel-SDK initialization failure
+     * otherwise exits before Orbit's persistent diagnostics are available. */
+    const uint32_t startup_firmware = kernel_get_fw_version();
+    klog_printf("[ORBIT-SVC] startup: beginning PS4 module initialization firmware=0x%08x\\n",
+                startup_firmware);
+    if (ps4_modules_initialize()) {
+        klog_printf("[ORBIT-SVC] startup: PS4 module initialization failed firmware=0x%08x\\n",
+                    startup_firmware);
+        fprintf(stderr, "[ORBIT-SVC] PS4 module initialization failed (firmware 0x%08x).\\n",
+                startup_firmware);
+        return 1;
+    }
+    klog_printf("[ORBIT-SVC] startup: PS4 module initialization succeeded firmware=0x%08x\\n",
+                startup_firmware);
 #endif
 #ifdef ORBIT_DIAGNOSTIC_LOCKS
     orbit_watch_start();
 #endif
-    setvbuf(stdout, NULL, _IOLBF, 0);
     copy_text(orbit.state_dir, sizeof orbit.state_dir, "/data/orbit-store");
     const unsigned char *runtime = NULL;
     size_t runtime_size = 0;
