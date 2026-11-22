@@ -1,0 +1,76 @@
+name: Build Orbit Store PS4 diagnostic PKG
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/src/orbit/store.cpp'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/src/orbit/starter.cpp'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/tests/unit/starter_test.cpp'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/sce_sys/param.json'
+      - '.github/workflows/orbit-ps4-diagnostic-pkg.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build-diagnostic-pkg:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: vendor/orbit-store-ps4-0.1.0/source-code/package-lock.json
+      - name: Build pinned PS4 SDK and elfldr
+        working-directory: vendor/orbit-store-ps4-0.1.0/source-code
+        run: docker build -f tools/Dockerfile.sdk.ps4 -t orbit-sdk-ps4:0.9-fw1400 .
+      - name: Bootstrap verified build inputs
+        working-directory: vendor/orbit-store-ps4-0.1.0/source-code
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python tools/bootstrap.py
+      - name: Build browser assets
+        working-directory: vendor/orbit-store-ps4-0.1.0/source-code
+        run: |
+          npm ci
+          npm run build
+          python3 tools/embed-launcher.py
+      - name: Build payload and app toolchain images
+        working-directory: vendor/orbit-store-ps4-0.1.0/source-code
+        run: |
+          docker build -t orbit-build-ps4:0.2 .
+          docker build -t orbit-app-build:0.2 app
+      - name: Build the real PS4 browser shortcut
+        working-directory: vendor/orbit-store-ps4-0.1.0/source-code
+        run: |
+          docker run --rm --cpus 2 --memory 6g -v "$PWD:/work" -w /work \
+            orbit-app-build:0.2 bash launcher/tools/build.sh
+      - name: Build Orbit PS4 payload
+        working-directory: vendor/orbit-store-ps4-0.1.0/source-code
+        run: |
+          docker run --rm --cpus 2 --memory 6g -v "$PWD:/work" \
+            orbit-build-ps4:0.2 payload
+      - name: Build installable PS4 PKG
+        working-directory: vendor/orbit-store-ps4-0.1.0/source-code
+        run: |
+          docker run --rm --cpus 2 --memory 6g -v "$PWD:/work" -w /work/app \
+            orbit-app-build:0.2 make pkg
+      - name: Verify the complete PKG and embedded payloads
+        working-directory: vendor/orbit-store-ps4-0.1.0/source-code
+        run: |
+          docker run --rm --cpus 2 --memory 6g -v "$PWD:/work" -w /work/app \
+            orbit-app-build:0.2 bash tools/verify-package.sh
+      - name: Upload diagnostic PKG
+        uses: actions/upload-artifact@v4
+        with:
+          name: orbit-store-ps4-diagnostic-app-01.05
+          path: vendor/orbit-store-ps4-0.1.0/source-code/app/dist/*.pkg
+          if-no-files-found: error
+          retention-days: 14
