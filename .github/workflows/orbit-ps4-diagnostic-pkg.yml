@@ -15,6 +15,7 @@ on:
       - 'vendor/orbit-store-ps4-0.1.0/source-code/tools/bootstrap.py'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/tools/Dockerfile.sdk.ps4'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/tools/patch_sdk_1402.py'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/Dockerfile'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/sce_sys/param.json'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/backend/main.c'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/backend/ps4_modules.c'
