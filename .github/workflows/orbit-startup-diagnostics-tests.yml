@@ -1,0 +1,30 @@
+name: Orbit PS4 startup diagnostics tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/src/orbit/store.cpp'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/src/orbit/starter.cpp'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/tests/unit/starter_test.cpp'
+      - '.github/workflows/orbit-startup-diagnostics-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  native-unit-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+      - name: Build native app test image
+        run: docker build -t orbit-app-build:ci vendor/orbit-store-ps4-0.1.0/source-code/app
+      - name: Run startup and native unit tests
+        run: |
+          docker run --rm --cpus 2 --memory 6g \
+            -v "$GITHUB_WORKSPACE/vendor/orbit-store-ps4-0.1.0/source-code:/work" \
+            -w /work/app orbit-app-build:ci make test
