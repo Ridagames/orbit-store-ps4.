@@ -66,8 +66,12 @@ jobs:
             orbit-app-build:0.2 make pkg
       - name: Verify the complete PKG and embedded payloads
         working-directory: vendor/orbit-store-ps4-0.1.0/source-code
+        env:
+          ORBIT_SOURCE_COMMIT: 4ab81473f9af0175a692942a536b0f84c8a53b3a
         run: |
-          docker run --rm --cpus 2 --memory 6g -v "$PWD:/work" -w /work/app \
+          docker run --rm --cpus 2 --memory 6g \
+            -e ORBIT_SOURCE_COMMIT="$ORBIT_SOURCE_COMMIT" \
+            -v "$PWD:/work" -w /work/app \
             orbit-app-build:0.2 bash tools/verify-package.sh
       - name: Upload diagnostic PKG
         uses: actions/upload-artifact@v4
