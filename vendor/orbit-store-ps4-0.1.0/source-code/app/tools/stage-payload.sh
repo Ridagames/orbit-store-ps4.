@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Orbit Store TV app - stages Orbit's payload for the package, as orbit/orbit_store.elf
-# with its release version in orbit/version.txt, and the pinned elfldr as orbit/elfldr.elf
+# Orbit Store TV app - stages Orbit and both pinned elfldr formats for the package.
+# GoldHEN BinLoader receives elfldr.bin; elfldr.elf remains available for ELF-loader use.
 # (both read by src/orbit/starter.cpp; elfldr from tools/bootstrap.py, or ORBIT_ELFLDR).
 # Usage: stage-payload.sh <orbit_store.elf | none> <stage directory>
 set -euo pipefail
@@ -32,10 +32,16 @@ mkdir -p "$stage/orbit"
 cp "$payload" "$stage/orbit/orbit_store.elf"
 printf '%s\n' "$version" > "$stage/orbit/version.txt"
 elfldr=${ORBIT_ELFLDR:-$(dirname "$payload")/../.deps/elfldr/elfldr.elf}
+elfldr_bin=${ORBIT_ELFLDR_BIN:-$(dirname "$payload")/../.deps/elfldr/elfldr.bin}
 elfldr_sha256=068b82915e6f7721105898ad58bb1dadfbc7c40ce40accaee432441ee9b56e53
 if [[ ! -f $elfldr ]] || [[ $(sha256sum "$elfldr" | cut -d' ' -f1) != "$elfldr_sha256" ]]; then
     printf 'elfldr a481740 not found or changed: %s (run tools/bootstrap.py in the repository root)\n' "$elfldr" >&2
     exit 1
 fi
 cp "$elfldr" "$stage/orbit/elfldr.elf"
-printf '==> [payload] Bundling Orbit %s (%s bytes)\n' "$version" "$size"
+if [[ ! -f $elfldr_bin ]] || (( $(stat -c %s "$elfldr_bin") < 64 || $(stat -c %s "$elfldr_bin") > 16 * 1024 * 1024 )); then
+    printf 'elfldr.bin missing or invalid: %s (run tools/bootstrap.py in the repository root)\n' "$elfldr_bin" >&2
+    exit 1
+fi
+cp "$elfldr_bin" "$stage/orbit/elfldr.bin"
+printf '==> [payload] Bundling Orbit %s (%s bytes) and elfldr.bin (%s bytes)\n' "$version" "$size" "$(stat -c %s "$elfldr_bin")"
