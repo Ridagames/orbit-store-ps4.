@@ -110,6 +110,23 @@ bool readable_elf(const std::string &path, long long *bytes)
     return ok;
 }
 
+ // elfldr.bin is a raw GoldHEN BinLoader bootstrap, not an ELF file.
+bool readable_bin_payload(const std::string &path, long long *bytes)
+{
+    const int fd = open(path.c_str(), O_RDONLY);
+    if (fd < 0)
+        return false;
+    struct stat info
+    {
+    };
+    const bool ok = fstat(fd, &info) == 0 && S_ISREG(info.st_mode) &&
+                    info.st_size >= 64 && info.st_size <= (16ll << 20);
+    close(fd);
+    if (ok)
+        *bytes = static_cast<long long>(info.st_size);
+    return ok;
+}
+
 Payload candidate(const std::string &elf, const std::string &version, const char *source)
 {
     Payload payload;
@@ -293,15 +310,17 @@ Result LoaderStarter::start()
         if (result.outcome == Outcome::no_loader && goldhen_port_ != 0)
         {
             long long elfldr_bytes = 0;
-            const std::string elfldr = readable_elf(where_.saved_elfldr, &elfldr_bytes)     ? where_.saved_elfldr
-                                       : readable_elf(where_.bundled_elfldr, &elfldr_bytes) ? where_.bundled_elfldr
-                                                                                            : std::string();
+            const std::string elfldr = readable_bin_payload(where_.saved_elfldr_bin, &elfldr_bytes)
+                                            ? where_.saved_elfldr_bin
+                                        : readable_bin_payload(where_.bundled_elfldr_bin, &elfldr_bytes)
+                                            ? where_.bundled_elfldr_bin
+                                            : std::string();
             std::string loader_error;
             if (!elfldr.empty() && send(elfldr, goldhen_port_, 10000, &loader_error) == Outcome::sent)
             {
                 started_elfldr = true;
                 if (log_)
-                    log_("elfldr: full file transfer accepted by GoldHEN PayLoader 9090; execution is not yet confirmed; waiting for listener 9021");
+                    log_("elfldr.bin: full bootstrap transfer accepted by GoldHEN BinLoader 9090; execution is not yet confirmed; waiting for listener 9021");
                 // Send Orbit once elfldr listens; until then its port refuses, so no
                 // bytes go anywhere.
                 result.outcome = Outcome::no_loader;
