@@ -1,0 +1,79 @@
+name: Extract Orbit Store PS4 0.1.0 application source
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/extract-orbit-ps4-source.yml
+
+permissions:
+  contents: write
+
+jobs:
+  extract-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Reassemble official application source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="vendor/orbit-store-ps4-0.1.0"
+          ARCHIVE="/tmp/orbit-store-0.1.0-source.tar.gz"
+          cat "$ROOT/orbit-store-0.1.0-source.tar.gz.part"[0-9][0-9][0-9] > "$ARCHIVE"
+          echo "Reassembled archive:"
+          ls -lh "$ARCHIVE"
+          gzip -t "$ARCHIVE"
+          echo "Archive integrity: OK"
+
+      - name: Extract application source tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="vendor/orbit-store-ps4-0.1.0"
+          DEST="$ROOT/source-code"
+          mkdir -p "$DEST"
+          tar -xzf /tmp/orbit-store-0.1.0-source.tar.gz -C "$DEST" --strip-components=1
+          echo "Extracted source size:"
+          du -sh "$DEST"
+          echo "Source file count: $(find "$DEST" -type f | wc -l)"
+          echo "Largest source files:"
+          find "$DEST" -type f -printf '%s\t%p\n' | sort -nr | head -n 25
+
+      - name: Verify GitHub file-size limits
+        shell: bash
+        run: |
+          set -euo pipefail
+          TOO_LARGE="$(find vendor/orbit-store-ps4-0.1.0/source-code -type f -size +90M -print)"
+          if [ -n "$TOO_LARGE" ]; then
+            printf 'Source files exceed the safe GitHub limit:\n%s\n' "$TOO_LARGE"
+            exit 24
+          fi
+          echo "All extracted source files are below 90 MiB." | tee source-extraction-report.txt
+          find vendor/orbit-store-ps4-0.1.0/source-code -type f | wc -l | awk '{print "Source files: " $1}' | tee -a source-extraction-report.txt
+          du -sh vendor/orbit-store-ps4-0.1.0/source-code | tee -a source-extraction-report.txt
+
+      - name: Commit source tree to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vendor/orbit-store-ps4-0.1.0/source-code
+          git commit -m "Extract official Orbit Store PS4 0.1.0 application source"
+          git push origin HEAD:main
+
+      - name: Upload extraction report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: orbit-store-ps4-source-extraction-report
+          path: source-extraction-report.txt
+          if-no-files-found: ignore
+          retention-days: 14
