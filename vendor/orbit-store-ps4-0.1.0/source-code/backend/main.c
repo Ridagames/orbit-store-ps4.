@@ -26,6 +26,7 @@
 #include <unistd.h>
 #ifndef ORBIT_DESKTOP
 #include <ps4/kernel.h>
+#include <ps4/klog.h>
 #include "ps4_modules.h"
 #endif
 static volatile sig_atomic_t stopping, signalled;
