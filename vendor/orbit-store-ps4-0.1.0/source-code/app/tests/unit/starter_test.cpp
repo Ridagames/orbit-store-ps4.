@@ -247,7 +247,7 @@ TEST(Starter, StartsElfldrThroughGoldhenWhenNoElfLoaderAnswers)
     EXPECT_EQ(started.take(), orbit);
     ASSERT_GE(logs.size(), 2u);
     EXPECT_NE(logs[0].find("GoldHEN BinLoader 9090"), std::string::npos) << logs[0];
-    EXPECT_NE(logs[1].find("port 9021 accepted Orbit"), std::string::npos) << logs[1];
+    EXPECT_NE(logs[1].find("accepted Orbit after approximately"), std::string::npos) << logs[1];
 }
 
 TEST(Starter, UsesThePackagedElfldrWhenNoneWasSaved)
