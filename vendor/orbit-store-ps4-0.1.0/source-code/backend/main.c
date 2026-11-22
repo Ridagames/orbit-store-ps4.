@@ -128,16 +128,16 @@ int main(int argc, char **argv) {
     /* Record this before module isolation: a kernel-SDK initialization failure
      * otherwise exits before Orbit's persistent diagnostics are available. */
     const uint32_t startup_firmware = kernel_get_fw_version();
-    klog_printf("[ORBIT-SVC] startup: beginning PS4 module initialization firmware=0x%08x\\n",
+    klog_printf("[ORBIT-SVC] startup: beginning PS4 module initialization firmware=0x%08x\n",
                 startup_firmware);
     if (ps4_modules_initialize()) {
-        klog_printf("[ORBIT-SVC] startup: PS4 module initialization failed firmware=0x%08x\\n",
+        klog_printf("[ORBIT-SVC] startup: PS4 module initialization failed firmware=0x%08x\n",
                     startup_firmware);
-        fprintf(stderr, "[ORBIT-SVC] PS4 module initialization failed (firmware 0x%08x).\\n",
+        fprintf(stderr, "[ORBIT-SVC] PS4 module initialization failed (firmware 0x%08x).\n",
                 startup_firmware);
         return 1;
     }
-    klog_printf("[ORBIT-SVC] startup: PS4 module initialization succeeded firmware=0x%08x\\n",
+    klog_printf("[ORBIT-SVC] startup: PS4 module initialization succeeded firmware=0x%08x\n",
                 startup_firmware);
 #endif
 #ifdef ORBIT_DIAGNOSTIC_LOCKS
