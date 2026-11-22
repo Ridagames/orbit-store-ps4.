@@ -13,7 +13,8 @@ on:
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/tools/stage-payload.sh'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/tools/verify-package.sh'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/tools/bootstrap.py'
-      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/tests/unit/starter_test.cpp'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/tools/Dockerfile.sdk.ps4'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/tools/patch_sdk_1402.py'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/sce_sys/param.json'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/backend/main.c'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/backend/ps4_modules.c'
@@ -37,7 +38,7 @@ jobs:
           cache-dependency-path: vendor/orbit-store-ps4-0.1.0/source-code/package-lock.json
       - name: Build pinned PS4 SDK and elfldr
         working-directory: vendor/orbit-store-ps4-0.1.0/source-code
-        run: docker build -f tools/Dockerfile.sdk.ps4 -t orbit-sdk-ps4:0.9-fw1400 .
+        run: docker build -f tools/Dockerfile.sdk.ps4 -t orbit-sdk-ps4:0.9-fw1402 .
       - name: Bootstrap verified build inputs
         working-directory: vendor/orbit-store-ps4-0.1.0/source-code
         run: |
