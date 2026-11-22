@@ -86,18 +86,26 @@ version = (image / 'orbit/version.txt').read_text().strip()
 assert version == match.group(1), 'packaged service version differs from source'
 assert b'Orbit-Store/' + version.encode() + b'\0' in packaged.read_bytes(), \
     'payload version marker differs'
-# elfldr a481740: GoldHEN BinLoader must receive the raw .bin bootstrap, not elfldr.elf.
-assert (image / 'orbit/elfldr.elf').is_file() and digest(image / 'orbit/elfldr.elf') == \
-    '068b82915e6f7721105898ad58bb1dadfbc7c40ce40accaee432441ee9b56e53', \
-    'pkg elfldr.elf missing or not the pinned a481740 build'
+# The patched elfldr.elf and its GoldHEN BinLoader bootstrap must both match
+# the fresh SDK-image outputs and the bytes staged into the package.
+source_elfldr = repo / '../.deps/elfldr/elfldr.elf'
+staged_elfldr = repo / 'build/package-extra/orbit/elfldr.elf'
+packaged_elfldr = image / 'orbit/elfldr.elf'
+assert source_elfldr.is_file() and staged_elfldr.is_file() and packaged_elfldr.is_file(), \
+    'pkg elfldr.elf missing'
+assert packaged_elfldr.read_bytes()[:6] == b'\x7fELF\x02\x01', \
+    'pkg elfldr.elf has an invalid ELF64 header'
+assert digest(packaged_elfldr) == digest(staged_elfldr) == digest(source_elfldr), \
+    'pkg elfldr.elf differs from the fresh guarded 14.02 SDK build'
+source_elfldr_bin = repo / '../.deps/elfldr/elfldr.bin'
 staged_elfldr_bin = repo / 'build/package-extra/orbit/elfldr.bin'
 packaged_elfldr_bin = image / 'orbit/elfldr.bin'
-assert staged_elfldr_bin.is_file() and packaged_elfldr_bin.is_file(), \
+assert source_elfldr_bin.is_file() and staged_elfldr_bin.is_file() and packaged_elfldr_bin.is_file(), \
     'pkg elfldr.bin bootstrap missing'
 assert 64 <= packaged_elfldr_bin.stat().st_size <= 16 * 1024 * 1024, \
     'pkg elfldr.bin has an invalid size'
-assert digest(packaged_elfldr_bin) == digest(staged_elfldr_bin), \
-    'pkg elfldr.bin differs from the staged GoldHEN bootstrap'
+assert digest(packaged_elfldr_bin) == digest(staged_elfldr_bin) == digest(source_elfldr_bin), \
+    'pkg elfldr.bin differs from the fresh guarded 14.02 SDK build'
 
 assert digest(image / 'eboot.bin') == digest(Path('build/eboot.bin')), \
     'pkg eboot.bin differs from the signed build output'
