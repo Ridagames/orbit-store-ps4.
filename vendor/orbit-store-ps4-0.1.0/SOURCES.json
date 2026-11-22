@@ -1,0 +1,179 @@
+{
+  "platform": "PS4",
+  "version": "0.1.0",
+  "sourceCommit": "4ab81473f9af0175a692942a536b0f84c8a53b3a",
+  "workingTreeChangesIncluded": false,
+  "sourceArchive": "orbit-store-0.1.0-source.tar.gz",
+  "reviewOnly": false,
+  "completeCorrespondingSource": true,
+  "unresolvedComponents": [],
+  "upstream": [
+    {
+      "name": "ps4-payload-sdk-0.9.zip",
+      "url": "https://github.com/ps4-payload-dev/sdk/releases/download/v0.9/ps4-payload-sdk.zip",
+      "sha256": "3190e88255a72161e5ce2f22a8ae8f638a2c5a9d1ff1e0209ed692d36b4d9ec5",
+      "kind": "build-input",
+      "scope": "PS4 payload SDK v0.9 release; its crt1.o is replaced by one rebuilt from commit 573b4a0 (tools/Dockerfile.sdk.ps4)"
+    },
+    {
+      "name": "ps4-payload-sdk-source-573b4a0.tar.gz",
+      "url": "https://codeload.github.com/ps4-payload-dev/sdk/tar.gz/573b4a0d0d5fa8695cfeee5f5e2f0447c550035d",
+      "commit": "573b4a0d0d5fa8695cfeee5f5e2f0447c550035d",
+      "kind": "source",
+      "scope": "PS4 payload SDK at 573b4a0 (v0.9 plus firmware 13.52 and 14.00); crt1.o is built from its crt/",
+      "sha256": "9551320c52409de3bd15acc8cb8807591813748409ae4e7bac7a69b0e7288c4d"
+    },
+    {
+      "name": "toolchain-llvm-18-0.5.4.tar.gz",
+      "url": "https://github.com/OpenOrbis/OpenOrbis-PS4-Toolchain/releases/download/v0.5.4/toolchain-llvm-18.tar.gz",
+      "sha256": "3c7cd5bb593ca74fa1c13fd59f3938dc0fc07985167f7275063019e63abe4526",
+      "kind": "build-input"
+    },
+    {
+      "name": "libmicrohttpd-1.0.1.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-1.0.1.tar.gz",
+      "sha256": "a89e09fc9b4de34dde19f4fcb4faaa1ce10299b9908db1132bbfa1de47882b94",
+      "kind": "source"
+    },
+    {
+      "name": "libwebp-1.4.0.tar.gz",
+      "url": "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.4.0.tar.gz",
+      "sha256": "61f873ec69e3be1b99535634340d5bde750b2e4447caa1db9f61be3fd49ab1e5",
+      "kind": "source"
+    },
+    {
+      "name": "curl-8.18.0.tar.xz",
+      "url": "https://curl.se/download/curl-8.18.0.tar.xz",
+      "sha256": "40df79166e74aa20149365e11ee4c798a46ad57c34e4f68fd13100e2c9a91946",
+      "kind": "source"
+    },
+    {
+      "name": "openssl-3.5.2.tar.gz",
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.2/openssl-3.5.2.tar.gz",
+      "sha256": "c53a47e5e441c930c3928cf7bf6fb00e5d129b630e0aa873b08258656e7345ec",
+      "kind": "source"
+    },
+    {
+      "name": "zlib-1.3.2.tar.gz",
+      "url": "https://github.com/madler/zlib/releases/download/v1.3.2/zlib-1.3.2.tar.gz",
+      "sha256": "bb329a0a2cd0274d05519d61c667c062e06990d72e125ee2dfa8de64f0119d16",
+      "kind": "source"
+    },
+    {
+      "name": "bzip2-1.0.8.tar.gz",
+      "url": "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+      "sha256": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
+      "kind": "source"
+    },
+    {
+      "name": "xz-5.8.1.tar.gz",
+      "url": "https://github.com/tukaani-project/xz/releases/download/v5.8.1/xz-5.8.1.tar.gz",
+      "sha256": "507825b599356c10dca1cd720c9d0d0c9d5400b9de300af00e4d1ea150795543",
+      "kind": "source"
+    },
+    {
+      "name": "libarchive-3.8.1.tar.xz",
+      "url": "https://github.com/libarchive/libarchive/releases/download/v3.8.1/libarchive-3.8.1.tar.xz",
+      "sha256": "19f917d42d530f98815ac824d90c7eaf648e9d9a50e4f309c812457ffa5496b5",
+      "kind": "source"
+    },
+    {
+      "name": "7z2603-src.7z",
+      "url": "https://github.com/ip7z/7zip/releases/download/26.03/7z2603-src.7z",
+      "sha256": "41e2a7c0e9f838351c625e01f0f581a2188bb3dda10c8e0b4a852da26546ffe2",
+      "kind": "source"
+    },
+    {
+      "name": "unrarsrc-7.2.7.tar.gz",
+      "url": "https://www.rarlab.com/rar/unrarsrc-7.2.7.tar.gz",
+      "sha256": "01d903a7dcf413cb2925696d7796e48e38d471f79bfe7ef3ad2aebf6c12dbefd",
+      "kind": "source",
+      "scope": "RARLAB UnRAR 7.23, built by tools/build-unrar.sh with tools/patch-unrar.py; extracts RAR archives (licence: licenses/unrar.txt)"
+    },
+    {
+      "name": "sqlite-amalgamation-3540100.zip",
+      "url": "https://www.sqlite.org/2026/sqlite-amalgamation-3540100.zip",
+      "sha256": "0a9c8e34352dad46006aa82836d5383bff9dc6bc9ce5a60553c05aa30e6ad1f9",
+      "kind": "source"
+    },
+    {
+      "name": "ps4-payload-sdk-source-1a85cb5.tar.gz",
+      "url": "https://codeload.github.com/ps4-payload-dev/sdk/tar.gz/1a85cb5a8ea12dc2dcfbcc878700d0d097245de7",
+      "commit": "1a85cb5a8ea12dc2dcfbcc878700d0d097245de7",
+      "kind": "source",
+      "sha256": "f1aadc552d49d8eb019ed728e9a6cce347ace485325f9cc31e207d5c39f940cb",
+      "scope": "PS4 payload SDK source at tag v0.9; the SDK image rebuilds its crt1.o and checks it matches the release"
+    },
+    {
+      "name": "create-fself-source-f2da622.tar.gz",
+      "url": "https://codeload.github.com/OpenOrbis/create-fself/tar.gz/f2da6229684ce320f673c06fceac9c218f621788",
+      "commit": "f2da6229684ce320f673c06fceac9c218f621788",
+      "kind": "source",
+      "sha256": "ccd3f136d20464a164767d6d87c83264443aa7836378800e5a0003517341218b"
+    },
+    {
+      "name": "create-gp4-source-bf8e66e.tar.gz",
+      "url": "https://codeload.github.com/OpenOrbis/create-gp4/tar.gz/bf8e66e9e9bdd92e41e1697893bc8098a151fa24",
+      "commit": "bf8e66e9e9bdd92e41e1697893bc8098a151fa24",
+      "kind": "source",
+      "sha256": "f439dbe266636147b700847ac40399902954f33d263654e3084ad144a704b38c"
+    },
+    {
+      "name": "readoelf-source-9e45cd0.tar.gz",
+      "url": "https://codeload.github.com/OpenOrbis/readoelf/tar.gz/9e45cd0c36b00e4468b59f386b9d594bb6617d23",
+      "commit": "9e45cd0c36b00e4468b59f386b9d594bb6617d23",
+      "kind": "source",
+      "sha256": "40a1236cf1ddee169607f08c6a7619aa6b281fda1abd5567058e959251366f43"
+    },
+    {
+      "name": "llvm-project-15.0.7.src.tar.xz",
+      "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.7/llvm-project-15.0.7.src.tar.xz",
+      "kind": "source",
+      "scope": "PS4 payload SDK C++ runtimes; pinned by SDK libcxx.sh",
+      "sha256": "8b5fcb24b4128cf04df1b0b9410ce8b1a729cb3c544e6da885d234280dedeac6"
+    },
+    {
+      "name": "openorbis-llvm-v1.2.tar.gz",
+      "url": "https://github.com/OpenOrbis/llvm-project/releases/download/v1.2/libcxx-full.tar.gz",
+      "sha256": "7cf326057d9e9811c26f932605295b9d4ab49b9b0ffa0b7e354e3621a44e00e9",
+      "kind": "build-input"
+    },
+    {
+      "name": "openorbis-llvm-source-83e2569.tar.gz",
+      "url": "https://codeload.github.com/OpenOrbis/llvm-project/tar.gz/83e2569f0c062d980ae142d8dc583f6b8733be35",
+      "sha256": "f679b11529c5f0fdf99db792006210b15b68a1625a8caaef8d60c950649b742f",
+      "kind": "source",
+      "commit": "83e2569f0c062d980ae142d8dc583f6b8733be35"
+    },
+    {
+      "name": "openorbis-source-6929baf.tar.gz",
+      "url": "https://codeload.github.com/OpenOrbis/OpenOrbis-PS4-Toolchain/tar.gz/6929bafac0b565692ed61e66032a79185ee9cf65",
+      "sha256": "a942004c58328a5a062be9b910d35b3784e30e52509616e8896eabb8fecae3eb",
+      "kind": "source",
+      "commit": "6929bafac0b565692ed61e66032a79185ee9cf65"
+    },
+    {
+      "name": "openorbis-musl-source-779f951.tar.gz",
+      "url": "https://codeload.github.com/OpenOrbis/musl/tar.gz/779f95174b44d39e6a8a788b36289cf4768944a9",
+      "sha256": "cc9763ca78ff47cc0095e06522b581777b183d9138bc9080b530db3ca5e03093",
+      "kind": "source",
+      "commit": "779f95174b44d39e6a8a788b36289cf4768944a9"
+    },
+    {
+      "name": "elfldr-source-b3ee497.tar.gz",
+      "url": "https://codeload.github.com/ps4-payload-dev/elfldr/tar.gz/b3ee49746cb9f3464e8dc75ec6387e8408558b8a",
+      "commit": "b3ee49746cb9f3464e8dc75ec6387e8408558b8a",
+      "kind": "source",
+      "scope": "elfldr source at tag v0.7; the SDK image rebuilds it and checks it matches the v0.7 release binary",
+      "sha256": "f27144fb4bb158b38b2e603160c5254ae83a0285f1d59e5e9e5d04a52842ee67"
+    },
+    {
+      "name": "elfldr-source-a481740.tar.gz",
+      "url": "https://codeload.github.com/ps4-payload-dev/elfldr/tar.gz/a4817404f5cb2d5c177b05cd5e4548b74e6c2725",
+      "commit": "a4817404f5cb2d5c177b05cd5e4548b74e6c2725",
+      "kind": "source",
+      "scope": "elfldr at a481740 (v0.7 plus firmware 13.52 and 14.00), GPL-3.0-or-later; built by the SDK image and carried in the payload and the TV app package",
+      "sha256": "9d351ad25c57bc63f15d0a3ecbd9b7e5c45317d08e593d61d56a71dbb003c81c"
+    }
+  ]
+}
