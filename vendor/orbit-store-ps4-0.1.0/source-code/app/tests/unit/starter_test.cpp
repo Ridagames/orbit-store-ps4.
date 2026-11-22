@@ -232,7 +232,10 @@ TEST(Starter, StartsElfldrThroughGoldhenWhenNoElfLoaderAnswers)
     write(where.bundled_elf, orbit); write(where.saved_elfldr, elfldr);
     const std::uint16_t elf_port = closed_port();
     Loader goldhen;
-    starter::LoaderStarter start(where, elf_port, {}, goldhen.port, 5000);
+    std::vector<std::string> logs;
+    starter::LoaderStarter start(where, elf_port,
+                                 [&](const std::string &line) { logs.push_back(line); },
+                                 goldhen.port, 5000);
     starter::Result result;
     Thread runner;
     runner.start([&] { result = start.start(); });
@@ -241,6 +244,9 @@ TEST(Starter, StartsElfldrThroughGoldhenWhenNoElfLoaderAnswers)
     runner.join();
     EXPECT_EQ(result.outcome, Outcome::sent) << result.detail;
     EXPECT_EQ(started.take(), orbit);
+    ASSERT_GE(logs.size(), 2u);
+    EXPECT_NE(logs[0].find("GoldHEN PayLoader 9090"), std::string::npos) << logs[0];
+    EXPECT_NE(logs[1].find("port 9021 accepted Orbit"), std::string::npos) << logs[1];
 }
 
 TEST(Starter, UsesThePackagedElfldrWhenNoneWasSaved)
