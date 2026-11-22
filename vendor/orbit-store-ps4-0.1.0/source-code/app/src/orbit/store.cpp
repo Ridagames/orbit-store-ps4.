@@ -5,6 +5,9 @@
 #ifdef ORBIT_PERF_TRACE
 #include "platform/ps4/system.hpp"
 #endif
+#ifdef ORBIT_PS4
+#include "platform/ps4/system.hpp"
+#endif
 #include "orbit/i18n.hpp"
 
 #include <cstdio>
@@ -785,13 +788,25 @@ void Store::start_if_needed(bool refused)
         if (!start_resent_)
         {
             start_resent_ = true;
-            if (starter_->start().outcome == starter::Outcome::sent)
+            const starter::Result retry = starter_->start();
+            if (retry.outcome == starter::Outcome::sent)
             {
+#ifdef ORBIT_PS4
+                hui::sys::log("[ORBIT] startup: second payload transfer accepted by loader; waiting %.0f s for backend 34177",
+                              start_wait_);
+#endif
                 start_deadline_ = now_seconds() + start_wait_;
                 return;
             }
+#ifdef ORBIT_PS4
+            hui::sys::log("[ORBIT] startup: second payload transfer failed outcome=%d detail=%s",
+                          static_cast<int>(retry.outcome), retry.detail.c_str());
+#endif
         }
         start_waiting_ = false;
+#ifdef ORBIT_PS4
+        hui::sys::log("[ORBIT] startup: backend 34177 did not answer after both payload attempts");
+#endif
         post_start(Starting::failed, tr("Orbit didn\xE2\x80\x99t answer after it was started. Close other apps such as ezRemote, then try again."));
         return;
     }
@@ -807,6 +822,10 @@ void Store::start_if_needed(bool refused)
     case starter::Outcome::sent:
         start_waiting_ = true;
         start_deadline_ = now_seconds() + start_wait_;
+#ifdef ORBIT_PS4
+        hui::sys::log("[ORBIT] startup: payload transfer accepted by loader; checking backend 34177 for %.0f s",
+                      start_wait_);
+#endif
         post_start(Starting::waiting, std::move(result.detail));
         break;
     case starter::Outcome::no_loader:
@@ -925,6 +944,9 @@ void Store::poll_once()
     }
     if (start_waiting_ || start_state_ != Starting::idle)
     {
+#ifdef ORBIT_PS4
+        hui::sys::log("[ORBIT] startup: backend 34177 answered; Orbit service is online");
+#endif
         start_waiting_ = false;
         post_start(Starting::idle, {});
     }
