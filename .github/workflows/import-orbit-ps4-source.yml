@@ -2,6 +2,9 @@ name: Import official Orbit Store PS4 0.1.0 source
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/import-orbit-ps4-source.yml
 
 permissions:
   contents: write
