@@ -4,8 +4,8 @@
 // The app is a screen for Orbit, which runs as a payload so downloads carry on
 // after the app is suspended or closed. When nothing answers on Orbit's port,
 // the app hands a copy of Orbit to the ELF loader the console's jailbreak runs
-// on 127.0.0.1:9021. When 9021 refuses the connection, it first sends elfldr to
-// GoldHEN's PayLoader on 9090 (which can't run Orbit itself) and waits for 9021.
+// on 127.0.0.1:9021. When 9021 refuses the connection, it sends the elfldr.bin bootstrap payload to
+// GoldHEN's BinLoader on 9090, then waits for elfldr to open 9021.
 // It sends the copy Orbit saved
 // in /data/orbit-store (which Orbit's updater keeps current) unless the copy in
 // this package is a newer release, or the saved one can't be read.
@@ -29,9 +29,9 @@ struct Locations
     std::string saved_elf = "/data/orbit-store/orbit_store.elf";
     std::string saved_version = "/data/orbit-store/saved-version.txt";
     std::string bundled_elf = "/app0/orbit/orbit_store.elf";
-    // elfldr, for when no ELF loader answers: the copy Orbit saved, else this package's.
-    std::string saved_elfldr = "/data/orbit-store/elfldr.elf";
-    std::string bundled_elfldr = "/app0/orbit/elfldr.elf";
+    // GoldHEN BinLoader requires elfldr.bin, not the ELF executable elfldr.elf.
+    std::string saved_elfldr_bin = "/data/orbit-store/elfldr.bin";
+    std::string bundled_elfldr_bin = "/app0/orbit/elfldr.bin";
     std::string bundled_version = "/app0/orbit/version.txt";
 };
 
@@ -82,7 +82,7 @@ class LoaderStarter final : public Starter
 {
   public:
     static constexpr std::uint16_t kLoaderPort = 9021;
-    // GoldHEN's payload loader: it can't run Orbit, so it only ever gets elfldr.
+    // GoldHEN BinLoader receives the elfldr.bin bootstrap, never Orbit itself.
     static constexpr std::uint16_t kGoldhenPort = 9090;
     static constexpr int kElfldrWaitMs = 20000;
 
