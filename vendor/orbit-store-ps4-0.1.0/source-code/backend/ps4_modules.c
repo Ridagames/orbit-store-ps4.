@@ -34,7 +34,7 @@ static uint32_t isolate_module(uint32_t handle) {
     dynlib_obj_t module = {0};
     if (kernel_dynlib_obj(-1, handle, &module) ||
         module.textsize > UINTPTR_MAX - module.mapbase) {
-        klog_printf("[ORBIT-SVC] module isolation: kernel_dynlib_obj failed handle=0x%08x\\n", handle);
+        klog_printf("[ORBIT-SVC] module isolation: kernel_dynlib_obj failed handle=0x%08x\n", handle);
         return 0;
     }
     /* Only the non-executable relocation pages between text and writable data.
@@ -43,7 +43,7 @@ static uint32_t isolate_module(uint32_t handle) {
     uintptr_t begin = module.mapbase + module.textsize;
     if (page_size <= 0 || (begin != module.database &&
         ps4_module_private_pages(begin, module.database, (size_t)page_size))) {
-        klog_printf("[ORBIT-SVC] module isolation: relocation pages failed handle=0x%08x\\n", handle);
+        klog_printf("[ORBIT-SVC] module isolation: relocation pages failed handle=0x%08x\n", handle);
         return 0;
     }
     private_handles[private_count++] = handle;
@@ -57,11 +57,11 @@ int ps4_modules_initialize(void) {
     for (size_t i = 0; i < sizeof names / sizeof names[0]; i++) {
         uint32_t handle = 0;
         if (kernel_dynlib_handle(-1, names[i], &handle)) {
-            klog_printf("[ORBIT-SVC] module initialization: kernel_dynlib_handle failed for %s\\n", names[i]);
+            klog_printf("[ORBIT-SVC] module initialization: kernel_dynlib_handle failed for %s\n", names[i]);
             continue;
         }
         if (!isolate_module(handle)) {
-            klog_printf("[ORBIT-SVC] module initialization: isolation failed for %s\\n", names[i]);
+            klog_printf("[ORBIT-SVC] module initialization: isolation failed for %s\n", names[i]);
             result = -1;
             break;
         }
