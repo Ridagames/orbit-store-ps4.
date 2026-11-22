@@ -8,6 +8,7 @@ on:
     paths:
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/src/orbit/store.cpp'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/src/orbit/starter.cpp'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/src/orbit/starter.hpp'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/tests/unit/starter_test.cpp'
       - '.github/workflows/orbit-startup-diagnostics-tests.yml'
 
@@ -27,4 +28,5 @@ jobs:
         run: |
           docker run --rm --cpus 2 --memory 6g \
             -v "$GITHUB_WORKSPACE/vendor/orbit-store-ps4-0.1.0/source-code:/work" \
-            -w /work/app orbit-app-build:ci make test
+            -w /work/app orbit-app-build:ci \
+            bash -c "bash tools/build-tests.sh && build/tests/unit_tests --gtest_filter='Starter.*' --gtest_brief=1"
