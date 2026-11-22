@@ -27,10 +27,7 @@ jobs:
           URL="https://github.com/saawant12/orbit-store-ps4/releases/download/v0.1.0/orbit-store-0.1.0-source-bundle.zip"
           FILE="orbit-store-0.1.0-source-bundle.zip"
           EXPECTED="2947002612699d46f772961ff825689ee277f729028562f25f0eee036be39d57"
-
-          curl --fail --location --retry 5 --retry-all-errors \
-            --connect-timeout 30 --max-time 3600 "$URL" -o "$FILE"
-
+          curl --fail --location --retry 5 --retry-all-errors --connect-timeout 30 --max-time 3600 "$URL" -o "$FILE"
           echo "$EXPECTED  $FILE" | sha256sum --check
 
       - name: Extract PS4 source into the repository
@@ -40,26 +37,57 @@ jobs:
           DEST="vendor/orbit-store-ps4-0.1.0"
           mkdir -p "$DEST"
           unzip -q orbit-store-0.1.0-source-bundle.zip -d "$DEST"
-
-          echo "Extracted source size:"
+          echo "Extracted size:"
           du -sh "$DEST"
           echo "File count: $(find "$DEST" -type f | wc -l)"
-          echo "Largest files:"
-          find "$DEST" -type f -printf '%s\t%p\n' | sort -nr | head -n 30
 
-      - name: Check GitHub individual file limit
+      - name: Split files that exceed GitHub's individual file limit
         shell: bash
         run: |
           set -euo pipefail
-          TOO_LARGE="$(find vendor/orbit-store-ps4-0.1.0 -type f -size +90M -print)"
+          DEST="vendor/orbit-store-ps4-0.1.0"
+          while IFS= read -r -d '' file; do
+            echo "Splitting large source asset: $file"
+            split --bytes=80M --numeric-suffixes=0 --suffix-length=3 "$file" "$file.part"
+            rm "$file"
+          done < <(find "$DEST" -type f -size +90M -print0)
+
+          cat > "$DEST/REASSEMBLE-LARGE-FILES.sh" <<'SCRIPT'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          ROOT="$(cd "$(dirname "$0")" && pwd)"
+          count=0
+          while IFS= read -r -d '' first; do
+            base="${first%.part000}"
+            parts=( "${base}".part[0-9][0-9][0-9] )
+            if [ ! -e "${parts[0]}" ]; then
+              echo "Missing chunks for: $base" >&2
+              exit 1
+            fi
+            cat "${parts[@]}" > "$base"
+            echo "Reassembled: ${base#"$ROOT"/}"
+            count=$((count + 1))
+          done < <(find "$ROOT" -type f -name '*.part000' -print0)
+          echo "Completed: $count large file(s) reassembled."
+          SCRIPT
+          chmod +x "$DEST/REASSEMBLE-LARGE-FILES.sh"
+
+          cat > "$DEST/README-LARGE-FILES.txt" <<'NOTE'
+          Four upstream source/toolchain archives exceed GitHub's 100 MB single-file limit.
+          Their original bytes are preserved as consecutive .part000, .part001, ... chunks.
+          To restore the original archive files, run:
+            bash REASSEMBLE-LARGE-FILES.sh
+          Run this script from any directory; it writes the reconstructed files beside their chunks.
+          NOTE
+
+          TOO_LARGE="$(find "$DEST" -type f -size +90M -print)"
           if [ -n "$TOO_LARGE" ]; then
-            {
-              echo "The archive was downloaded and extracted, but these files exceed the safe GitHub file limit:"
-              printf '%s\n' "$TOO_LARGE"
-            } | tee import-report.txt
-            exit 23
+            printf 'Files still too large:\n%s\n' "$TOO_LARGE"
+            exit 24
           fi
-          echo "All extracted files are below 90 MiB." | tee import-report.txt
+          echo "All tracked files are below 90 MiB." | tee import-report.txt
+          echo "Tracked file count: $(find "$DEST" -type f | wc -l)" | tee -a import-report.txt
+          du -sh "$DEST" | tee -a import-report.txt
 
       - name: Commit imported source to main
         shell: bash
