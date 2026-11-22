@@ -300,14 +300,27 @@ Result LoaderStarter::start()
             if (!elfldr.empty() && send(elfldr, goldhen_port_, 10000, &loader_error) == Outcome::sent)
             {
                 started_elfldr = true;
+                if (log_)
+                    log_("elfldr: full file transfer accepted by GoldHEN PayLoader 9090; execution is not yet confirmed; waiting for listener 9021");
                 // Send Orbit once elfldr listens; until then its port refuses, so no
                 // bytes go anywhere.
                 result.outcome = Outcome::no_loader;
-                for (int waited = 0; result.outcome == Outcome::no_loader && waited < elfldr_wait_ms_;
-                     waited += 250)
+                int waited = 0;
+                for (; result.outcome == Outcome::no_loader && waited < elfldr_wait_ms_; waited += 250)
                 {
                     usleep(250000);
                     result.outcome = send(payload.path, port_, 10000, &error);
+                }
+                if (log_)
+                {
+                    char phase[192];
+                    if (result.outcome == Outcome::sent)
+                        std::snprintf(phase, sizeof(phase), "elfldr: port %u accepted Orbit after approximately %d ms",
+                                      port_, waited + 250);
+                    else
+                        std::snprintf(phase, sizeof(phase), "elfldr: port %u did not accept Orbit within %d ms (outcome=%s)",
+                                      port_, elfldr_wait_ms_, outcome_name(result.outcome));
+                    log_(phase);
                 }
                 if (result.outcome == Outcome::no_loader)
                     error = tr("GoldHEN's payload loader didn't start Orbit's elfldr. Check that "
