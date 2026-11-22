@@ -5,8 +5,8 @@
 # tools/patch_sdk_1402.py, using offsets checked against retail FW 14.02. This first stage builds
 # both from pinned commits the way upstream CI does: Ubuntu 24.04, clang 18.1.3, the same
 # paths, and elfldr's commit time as its build date. It first rebuilds SDK v0.9's crt1.o and
-# elfldr v0.7 from their release commits and stops unless both match the official files byte
-# for byte, so the newer files are what upstream's own build produces.
+# elfldr v0.7 from their release commits and checks the unmodified release baselines byte for
+# byte before applying the separately reviewed 14.02 kernel-init patch.
 FROM ubuntu:24.04@sha256:fe81560990fae86dc4743202b2cb4d3df98d0bcf949173cecef15ce1127ef852 AS upstream
 RUN apt-get update && apt-get install -y --no-install-recommends clang-18=1:18.1.3-1ubuntu1 lld-18=1:18.1.3-1ubuntu1 llvm-18=1:18.1.3-1ubuntu1 make xxd unzip curl ca-certificates python3 && rm -rf /var/lib/apt/lists/*
 ARG SDK_ZIP_SHA256=3190e88255a72161e5ce2f22a8ae8f638a2c5a9d1ff1e0209ed692d36b4d9ec5
