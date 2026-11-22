@@ -86,10 +86,18 @@ version = (image / 'orbit/version.txt').read_text().strip()
 assert version == match.group(1), 'packaged service version differs from source'
 assert b'Orbit-Store/' + version.encode() + b'\0' in packaged.read_bytes(), \
     'payload version marker differs'
-# elfldr a481740 (v0.7 plus firmware 13.52 and 14.00), which the app sends to GoldHEN's PayLoader when no ELF loader answers.
+# elfldr a481740: GoldHEN BinLoader must receive the raw .bin bootstrap, not elfldr.elf.
 assert (image / 'orbit/elfldr.elf').is_file() and digest(image / 'orbit/elfldr.elf') == \
     '068b82915e6f7721105898ad58bb1dadfbc7c40ce40accaee432441ee9b56e53', \
-    'pkg elfldr missing or not the pinned a481740 build'
+    'pkg elfldr.elf missing or not the pinned a481740 build'
+staged_elfldr_bin = repo / 'build/package-extra/orbit/elfldr.bin'
+packaged_elfldr_bin = image / 'orbit/elfldr.bin'
+assert staged_elfldr_bin.is_file() and packaged_elfldr_bin.is_file(), \
+    'pkg elfldr.bin bootstrap missing'
+assert 64 <= packaged_elfldr_bin.stat().st_size <= 16 * 1024 * 1024, \
+    'pkg elfldr.bin has an invalid size'
+assert digest(packaged_elfldr_bin) == digest(staged_elfldr_bin), \
+    'pkg elfldr.bin differs from the staged GoldHEN bootstrap'
 
 assert digest(image / 'eboot.bin') == digest(Path('build/eboot.bin')), \
     'pkg eboot.bin differs from the signed build output'
