@@ -10,6 +10,8 @@ on:
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/src/orbit/starter.cpp'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/tests/unit/starter_test.cpp'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/sce_sys/param.json'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/backend/main.c'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/backend/ps4_modules.c'
       - '.github/workflows/orbit-ps4-diagnostic-pkg.yml'
 
 permissions:
