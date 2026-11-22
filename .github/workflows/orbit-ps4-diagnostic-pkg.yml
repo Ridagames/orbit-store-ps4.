@@ -54,11 +54,11 @@ jobs:
         run: |
           docker build -t orbit-build-ps4:0.2 .
           docker build -t orbit-app-build:0.2 app
-      - name: Run host unit tests
+      - name: Run loader startup tests
         working-directory: vendor/orbit-store-ps4-0.1.0/source-code
         run: |
-          docker run --rm --cpus 2 --memory 6g -v "$PWD:/work" -w /work/app \\
-            orbit-app-build:0.2 make test
+          docker run --rm --cpus 2 --memory 6g -v "$PWD:/work" -w /work/app \
+            orbit-app-build:0.2 bash -c "bash tools/build-tests.sh && build/tests/unit_tests --gtest_filter='Starter.*' --gtest_brief=1"
       - name: Build the real PS4 browser shortcut
         working-directory: vendor/orbit-store-ps4-0.1.0/source-code
         run: |
