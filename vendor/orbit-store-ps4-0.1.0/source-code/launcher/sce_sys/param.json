@@ -1,0 +1,14 @@
+{
+  "applicationCategoryType": 0,
+  "titleId": "ORBT00001",
+  "localizedParameters": {
+    "defaultLanguage": "en-US",
+    "en-US": {
+      "titleName": "Orbit Store Browser"
+    }
+  },
+  "contentId": "UP9000-ORBT00001_00-ORBITBROWSER0001",
+  "masterVersion": "01.00",
+  "appVersion": "01.04",
+  "requiredSystemSoftwareVersion": "0x05050000"
+}

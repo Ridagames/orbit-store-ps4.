@@ -1,0 +1,49 @@
+{
+  "platform": "PS4",
+  "components": [
+    {
+      "name": "PS4 payload SDK startup, C compatibility sources and import stubs",
+      "sourceVerified": true,
+      "revision": "1a85cb5a8ea12dc2dcfbcc878700d0d097245de7",
+      "evidence": "v0.9 tag resolved from upstream; source archive included separately from the binary SDK."
+    },
+    {
+      "name": "Payload SDK C++ runtime libraries",
+      "sourceVerified": true,
+      "source": "LLVM 15.0.7",
+      "evidence": "All three libraries in the payload build image match the pinned SDK v0.9 ZIP. The pinned SDK ci.sh invokes libcxx.sh selecting LLVM 15.0.7. Local hashes: .state/ps4-release-prep-2026-11-11/sdk-runtime-provenance.json"
+    },
+    {
+      "name": "OpenOrbis native headers and linker script",
+      "sourceVerified": true,
+      "revision": "6929bafac0b565692ed61e66032a79185ee9cf65",
+      "evidence": "691 source files match the pinned SDK bytes; active headers and linker script extracted directly from this source archive."
+    },
+    {
+      "name": "OpenOrbis native LLVM runtimes and C++ headers",
+      "sourceVerified": true,
+      "revision": "83e2569f0c062d980ae142d8dc583f6b8733be35",
+      "evidence": "All five library archives and 180 headers match official LLVM fork release v1.2 byte for byte; full source archive and component notices included. Enforced by app/tooling/orbis-runtime-lock.json."
+    },
+    {
+      "name": "OpenOrbis native musl and CRT",
+      "sourceVerified": true,
+      "revision": "779f95174b44d39e6a8a788b36289cf4768944a9",
+      "evidence": "Original SDK constituent revision could not be proved. Rebuilt unmodified pinned source with explicit x86_64 FreeBSD compiler target; 218 headers match old SDK. Recipe: app/tools/setup-orbis-runtime.py."
+    },
+    {
+      "name": "Native console import libraries",
+      "sourceVerified": true,
+      "source": "app/tools/setup-orbis-runtime.py and app/tooling/orbis-imports.json",
+      "evidence": "Rebuilt ten link-only libraries from recorded function names; full exported symbol sets match the old SDK. No system-module implementation is bundled."
+    },
+    {
+      "name": "elfldr ELF loader (bundled, built from upstream source)",
+      "sourceVerified": true,
+      "revision": "a4817404f5cb2d5c177b05cd5e4548b74e6c2725",
+      "evidence": "Built by tools/Dockerfile.sdk.ps4 from the pinned source archive at a481740 (v0.7 plus firmware 13.52 and 14.00), with the SDK v0.9 release whose crt1.o is rebuilt from SDK commit 573b4a0, in Ubuntu 24.04 with clang 18.1.3 like upstream CI. The same image first rebuilds elfldr v0.7 and SDK v0.9 crt1.o from their release commits and stops unless both match the official files byte for byte. SHA-256 of the result is pinned in tools/bootstrap.py and app/tools/stage-payload.sh; both source archives are included."
+    }
+  ],
+  "nativeRuntimeProof": "app/.deps/orbis/runtime/provenance.json",
+  "report": "docs/openorbis-runtime.md"
+}

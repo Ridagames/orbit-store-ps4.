@@ -1,0 +1,4 @@
+**
+!tools/
+!tools/build-deps.sh
+!tools/build-host-archive.sh

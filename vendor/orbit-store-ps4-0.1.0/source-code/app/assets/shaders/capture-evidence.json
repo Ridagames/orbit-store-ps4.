@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-12",
+  "firmware": "12.00",
+  "capturePackageSha256": "2c7851d60ebd8faf12044edede757c54decf4bb303c3e17820ee5c9a35b18b78",
+  "result": "All eight stages compiled, exported and reloaded; all four programs linked",
+  "retailRendererTested": false,
+  "binariesSha256": {
+    "backdrop.vert": "148fde15c64d8ad2430dc5f7ce02b601de3b5ce01baec482340311d8d20c5afd",
+    "backdrop.frag": "a3fc12146e7ab447af9b538bc965861e5ddd28dee8e46ce5599f65c549a2d0d0",
+    "batch2d.vert": "84a510bbbe2f7a06806ed4308bd0110ca47d83a60a66043eb33a9ce8d7a6bae7",
+    "batch2d.frag": "2d2ebdaee85e6fc3c608fb5e4c1a6befb0ab57c5a66b9febd452d5cbbedafdd5",
+    "mesh2d.vert": "4c55fae64385b2eb07a3051eea1126faec786df86657707ec7eb3fc535393a9e",
+    "mesh2d.frag": "46dcaef90a2ea50523bc8298fe6f7d9c97859dfcb2c9b985c7ce86ab372e8429",
+    "blur.vert": "96a7c73cdfa7b5de79c72aa2208c7f5816012532b7d44dcfc58daa30fce8a3e7",
+    "blur.frag": "444fe3abf931298b19b79da60e1264b86870439cf938e52210a4a6937049a390"
+  },
+  "compilerModulesSha256": {
+    "libScePigletv2VSH.sprx": "69d6b3adc85b6edf5208b7f18fad3b2638ae7c4648f78880877bae3aa4202efd",
+    "libSceShaccVSH.sprx": "0a64982b0d7e33701745ab5180a1d314c11980215e418d14e868c75de3ca1e12"
+  }
+}

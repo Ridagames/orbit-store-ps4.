@@ -1,0 +1,46 @@
+# Internal status and handoffs are excluded from corresponding source archives.
+/AGENTS.md export-ignore
+/release-status.json export-ignore
+/docs/archive/ export-ignore
+/docs/repository-cleanup.md export-ignore
+/release-draft/ export-ignore
+# Task lists, test logs, console probes and test tools are not needed to build
+# Orbit, so they stay out of the release source bundle (as in Orbit for PS5).
+/README.md export-ignore
+/not-done-devin.md export-ignore
+/tests/ export-ignore
+/experiments/ export-ignore
+/tools/testing/ export-ignore
+/tools/ps4-remote-session.py export-ignore
+/tools/ps4_remoteplay_pair.py export-ignore
+/tools/start-ps4-control.py export-ignore
+/tools/capture-ps4-native.py export-ignore
+/tools/capture-ps4-screen.py export-ignore
+/tools/ps4_debug.py export-ignore
+/tools/run-console-benchmark.py export-ignore
+/tools/viking_inspect_session.cjs export-ignore
+/tools/viking_rar_inspect.py export-ignore
+/tools/rar-inspection-requirements.txt export-ignore
+/tools/dlps_archive_scan.py export-ignore
+/tools/dlps_archive_scan_browser.mjs export-ignore
+/docs/ps4-handoff.md export-ignore
+/docs/ps4-hardware-2026-11-11.md export-ignore
+/docs/ps4-test-control.md export-ignore
+/docs/ps4-review-progress.md export-ignore
+/docs/ps4-release-preparation.md export-ignore
+/docs/ps4-native-capture.md export-ignore
+/docs/ps4-host-validation.json export-ignore
+/docs/ps4-platform-matrix.md export-ignore
+/docs/ps4-port.md export-ignore
+/docs/internal-rar-licence-follow-up.md export-ignore
+/docs/viking-rar-inspection.md export-ignore
+/docs/catalogue-import-holds.md export-ignore
+# Authenticated snapshots, readers and decoding material remain in the archive.
+/catalog/source-candidates.json export-ignore
+/catalog/games.json export-ignore
+/catalog/releases.json export-ignore
+/catalog/catalog.json export-ignore
+/catalog/addons.json export-ignore
+/catalog/addons-catalog.json export-ignore
+/catalog/updates.json export-ignore
+/catalog/updates-catalog.json export-ignore
