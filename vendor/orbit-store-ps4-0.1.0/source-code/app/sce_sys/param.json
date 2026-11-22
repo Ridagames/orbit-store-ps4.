@@ -9,7 +9,7 @@
   },
   "applicationCategoryType": 0,
   "applicationDrmType": "free",
-  "appVersion": "01.04",
+  "appVersion": "01.05",
   "category": "gde",
   "attribute": 0,
   "attribute2": 0,
@@ -17,7 +17,7 @@
   "conceptId": "99177",
   "contentBadgeType": 1,
   "contentId": "UP9000-ORBT00002_00-ORBITSTORETV0001",
-  "contentVersion": "00.001.000",
+  "contentVersion": "00.002.000",
   "downloadDataSize": 256,
   "gameIntent": {
     "permittedIntents": [
