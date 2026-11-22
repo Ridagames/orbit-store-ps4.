@@ -305,7 +305,7 @@ Result LoaderStarter::start()
         std::string error;
         result.outcome = send(payload.path, port_, 10000, &error);
         // A refused connection sent no bytes, so starting elfldr can't run Orbit twice.
-        // GoldHEN's PayLoader gets elfldr only (never Orbit, too big for it), and only
+        // GoldHEN BinLoader gets elfldr.bin only (never Orbit, too big for it), and only
         // when a copy can be read: an empty connection would wedge it.
         if (result.outcome == Outcome::no_loader && goldhen_port_ != 0)
         {
@@ -342,8 +342,8 @@ Result LoaderStarter::start()
                     log_(phase);
                 }
                 if (result.outcome == Outcome::no_loader)
-                    error = tr("GoldHEN's payload loader didn't start Orbit's elfldr. Check that "
-                               "GoldHEN's PayLoader Server is on, or start an ELF loader.");
+                    error = tr("GoldHEN BinLoader did not start elfldr. Check that GoldHEN's BinLoader "
+                               "server is enabled, or start an ELF loader.");
             }
         }
         result.detail = result.outcome == Outcome::sent
