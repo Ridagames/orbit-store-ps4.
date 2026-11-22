@@ -1,5 +1,8 @@
 #include "ps4_modules.h"
 #include <sys/mman.h>
+#ifndef ORBIT_DESKTOP
+#include <ps4/klog.h>
+#endif
 int ps4_module_private_pages(uintptr_t begin, uintptr_t end, size_t page_size) {
     if (!begin || !page_size || begin % page_size || end % page_size ||
         end <= begin || end - begin > 1024 * 1024) return -1;
@@ -30,13 +33,19 @@ static uint32_t isolate_module(uint32_t handle) {
     if (private_count == sizeof private_handles / sizeof private_handles[0]) return 0;
     dynlib_obj_t module = {0};
     if (kernel_dynlib_obj(-1, handle, &module) ||
-        module.textsize > UINTPTR_MAX - module.mapbase) return 0;
+        module.textsize > UINTPTR_MAX - module.mapbase) {
+        klog_printf("[ORBIT-SVC] module isolation: kernel_dynlib_obj failed handle=0x%08x\\n", handle);
+        return 0;
+    }
     /* Only the non-executable relocation pages between text and writable data.
      * Derive the range from this process's module metadata, not firmware offsets. */
     long page_size = sysconf(_SC_PAGESIZE);
     uintptr_t begin = module.mapbase + module.textsize;
     if (page_size <= 0 || (begin != module.database &&
-        ps4_module_private_pages(begin, module.database, (size_t)page_size))) return 0;
+        ps4_module_private_pages(begin, module.database, (size_t)page_size))) {
+        klog_printf("[ORBIT-SVC] module isolation: relocation pages failed handle=0x%08x\\n", handle);
+        return 0;
+    }
     private_handles[private_count++] = handle;
     return handle;
 }
@@ -47,7 +56,12 @@ int ps4_modules_initialize(void) {
     pthread_mutex_lock(&module_lock);
     for (size_t i = 0; i < sizeof names / sizeof names[0]; i++) {
         uint32_t handle = 0;
-        if (!kernel_dynlib_handle(-1, names[i], &handle) && !isolate_module(handle)) {
+        if (kernel_dynlib_handle(-1, names[i], &handle)) {
+            klog_printf("[ORBIT-SVC] module initialization: kernel_dynlib_handle failed for %s\\n", names[i]);
+            continue;
+        }
+        if (!isolate_module(handle)) {
+            klog_printf("[ORBIT-SVC] module initialization: isolation failed for %s\\n", names[i]);
             result = -1;
             break;
         }
