@@ -224,12 +224,13 @@ TEST(Starter, ReportsAMissingLoaderAndAMissingFile)
 
 TEST(Starter, StartsElfldrThroughGoldhenWhenNoElfLoaderAnswers)
 {
-    // GoldHEN's PayLoader can't run Orbit: it gets elfldr, then Orbit goes to elfldr's port.
+    // GoldHEN BinLoader gets the raw elfldr.bin bootstrap; Orbit then goes to elfldr port 9021.
     TempDir dir; auto where = dir.locations();
-    where.saved_elfldr = dir.path + "/elfldr.elf";
-    where.bundled_elfldr = dir.path + "/missing-bundled-elfldr.elf";
-    const auto orbit = elf_bytes(8192, 'o'), elfldr = elf_bytes(4096, 'e');
-    write(where.bundled_elf, orbit); write(where.saved_elfldr, elfldr);
+    where.saved_elfldr_bin = dir.path + "/elfldr.bin";
+    where.bundled_elfldr_bin = dir.path + "/missing-bundled-elfldr.bin";
+    const auto orbit = elf_bytes(8192, 'o');
+    const std::string elfldr(4096, 'e'); // raw .bin bootstrap, deliberately not an ELF
+    write(where.bundled_elf, orbit); write(where.saved_elfldr_bin, elfldr);
     const std::uint16_t elf_port = closed_port();
     Loader goldhen;
     std::vector<std::string> logs;
@@ -245,30 +246,30 @@ TEST(Starter, StartsElfldrThroughGoldhenWhenNoElfLoaderAnswers)
     EXPECT_EQ(result.outcome, Outcome::sent) << result.detail;
     EXPECT_EQ(started.take(), orbit);
     ASSERT_GE(logs.size(), 2u);
-    EXPECT_NE(logs[0].find("GoldHEN PayLoader 9090"), std::string::npos) << logs[0];
+    EXPECT_NE(logs[0].find("GoldHEN BinLoader 9090"), std::string::npos) << logs[0];
     EXPECT_NE(logs[1].find("port 9021 accepted Orbit"), std::string::npos) << logs[1];
 }
 
 TEST(Starter, UsesThePackagedElfldrWhenNoneWasSaved)
 {
     TempDir dir; auto where = dir.locations();
-    where.saved_elfldr = dir.path + "/no-saved-elfldr.elf";
-    where.bundled_elfldr = dir.path + "/bundled-elfldr.elf";
-    const auto elfldr = elf_bytes(4096, 'b');
-    write(where.bundled_elf, elf_bytes(8192, 'o')); write(where.bundled_elfldr, elfldr);
+    where.saved_elfldr_bin = dir.path + "/no-saved-elfldr.bin";
+    where.bundled_elfldr_bin = dir.path + "/bundled-elfldr.bin";
+    const std::string elfldr(4096, 'b');
+    write(where.bundled_elf, elf_bytes(8192, 'o')); write(where.bundled_elfldr_bin, elfldr);
     Loader goldhen;
     starter::LoaderStarter start(where, closed_port(), {}, goldhen.port, 600);
     const auto result = start.start(); // elfldr never listens here
     EXPECT_EQ(goldhen.take(), elfldr);
     EXPECT_EQ(result.outcome, Outcome::no_loader);
-    EXPECT_NE(result.detail.find("PayLoader Server"), std::string::npos) << result.detail;
+    EXPECT_NE(result.detail.find("BinLoader"), std::string::npos) << result.detail;
 }
 
 TEST(Starter, NeverOpensGoldhensLoaderWithoutElfldr)
 {
     TempDir dir; auto where = dir.locations();
-    where.saved_elfldr = dir.path + "/none-a.elf";
-    where.bundled_elfldr = dir.path + "/none-b.elf";
+    where.saved_elfldr_bin = dir.path + "/none-a.bin";
+    where.bundled_elfldr_bin = dir.path + "/none-b.bin";
     write(where.bundled_elf, elf_bytes(8192, 'o'));
     Loader goldhen;
     starter::LoaderStarter start(where, closed_port(), {}, goldhen.port, 600);
