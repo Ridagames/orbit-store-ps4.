@@ -8,6 +8,11 @@ on:
     paths:
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/src/orbit/store.cpp'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/src/orbit/starter.cpp'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/src/orbit/starter.hpp'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/tests/unit/starter_test.cpp'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/tools/stage-payload.sh'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/app/tools/verify-package.sh'
+      - 'vendor/orbit-store-ps4-0.1.0/source-code/tools/bootstrap.py'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/tests/unit/starter_test.cpp'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/app/sce_sys/param.json'
       - 'vendor/orbit-store-ps4-0.1.0/source-code/backend/main.c'
@@ -49,6 +54,11 @@ jobs:
         run: |
           docker build -t orbit-build-ps4:0.2 .
           docker build -t orbit-app-build:0.2 app
+      - name: Run host unit tests
+        working-directory: vendor/orbit-store-ps4-0.1.0/source-code
+        run: |
+          docker run --rm --cpus 2 --memory 6g -v "$PWD:/work" -w /work/app \\
+            orbit-app-build:0.2 make test
       - name: Build the real PS4 browser shortcut
         working-directory: vendor/orbit-store-ps4-0.1.0/source-code
         run: |
