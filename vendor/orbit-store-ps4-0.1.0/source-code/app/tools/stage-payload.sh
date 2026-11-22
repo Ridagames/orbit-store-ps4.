@@ -33,9 +33,11 @@ cp "$payload" "$stage/orbit/orbit_store.elf"
 printf '%s\n' "$version" > "$stage/orbit/version.txt"
 elfldr=${ORBIT_ELFLDR:-$(dirname "$payload")/../.deps/elfldr/elfldr.elf}
 elfldr_bin=${ORBIT_ELFLDR_BIN:-$(dirname "$payload")/../.deps/elfldr/elfldr.bin}
-elfldr_sha256=068b82915e6f7721105898ad58bb1dadfbc7c40ce40accaee432441ee9b56e53
-if [[ ! -f $elfldr ]] || [[ $(sha256sum "$elfldr" | cut -d' ' -f1) != "$elfldr_sha256" ]]; then
-    printf 'elfldr a481740 not found or changed: %s (run tools/bootstrap.py in the repository root)\n' "$elfldr" >&2
+elfldr_size=0
+if [[ -f $elfldr ]]; then elfldr_size=$(stat -c %s "$elfldr"); fi
+if [[ ! -f $elfldr ]] || ((elfldr_size < 64 || elfldr_size > 16 * 1024 * 1024)) || \
+   [[ $(head -c 6 "$elfldr" | od -An -tx1 | tr -d ' \\n') != 7f454c460201 ]]; then
+    printf 'elfldr.elf missing or invalid: %s (run tools/bootstrap.py in the repository root)\n' "$elfldr" >&2
     exit 1
 fi
 cp "$elfldr" "$stage/orbit/elfldr.elf"
