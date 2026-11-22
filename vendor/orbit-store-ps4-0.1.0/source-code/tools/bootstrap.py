@@ -39,7 +39,7 @@ def image_file(name):
 # Always copy both artifacts from the just-built, pinned SDK image so stale
 # pre-14.02 outputs cannot survive a rebuild.
 elf_data = image_file('elfldr.elf')
-if len(elf_data) < 64 or elf_data[:6] != b'\\x7fELF\\x02\\x01':
+if len(elf_data) < 64 or elf_data[:6] != b'\x7fELF\x02\x01':
     raise SystemExit('Invalid elfldr.elf: missing ELF64 header')
 ELFLDR.write_bytes(elf_data)
 
