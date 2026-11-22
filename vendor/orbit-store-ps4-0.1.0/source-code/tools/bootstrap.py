@@ -21,7 +21,7 @@ for name, expected in FILES.items():
 # elfldr (GPL-3.0-or-later, ps4-payload-dev/elfldr) at a4817404, the v0.7 release plus firmware
 # 13.52, 14.00 and a guarded 14.02 kernel-init path. Orbit starts it through GoldHEN's payload
 # loader when no ELF loader answers on 9021 (backend/loader_start.c). The SDK image builds it
-# (tools/Dockerfile.sdk.ps4); this copies it out once and checks it.
+# (tools/Dockerfile.sdk.ps4); this copies both ELF and BinLoader artifacts out and validates them.
 ELFLDR = ROOT / '.deps/elfldr/elfldr.elf'
 ELFLDR_BIN = ROOT / '.deps/elfldr/elfldr.bin'
 SDK_IMAGE = 'orbit-sdk-ps4:0.9-fw1402'
