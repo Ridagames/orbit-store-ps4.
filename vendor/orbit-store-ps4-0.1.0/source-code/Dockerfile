@@ -1,4 +1,4 @@
-FROM orbit-sdk-ps4:0.9-fw1400
+FROM orbit-sdk-ps4:0.9-fw1402
 USER root
 RUN apt-get update && apt-get install -y --no-install-recommends curl python3 cmake pkg-config autoconf automake libtool perl libcurl4-openssl-dev libmicrohttpd-dev libssl-dev zstd && rm -rf /var/lib/apt/lists/*
 COPY tools/build-deps.sh /tmp/build-deps.sh
